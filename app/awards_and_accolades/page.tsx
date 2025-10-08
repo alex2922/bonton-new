@@ -108,7 +108,6 @@ const Plan2035 = () => {
 
   return (
     <>
-      
       <SectionTop
         chip="Beyond Cables. Beyond Current. Beyond Limits."
         title="Awards & Accolades"
@@ -117,24 +116,25 @@ const Plan2035 = () => {
         btnText="Be a Part of Our Journey"
         link="/career-opportunities"
       />
-
-      <div className="parent py-[50px] bg-[var(--accent1)]/10 ">
-        <div className="container px-4 flex flex-col gap-8">
-          {awards.map((award, index) => (
+      {awards.map((award, index) => (
+        <div key={index} className={`parent  relative   ${index % 2 !== 0 ? 'bg-gradient-to-br from-[#121722] via-emerald-500 to-[var(--accent3)]' : 'bg-gradient-to-br from-[#121722] via-[var(--accent2)] to-[var(--accent3)]'}`}>
+           <Image
+                  src="/sectiontop/awards.jpg"
+                  alt={award.title}
+                  fill
+                  className="object-cover absolute top-0 left-0 -z-1 opacity-4"
+                />
+          <div className="container px-2 py-[20px] flex flex-col gap-8">
             <div
               data-aos="fade-up"
               data-aos-delay={index * 200}
-              key={index}
-              className="w-full flex flex-col lg:flex-row bg-white/50 shadow-lg rounded-2xl overflow-hidden"
+              className="w-full flex flex-col lg:flex-row   overflow-hidden"
             >
               <div className="relative w-[100%] lg:max-w-[500px] p-3 lg:p-6 h-[300px] lg:h-auto lg:aspect-square">
-                <Image
-                  src="/awards/bg.png"
-                  alt={"background"}
-                  fill
-                  className="absolute object-cover z-[1]"
-                />
-                <TiltWrapper 
+                {/* <Image src="/awards/bg.png" alt={award.title} fill className="object-cover absolute top-0 left-0 -z-1" /> */}
+                {/* <div className=" bg-gradient-to-r from-[#121722] h-full w-full absolute top-0 left-0 -z-1 via-[var(--accent2)] to-[var(--accent3)]"></div> */}
+
+                <TiltWrapper
                   className="relative w-full h-full z-[2]"
                   tiltMaxAngleX={20}
                   tiltMaxAngleY={20}
@@ -149,32 +149,36 @@ const Plan2035 = () => {
                   />
                 </TiltWrapper>
               </div>
-              <div className="flex w-full flex-col gap-4 p-6 bg-gradient-to-br from-[#121722]   via-emerald-500/80 to-transparent relative">
-                <Image src="/awards/bg.png" alt={award.title} fill className="object-cover absolute top-0 left-0 -z-1" />
-                <span className="chip">{award.chip}</span>
-                <h3 className="font-bold text-2xl -mb-4">{award.title}</h3>
-                <h4 className="font-bold text-md text-white">
-                  {award.event}
-                </h4>
-                <p className="text-white/90 ">{award.desc}</p>
+              <div className="flex w-full flex-col gap-4  lg:p-6   relative">
+               
+                <div className="flex w-full flex-col gap-4 z-20">
+                  <span className={`chip !text-white`}>{award.chip}</span>
+                  <h3 className={`font-bold text-2xl -mb-4 text-white`}>
+                    {award.title}
+                  </h3>
+                  <h4 className={`font-bold text-md text-white`}>
+                    {award.event}
+                  </h4>
+                  <p className={` text-white`}>{award.desc}</p>
 
-                {award.info.map((info, index) => (
-                  <div
-                    key={index}
-                    className="flex bg-white/80 flex-col gap-2 p-2 rounded-xl border border-[var(--accent1)]/20"
-                  >
-                    <h4 className="font-bold text-md text-[var(--accent1)]">
-                      {info.title}
-                    </h4>
-                    <p className="text-black/90 ">{info.desc}</p>
-                  </div>
-                ))}
+                  {award.info.map((info, idx) => (
+                    <div
+                      key={idx}
+                      className={`flex  flex-col gap-2 p-4 rounded-xl 
+                        ${index % 2 === 0 ? 'bg-gradient-to-br from-[#121722] via-emerald-900 to-[var(--accent3)]' : 'bg-gradient-to-br from-[#121722] via-[var(--accent2)] to-[var(--accent3)]'}`}
+                    >
+                      <h4 className="font-bold text-md text-white">
+                        {info.title}
+                      </h4>
+                      <p className="text-white/90 ">{info.desc}</p>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
-          ))}
+          </div>
         </div>
-      </div>
-
+      ))}
       <Certificates />
 
       <div className="parent py-[100px]">
@@ -187,11 +191,7 @@ const Plan2035 = () => {
             Our Commitment to <span>Excellence</span>
           </h2>
 
-          <p
-            className=" text-center "
-            data-aos="fade-up"
-            data-aos-delay="200"
-          >
+          <p className=" text-center " data-aos="fade-up" data-aos-delay="200">
             Across all these honors, namely partnerships, participation awards
             and sponsorship accolades, we demonstrate sustained leadership and
             alignment with India’s evolving infrastructure, safety, and quality
