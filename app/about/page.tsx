@@ -29,11 +29,7 @@ import {
   FaShieldAlt,
   FaCogs,
 } from "react-icons/fa";
-import {
-  MdElectricBolt,
-  MdCable,
-  MdViewTimeline,
-} from "react-icons/md";
+import { MdElectricBolt, MdCable, MdViewTimeline } from "react-icons/md";
 import {
   FaAward,
   FaCertificate,
@@ -309,7 +305,87 @@ const page = () => {
     },
   ];
 
-
+  const certifications = [
+    {
+      certification: "IATF 16949:2016",
+      issuingAuthority: "International Automotive Task Force",
+      stakeholderRelevance: "Government Engineers, Industrial Consultants",
+      guarantees: "Automotive-grade quality and global supply chain compliance",
+    },
+    {
+      certification: "ISO 9001:2015",
+      issuingAuthority: "International Standards Organization",
+      stakeholderRelevance: "Contractors, Consultants, Government Engineers",
+      guarantees: "Consistent quality management across products & processes",
+    },
+    {
+      certification: "ISO 14001:2015",
+      issuingAuthority: "International Standards Organization",
+      stakeholderRelevance: "Consultants, Architects, Government Engineers",
+      guarantees: "Environmental management, sustainable practices",
+    },
+    {
+      certification: "ISO 45001:2018",
+      issuingAuthority: "International Standards Organization",
+      stakeholderRelevance: "Contractors, Government Engineers",
+      guarantees: "Occupational health & safety for workforce and projects",
+    },
+    {
+      certification: "ISO 50001:2011",
+      issuingAuthority: "International Standards Organization",
+      stakeholderRelevance: "Consultants, Government Engineers",
+      guarantees: "Energy efficiency & responsible resource management",
+    },
+    {
+      certification: "ISO/IEC 27001:2013",
+      issuingAuthority: "International Standards Organization",
+      stakeholderRelevance: "Government Engineers, Large Project Consultants",
+      guarantees: "Information security, data confidentiality, and integrity",
+    },
+    {
+      certification: "RoHS 2 Compliant",
+      issuingAuthority: "European Union (Directive 2011/65/EU)",
+      stakeholderRelevance: "Contractors, Architects, Consultants",
+      guarantees: "Free from hazardous substances (Lead, Cadmium, Mercury)",
+    },
+    {
+      certification: "REACH Compliant",
+      issuingAuthority: "European Chemicals Agency (ECHA)",
+      stakeholderRelevance: "Consultants, Architects, Government Engineers",
+      guarantees: "Safe chemical use across supply chain, eco-safety",
+    },
+    {
+      certification: "UL Certified",
+      issuingAuthority: "Underwriters Laboratories (USA)",
+      stakeholderRelevance: "Contractors, Architects, Consultants",
+      guarantees: "Global benchmark for fire, electrical & safety testing",
+    },
+    {
+      certification: "CE Mark",
+      issuingAuthority: "European Union",
+      stakeholderRelevance: "Consultants, Architects, Government Engineers",
+      guarantees: "EU health, safety, and environmental compliance",
+    },
+    {
+      certification: "GC-Mark",
+      issuingAuthority: "DQS (Germany)",
+      stakeholderRelevance: "Consultants, Architects, Contractors",
+      guarantees: "Trusted product certification for quality and reliability",
+    },
+    {
+      certification: "SMETA Confirmation",
+      issuingAuthority: "Sedex Members Ethical Trade Audit",
+      stakeholderRelevance: "Architects, Government Engineers, Consultants",
+      guarantees: "Ethical practices in labor, health & safety, environment",
+    },
+    {
+      certification: "NABL Accredited Labs",
+      issuingAuthority: "National Accreditation Board for Testing & Calibration Labs (India)",
+      stakeholderRelevance: "Government Engineers, Contractors, Consultants",
+      guarantees: "Independent lab testing, precision & reliable results",
+    },
+  ];
+  
 
   return (
     <>
@@ -345,15 +421,6 @@ const page = () => {
               innovation in the cable industry
             </p>
           </div>
-
-
-
-
-
-
-
-
-
 
           <div className="relative">
             <Swiper
@@ -410,18 +477,21 @@ const page = () => {
         <div className="container px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16" data-aos="fade-up">
-           
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-                Proven <span className="text-[var(--accent1)]">Engineering Excellence</span>
+                Proven{" "}
+                <span className="text-[var(--accent1)]">
+                  Engineering Excellence
+                </span>
               </h2>
               <p className="text-xl text-white max-w-3xl mx-auto">
-                Built on deep expertise, global certifications, and unwavering commitment to quality and performance
+                Built on deep expertise, global certifications, and unwavering
+                commitment to quality and performance
               </p>
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <div 
-                data-aos="fade-up" 
+              <div
+                data-aos="fade-up"
                 data-aos-delay="100"
                 className="group relative bg-white rounded-2xl p-4 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 overflow-hidden"
               >
@@ -434,14 +504,17 @@ const page = () => {
                     Proven Engineering Excellence
                   </h3>
                   <p className="text-gray-800 leading-relaxed">
-                    With over <strong>15 years</strong> in the industry, we deliver future-ready solutions built on deep engineering expertise, ensuring reliability for critical infrastructure projects.
+                    With over <strong>15 years</strong> in the industry, we
+                    deliver future-ready solutions built on deep engineering
+                    expertise, ensuring reliability for critical infrastructure
+                    projects.
                   </p>
                   <div className="w-0 group-hover:w-full h-1 bg-gradient-to-r from-[var(--accent1)] to-blue-600 transition-all duration-500 rounded-full mt-6"></div>
                 </div>
               </div>
 
-              <div 
-                data-aos="fade-up" 
+              <div
+                data-aos="fade-up"
                 data-aos-delay="200"
                 className="group relative bg-white rounded-2xl p-4 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 overflow-hidden"
               >
@@ -454,14 +527,18 @@ const page = () => {
                     Unmatched Global Certifications
                   </h3>
                   <p className="text-gray-800 leading-relaxed">
-                    As India&apos;s most certified wire and cable company, holding prestigious global accreditations like <strong>UL, RoHS 2, REACH, and IATF 16949:2016</strong>, we guarantee products that meet the highest international quality and safety standards.
+                    As India&apos;s most certified wire and cable company,
+                    holding prestigious global accreditations like{" "}
+                    <strong>UL, RoHS 2, REACH, and IATF 16949:2016</strong>, we
+                    guarantee products that meet the highest international
+                    quality and safety standards.
                   </p>
                   <div className="w-0 group-hover:w-full h-1 bg-gradient-to-r from-green-500 to-emerald-600 transition-all duration-500 rounded-full mt-6"></div>
                 </div>
               </div>
 
-              <div 
-                data-aos="fade-up" 
+              <div
+                data-aos="fade-up"
                 data-aos-delay="300"
                 className="group relative bg-white rounded-2xl p-4 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 overflow-hidden"
               >
@@ -474,14 +551,17 @@ const page = () => {
                     Trusted for Performance & Safety
                   </h3>
                   <p className="text-gray-800 leading-relaxed">
-                    We are a preferred partner, explicitly trusted by <strong>consultants, architects, and builders</strong> for delivering superior performance, unwavering safety, and sustainable solutions.
+                    We are a preferred partner, explicitly trusted by{" "}
+                    <strong>consultants, architects, and builders</strong> for
+                    delivering superior performance, unwavering safety, and
+                    sustainable solutions.
                   </p>
                   <div className="w-0 group-hover:w-full h-1 bg-gradient-to-r from-purple-500 to-indigo-600 transition-all duration-500 rounded-full mt-6"></div>
                 </div>
               </div>
 
-              <div 
-                data-aos="fade-up" 
+              <div
+                data-aos="fade-up"
                 data-aos-delay="400"
                 className="group relative bg-white rounded-2xl p-4 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 overflow-hidden"
               >
@@ -494,15 +574,18 @@ const page = () => {
                     Comprehensive Product Portfolio
                   </h3>
                   <p className="text-gray-800 leading-relaxed">
-                    Offering <strong>25+ product categories</strong>, we provide a robust range of solutions for diverse applications across <strong>Power, Construction, IT, and Automotive</strong> sectors, simplifying procurement for complex projects.
+                    Offering <strong>25+ product categories</strong>, we provide
+                    a robust range of solutions for diverse applications across{" "}
+                    <strong>Power, Construction, IT, and Automotive</strong>{" "}
+                    sectors, simplifying procurement for complex projects.
                   </p>
                   <div className="w-0 group-hover:w-full h-1 bg-gradient-to-r from-orange-500 to-red-600 transition-all duration-500 rounded-full mt-6"></div>
                 </div>
               </div>
             </div>
 
-            <div 
-              data-aos="fade-up" 
+            <div
+              data-aos="fade-up"
               data-aos-delay="500"
               className="mt-6 bg-white rounded-3xl p-8 border border-[var(--accent1)]/20"
             >
@@ -515,7 +598,11 @@ const page = () => {
                     Robust Manufacturing & Distribution
                   </h3>
                   <p className="text-lg text-gray-700 leading-relaxed">
-                    Supported by over <strong>600 skilled professionals</strong>, two active manufacturing units (with a third underway), and a network of <strong>1,000+ channel partners</strong>, we ensure consistent product availability and reliable supply chain support for projects nationwide.
+                    Supported by over <strong>600 skilled professionals</strong>
+                    , two active manufacturing units (with a third underway),
+                    and a network of <strong>1,000+ channel partners</strong>,
+                    we ensure consistent product availability and reliable
+                    supply chain support for projects nationwide.
                   </p>
                 </div>
               </div>
@@ -921,6 +1008,138 @@ const page = () => {
       </div>
 
       <WhyUsSection />
+      <div className="parent py-[100px]" id="certifications">
+        <div className="container flex flex-col items-center justify-center">
+          <h2
+            data-aos="fade-up"
+            data-aos-delay="200"
+            className="text-4xl lg:text-5xl font-[900] text-gray-900 mb-6"
+          >
+            Our Certifications
+          </h2>
+          <p
+            data-aos="fade-up"
+            data-aos-delay="400"
+            className="text-lg text-gray-600 max-w-3xl text-center mb-6"
+          >
+            Our comprehensive portfolio of international certifications demonstrates our unwavering commitment to excellence, safety, and environmental responsibility across every aspect of our operations.
+          </p>
+          <div className="w-full max-w-7xl mx-auto" data-aos="fade-up" data-aos-delay="600">
+            <div className="bg-gradient-to-br from-[#121722] via-emerald-900 to-[var(--accent3)] rounded-3xl shadow-2xl border border-gray-100 overflow-hidden">
+              {/* Desktop Table */}
+              <div className="hidden lg:block overflow-x-auto">
+                <table className="w-full">
+                  <thead  className="bg-white/10 backdrop-blur-sm border-b border-white/20">
+                    <tr>
+                      <th className="px-6 py-4 text-left text-sm font-semibold text-white uppercase tracking-wider">
+                        Certification
+                      </th>
+                      <th className="px-6 py-4 text-left text-sm font-semibold text-white uppercase tracking-wider">
+                        Issuing Authority
+                      </th>
+                      <th className="px-6 py-4 text-left text-sm font-semibold text-white uppercase tracking-wider">
+                        Stakeholder Relevance
+                      </th>
+                      <th className="px-6 py-4 text-left text-sm font-semibold text-white uppercase tracking-wider">
+                        Guarantees
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-white/20">
+                    {certifications.map((cert, index) => (
+                      <tr 
+                        key={index} 
+                        className="hover:bg-white/10 transition-all duration-300 group border-l-4 border-transparent hover:border-white/50"
+                      >
+                        <td className="px-6 py-4 whitespace-nowrap">
+                          <div className="flex items-center">
+                            <div className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-lg flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-200 shadow-lg group-hover:shadow-xl">
+                              <FaCertificate className="text-white text-sm" />
+                            </div>
+                            <div>
+                              <div className="text-sm font-semibold text-white group-hover:text-emerald-200 transition-colors">
+                                {cert.certification}
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                        <td className="px-6 py-4">
+                          <div className="text-sm text-white/80 group-hover:text-white transition-colors">
+                            {cert.issuingAuthority}
+                          </div>
+                        </td>
+                        <td className="px-6 py-4">
+                          <div className="text-sm text-white/80 group-hover:text-white transition-colors">
+                            {cert.stakeholderRelevance}
+                          </div>
+                        </td>
+                        <td className="px-6 py-4">
+                          <div className="text-sm text-white/80 group-hover:text-white transition-colors">
+                            {cert.guarantees}
+                          </div>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+
+              {/* Mobile Cards */}
+              <div className="lg:hidden">
+                <div className="p-6 space-y-6">
+                  {certifications.map((cert, index) => (
+                    <div 
+                      key={index}
+                      className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 shadow-lg hover:shadow-xl transition-all duration-300 group"
+                    >
+                      <div className="flex items-start gap-4">
+                        <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-200">
+                          <FaCertificate className="text-white text-lg" />
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <h4 className="text-lg font-bold text-white mb-3 group-hover:text-emerald-200 transition-colors">
+                            {cert.certification}
+                          </h4>
+                          
+                          <div className="space-y-3">
+                            <div>
+                              <span className="text-sm font-semibold text-white/70 uppercase tracking-wide">
+                                Issuing Authority
+                              </span>
+                              <p className="text-sm text-white/80 mt-1">
+                                {cert.issuingAuthority}
+                              </p>
+                            </div>
+                            
+                            <div>
+                              <span className="text-sm font-semibold text-white/70 uppercase tracking-wide">
+                                Stakeholder Relevance
+                              </span>
+                              <p className="text-sm text-white/80 mt-1">
+                                {cert.stakeholderRelevance}
+                              </p>
+                            </div>
+                            
+                            <div>
+                              <span className="text-sm font-semibold text-white/70 uppercase tracking-wide">
+                                Guarantees
+                              </span>
+                              <p className="text-sm text-white/80 mt-1">
+                                {cert.guarantees}
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
 
       <div className="parent py-[100px] bg-black/95 relative">
         <div

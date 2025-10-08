@@ -10,6 +10,7 @@ import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
+import Link from "next/link";
 
 const Certificates = () => {
   const certificates = [
@@ -188,6 +189,10 @@ const Certificates = () => {
               </SwiperSlide>
             ))}
           </Swiper>
+          <div className="w-full flex justify-center">
+
+            <Link href="/about#certifications" className="btn mx-auto">View All Certification Details</Link>
+          </div>
         </div>
       </div>
       
