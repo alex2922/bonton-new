@@ -14,28 +14,28 @@ const page = () => {
     },
     {
       name: "Mr. E.J. Francis",
-      designation: "Assistant General Manager: Kochi",
+      designation: "General Manager: Kochi",
       description:
         "Brings 30 years of experience in sales and marketing. Serving the company since 2008.",
       image: "/team/Mr. E.J. Francis.jpg",
     },
     {
       name: "Mr. Bhupesh Nangia",
-      designation: "Assistant General Manager: Sales & Marketing (Projects)",
+      designation: "General Manager: Sales & Marketing (Projects)",
       description:
         "Possesses over 34 years of extensive experience in sales and marketing. Serving at Bonton Cables since 2018.",
       image: "/team/Bhupesh Nangia.jpg",
     },
     {
       name: "Mr. Vivek Aggarwal",
-      designation: "Assistant General Manager: Jaipur",
+      designation: "General Manager: Jaipur",
       description:
         "Brings 30 years of experience in sales and marketing. Serving the organization since 2011.",
       image: "/team/Vivek Aggarwal.jpg",
     },
     {
       name: "Mr. Anil Pathania",
-      designation: "Assistant General Manager: Punjab",
+      designation: "General Manager: Punjab",
       description:
         "Has over 25 years of experience in sales and marketing. Became part of Bonton Cables in 2022.",
       image: "/team/Mr. Anil Pathania.jpg",
@@ -49,7 +49,7 @@ const page = () => {
     },
     {
       name: "Mr. Anil Dua",
-      designation: "Assistant General Manager: Institutional Sales & Marketing",
+      designation: "General Manager: Institutional Sales & Marketing",
       description:
         "Has 25 years of corporate experience in sales and marketing. Joined Bonton Cables in 2024.",
       image: "/team/Anil Dua .jpg",
@@ -78,18 +78,18 @@ const page = () => {
     {
       name: "Neetika Ghai",
       designation:
-        "Assistant General Manager: Business Development (Private Projects)",
+        "General Manager: Business Development (Private Projects)",
       description:
         "Brings 11+ years of experience in sales and marketing. Working with Bonton Cables since 2014.",
       image: "/team/Neetika Ghai.JPG",
     },
-    {
-      name: "Mr. Ankit Singh",
-      designation: "Quality Assurance: Head",
-      description:
-        "Has over 18 years of professional experience in Quality Assurance and Operations. Joined the company in 2018.",
-      image: "/team/Mr. Ankit Singh.jpg",
-    },
+    // {
+    //   name: "Mr. Ankit Singh",
+    //   designation: "Quality Assurance: Head",
+    //   description:
+    //     "Has over 18 years of professional experience in Quality Assurance and Operations. Joined the company in 2018.",
+    //   image: "/team/Mr. Ankit Singh.jpg",
+    // },
     {
       name: "Mr. Sandeep Kumar",
       designation: "Purchase Head",
@@ -106,26 +106,22 @@ const page = () => {
     },
     {
       name: "Mr. Ajay Chandulal Vyas",
-      designation: "Assistant General Manager: Punjab",
+      designation: "Branch Head: Gujrat",
       description:
         "Possesses over 25 years of professional expertise in Sales and Marketing, and became part of the company in 2024.",
       image: "/team/Ajay Chandulal Vyas.jpg",
     },
     {
       name: "Mr. Mohit Goel",
-      designation: "Sales & Marketing",
+      designation: "Branch Head: Trade (Delhi NCR, Western UP, Uttarakhand)",
       description:
         "Possesses over 12 years of professional expertise in Sales and Marketing, and became part of the company in 2022.",
       image: "/team/Mohit Goel.jpg",
     },
   ];
 
-
-
-
   return (
     <>
- 
       <SectionTop
         chip=""
         title="Our Leadership Team"

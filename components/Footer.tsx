@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { FaPhone, FaEnvelope, FaYoutube, FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 const Footer = () => {
   const date = new Date();
@@ -47,8 +48,8 @@ const Footer = () => {
           name: "deepak@bontoncablesindia.com",
           link: "mailto:deepak@bontoncablesindia.com",
         },
-        { name: "813 029 9001", link: "tel:+918130299001" },
-        { name: "956 078 0555", link: "tel:+919560780555" },
+        { name: "+91 813 029 9001", link: "tel:+918130299001" },
+        { name: "+91 956 078 0555", link: "tel:+919560780555" },
    
 
         {
@@ -107,10 +108,16 @@ const Footer = () => {
               <h2 className="text-lg font-semibold text-white">{nav.title}</h2>
               {nav.links.map((link, idx) => (
                 <Link
-                  className="text-hover text-white/70 hover:text-white transition-colors duration-200"
+                  className="text-hover text-white/70 hover:text-white transition-colors duration-200 flex items-center gap-2"
                   href={link.link}
                   key={idx}
                 >
+                  {link.link.startsWith('tel:') && <FaPhone className="text-sm rotate-90" />}
+                  {link.link.startsWith('mailto:') && <FaEnvelope className="text-sm" />}
+                  {link.link.includes('youtube.com') && <FaYoutube className="text-sm" />}
+                  {link.link.includes('facebook.com') && <FaFacebook className="text-sm" />}
+                  {link.link.includes('instagram.com') && <FaInstagram className="text-sm" />}
+                  {link.link.includes('linkedin.com') && <FaLinkedin className="text-sm" />}
                   {link.name}
                 </Link>
               ))}

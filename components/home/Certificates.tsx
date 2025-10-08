@@ -14,7 +14,7 @@ import 'swiper/css/navigation';
 const Certificates = () => {
   const certificates = [
     {
-      name: "IATF 16949",
+      name: "IATF 16949:20126",
       image: "/home/Certifications/IATF.jpg",
       description:
         "The gold standard in automotive quality management. This prestigious global certification ensures our cables meet the most stringent demands of the automotive industry worldwide.",
@@ -56,10 +56,10 @@ const Certificates = () => {
         "Our in-house quality laboratories are accredited by NABL, ensuring precise and reliable testing of raw materials and finished products to industry-leading standards.",
     },
     {
-      name: "TÜV SÜD South Asia",
+      name: "TUV SUD South Asia",
       image: "/home/Certifications/TUV SUD.jpg",
       description:
-        "TÜV SÜD certification demonstrates our commitment to meeting international safety and quality standards, ensuring our products are tested and verified by independent experts.",
+        "TUV SUD certification demonstrates our commitment to meeting international safety and quality standards, ensuring our products are tested and verified by independent experts.",
     },
   ];
 
