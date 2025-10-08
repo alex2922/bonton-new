@@ -98,7 +98,7 @@ const HomeCategoriesSections = () => {
                               {item.name}
                             </h3>
                             <p className="text-gray-600 text-xs md:text-sm leading-tight line-clamp-4">
-                              {item.shortDescription}
+                             &quot; {item.shortDescription} &quot;
                             </p>
                           </div>
                           

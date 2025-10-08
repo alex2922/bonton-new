@@ -2,101 +2,103 @@ import SectionTop from '@/components/SectionTop';
 import Image from 'next/image'
 
 const Plan2035 = () => {
-  // Mapping company names to their logo files
-  const companyLogoMap: { [key: string]: string } = {
-    "DLF": "DLF.png",
-    "Ireo": "IREO.png",
-    "Vatika": "VATIKA.png",
-    "Emaar": "EMAAR.png",
-    "MGF": "MGF.png",
-    "M3M": "M3M.png",
-    "Lodha": "LODHA.png",
-    "Kalpataru": "KALPATARU.png",
-    "Raheja": "RAHEJA.png",
-    "Brigade": "BRIGADE GROUP.png",
-    "LULU": "LULU.png",
-    "Godrej": "Godrej.png",
-    "TATA Projects": "TATA PROJECTS.png",
-    "Lotus Green": "LOTUS GREENS.png",
-    "Smart World": "SMART WORLD.png",
-    "Foxconn": "FOXCONN.png",
-    "NVIDIA": "NVIDIA.png",
-    "Micron": "MICRON.png",
-    "Engineers India Limited": "EIL.png",
-    "Tyco": "TYCO.png",
-    "Minda": "MINDA.png",
-    "Srinisons": "SRINISONS.png",
-    "Johnson Controls": "Johnson Controls.png",
-    "Honeywell": "HONEYWELL.png",
-    "Siemens": "SIEMENS.png",
-    "GE": "GE.png",
-    "Schneider": "Scheider.png",
-    "Rockwell Automation": "Rockwell automation.png",
-    "Google": "Google.png",
-    "Dell": "DELL.png",
-    "IBM": "IBM.png",
-    "EnY": "EnY.png",
-    "HCL": "HCL.png",
-    "HSBC": "HSBC.png",
-    "Bank of America": "BANK OF AMERICA.png",
-    "KPMG": "KPMG.png",
-    "Amazon Web Services": "AWS.png",
-    "Amazon": "AMAZON.png",
-    "Nxtra": "NEXTRA.png",
-    "Flipkart": "FLIPKART.png",
-    "Delhivery": "DELHIVERY.png",
-    "AIIMS": "AIIMS.png",
-    "Fortis": "Fortis.png",
-    "Apollo Hospitals": "APOLLO HOSPITALS.png",
-    "Sheraton": "SHERATON.png",
-    "Holiday INN": "HOLIDAY INN.png",
-    "Marriott": "MARRIOTT.png",
-    "Crowne Plaza": "CROWNE PLAZA.png",
-    "Four Seasons": "FOUR SEASONS.png",
-    "Grand Hyatt": "GRAND HYATT.png",
-    "Country Inn": "COUNTRY INN.png",
-    "Taj": "TAJ.png",
-    "IHG": "IHG.png",
-    "Airtel": "Airtel.png",
-    "Vodafone Idea": "VI.png",
-    "Ericsson": "ERICSSON.png",
-    "Aircel": "AIRCEL.png",
-    "Indus Towers": "INDUS TOWERS.png",
-    "Reliance Jio": "JIO.png",
-    "Nokia": "NOKIA.png",
-    "NBCC": "NBCC.png",
-    "CPWD": "CPWD.png",
-    "DDA": "DDA.png",
-    "MHADA": "MHADA.png",
-    "CIDCO": "CIDCO.png",
-    "DMRC": "DMRC.png",
-    "Lucknow Metro": "LUCKNOW METRO.png",
-    "Bangalore Metro": "Bangalore metro.png",
-    "Pune Metro": "Pune Metro.png",
-    "Mumbai Metro": "MUMBAI METRO.png",
-    "Ahmedabad Metro": "AHMEDABAD METRO.png",
-    "Kanpur Metro": "KANPUR METRO.png",
-    "Airport Authority of India": "AAI.png",
-    "Delta": "DELTA.png",
-    "Tricolite": "TRICOLITE.png",
-    "Adelac": "ADELAC.png",
-    "Jackson": "JAKSON.png",
-    "Panasonic": "PANASONIC.png",
-    "Exicom": "EXICOM.png",
-    "Voltas": "VOLTAS.png",
-    "MasterCard": "MASTERCARD.png",
-    "Salesforce": "SALESFORCE.png",
-    "We Work": "WEWORK.png",
-    "WeWork": "WEWORK.png",
-    "Max Hospital":"max.png",
-    "ESIC":"esic.png",
-    "Medanta":"medanta.png",
-    "Jaypee Group":"jaypee_small.png",
-    "The 3C Company":"3c.png",
-    "Ambience Mall":"ambience mall.png",
-    "Bharti Infra Limited":"bharti.png"
-
+  // Combined company data with logo file and background color
+  const companyData: { [key: string]: { logo: string; bgColor: string } } = {
+    "DLF": { logo: "DLF.png", bgColor: "#ffffff" },
+    "Ireo": { logo: "IREO.png", bgColor: "#ebebe7" },
+    "Vatika": { logo: "VATIKA.png", bgColor: "#ffffff" },
+    "Emaar": { logo: "EMAAR.png", bgColor: "#ebebe7" },
+    "MGF": { logo: "MGF.png", bgColor: "#ffffff" },
+    "M3M": { logo: "M3M.png", bgColor: "#ffffff" },
+    "Lodha": { logo: "LODHA.png", bgColor: "#ebebe7" },
+    "Kalpataru": { logo: "KALPATARU.png", bgColor: "#ebebe7" },
+    "Raheja": { logo: "RAHEJA.png", bgColor: "#ffffff" },
+    "Brigade": { logo: "BRIGADE GROUP.png", bgColor: "#ffffff" },
+    "LULU": { logo: "LULU.png", bgColor: "#ffffff" },
+    "Godrej": { logo: "Godrej.png", bgColor: "#ebebe7" },
+    "TATA Projects": { logo: "TATA PROJECTS.png", bgColor: "#ffffff" },
+    "Lotus Green": { logo: "LOTUS GREENS.png", bgColor: "#ffffff" },
+    "Smart World": { logo: "SMART WORLD.png", bgColor: "#ffffff" },
+    "Foxconn": { logo: "FOXCONN.png", bgColor: "#d4d1cc" },
+    "NVIDIA": { logo: "NVIDIA.png", bgColor: "#d4d1cc" },
+    "Micron": { logo: "MICRON.png", bgColor: "#ffffff" },
+    "Engineers India Limited": { logo: "EIL.png", bgColor: "#ffffff" },
+    "Tyco": { logo: "TYCO.png", bgColor: "#ffffff" },
+    "Minda": { logo: "MINDA.png", bgColor: "#ffffff" },
+    "Srinisons": { logo: "SRINISONS.png", bgColor: "#ffffff" },
+    "Johnson Controls": { logo: "Johnson Controls.png", bgColor: "#f5f5f5" },
+    "Honeywell": { logo: "HONEYWELL.png", bgColor: "#c5c5c5" },
+    "Siemens": { logo: "SIEMENS.png", bgColor: "#e5e5e5" },
+    "GE": { logo: "GE.png", bgColor: "#ebebe7" },
+    "Schneider": { logo: "Scheider.png", bgColor: "#d4d1cc" },
+    "Rockwell Automation": { logo: "Rockwell automation.png", bgColor: "#d4d1cc" },
+    "Google": { logo: "Google.png", bgColor: "#eee" },
+    "Dell": { logo: "DELL.png", bgColor: "#d4d1cc" },
+    "IBM": { logo: "IBM.png", bgColor: "#d4d1cc" },
+    "EnY": { logo: "EnY.png", bgColor: "#d4d1cc" },
+    "HCL": { logo: "HCL.png", bgColor: "#d4d1cc" },
+    "HSBC": { logo: "HSBC.png", bgColor: "#d4d1cc" },
+    "Bank of America": { logo: "BANK OF AMERICA.png", bgColor: "#d4d1cc" },
+    "KPMG": { logo: "KPMG.png", bgColor: "#d4d1cc" },
+    "Amazon Web Services": { logo: "AWS.png", bgColor: "#d4d1cc" },
+    "Amazon": { logo: "AMAZON.png", bgColor: "#eee" },
+    "Nxtra": { logo: "NEXTRA.png", bgColor: "#ffffff" },
+    "Flipkart": { logo: "FLIPKART.png", bgColor: "#eee" },
+    "Delhivery": { logo: "DELHIVERY.png", bgColor: "#d4d1cc" },
+    "AIIMS": { logo: "AIIMS.png", bgColor: "#eee" },
+    "Fortis": { logo: "Fortis.png", bgColor: "#d4d1cc" },
+    "Apollo Hospitals": { logo: "APOLLO HOSPITALS.png", bgColor: "#d4d1cc" },
+    "Sheraton": { logo: "SHERATON.png", bgColor: "#d4d1cc" },
+    "Holiday INN": { logo: "HOLIDAY INN.png", bgColor: "#ffffff" },
+    "Marriott": { logo: "MARRIOTT.png", bgColor: "#ffffff" },
+    "Crowne Plaza": { logo: "CROWNE PLAZA.png", bgColor: "#d4d1cc" },
+    "Four Seasons": { logo: "FOUR SEASONS.png", bgColor: "#ffffff" },
+    "Grand Hyatt": { logo: "GRAND HYATT.png", bgColor: "#ffffff" },
+    "Country Inn": { logo: "COUNTRY INN.png", bgColor: "#ffffff" },
+    "Taj": { logo: "TAJ.png", bgColor: "#ffffff" },
+    "IHG": { logo: "IHG.png", bgColor: "#ddd" },
+    "Airtel": { logo: "Airtel.png", bgColor: "#d4d1cc" },
+    "Vodafone Idea": { logo: "VI.png", bgColor: "#ffffff" },
+    "Ericsson": { logo: "ERICSSON.png", bgColor: "#d4d1cc" },
+    "Aircel": { logo: "AIRCEL.png", bgColor: "#ffffff" },
+    "Indus Towers": { logo: "INDUS TOWERS.png", bgColor: "#ffffff" },
+    "Reliance Jio": { logo: "JIO.png", bgColor: "#ffffff" },
+    "Nokia": { logo: "NOKIA.png", bgColor: "#d4d1cc" },
+    "NBCC": { logo: "NBCC.png", bgColor: "#ffffff" },
+    "CPWD": { logo: "CPWD.png", bgColor: "#ffffff" },
+    "DDA": { logo: "DDA.png", bgColor: "#ffffff" },
+    "MHADA": { logo: "MHADA.png", bgColor: "#eee" },
+    "CIDCO": { logo: "CIDCO.png", bgColor: "#eee" },
+    "DMRC": { logo: "DMRC.png", bgColor: "#000" },
+    "Lucknow Metro": { logo: "LUCKNOW METRO.png", bgColor: "#ffffff" },
+    "Bangalore Metro": { logo: "Bangalore metro.png", bgColor: "#d4d1cc" },
+    "Pune Metro": { logo: "Pune Metro.png", bgColor: "#ffffff" },
+    "Mumbai Metro": { logo: "MUMBAI METRO.png", bgColor: "#d4d1cc" },
+    "Ahmedabad Metro": { logo: "AHMEDABAD METRO.png", bgColor: "#eee" },
+    "Kanpur Metro": { logo: "KANPUR METRO.png", bgColor: "#eee" },
+    "Airport Authority of India": { logo: "AAI.png", bgColor: "#eee" },
+    "Delta": { logo: "DELTA.png", bgColor: "#ffffff" },
+    "Tricolite": { logo: "TRICOLITE.png", bgColor: "#ffffff" },
+    "Adelac": { logo: "ADELAC.png", bgColor: "#ffffff" },
+    "Jackson": { logo: "JAKSON.png", bgColor: "#ffffff" },
+    "Panasonic": { logo: "PANASONIC.png", bgColor: "#ffffff" },
+    "Exicom": { logo: "EXICOM.png", bgColor: "#ffffff" },
+    "Voltas": { logo: "VOLTAS.png", bgColor: "#d4d1cc" },
+    "MasterCard": { logo: "MASTERCARD.png", bgColor: "#d4d1cc" },
+    "Salesforce": { logo: "SALESFORCE.png", bgColor: "#d4d1cc" },
+    "We Work": { logo: "WEWORK.png", bgColor: "#ffffff" },
+    "WeWork": { logo: "WEWORK.png", bgColor: "#ffffff" },
+    "Max Hospital": { logo: "max.png", bgColor: "#eee" },
+    "ESIC": { logo: "esic.png", bgColor: "#ffffff" },
+    "Medanta": { logo: "medanta.png", bgColor: "#d4d1cc" },
+    "Jaypee Group": { logo: "jaypee_small.png", bgColor: "#bfbfbf" },
+    "The 3C Company": { logo: "3c.png", bgColor: "#ffffff" },
+    "Ambience Mall": { logo: "ambience mall.png", bgColor: "#e5e5e5" },
+    "Bharti Infra Limited": { logo: "bharti.png", bgColor: "#d4d1cc" }
   };
+  
+  // Default background color for logos not specified above
+  const defaultBgValue = "#ebebe7";
 
   const sectors = [
     {
@@ -123,7 +125,8 @@ const Plan2035 = () => {
         "NVIDIA",
         "Micron",
         "Engineers India Limited",
-        "Jaypee Group" 
+        "Jaypee Group",
+        "Lodha",
       ],
     },
     {
@@ -253,7 +256,7 @@ const Plan2035 = () => {
     <>
     <SectionTop
         chip="Beyond Cables. Beyond Current. Beyond Limits."
-        title="Applications by Sectors"
+        title="Application by Sector"
         description="    Trusted by industry leaders across diverse sectors, our innovative
             cable solutions power critical infrastructure and drive
             technological advancement."
@@ -298,7 +301,7 @@ const Plan2035 = () => {
                   {/* Company Logos Grid */}
                   <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-2 xl:grid-cols-3 gap-3 sm:gap-4">
                     {item.companies.map((company, companyIndex) => {
-                      const logoFile = companyLogoMap[company];
+                      const companyInfo = companyData[company];
                       const isSpecialCase = company === "Shopping malls and airports";
                       
                       return (
@@ -310,10 +313,13 @@ const Plan2035 = () => {
                             <div className="w-10 h-10 sm:w-12 sm:h-12 mb-2 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center">
                               <span className="text-white text-sm sm:text-lg">🏢</span>
                             </div>
-                          ) : logoFile ? (
-                            <div className="relative w-10 h-10 sm:w-12 sm:h-12 mb-2 flex items-center justify-center rounded-full overflow-hidden bg-white shadow-sm">
+                          ) : companyInfo ? (
+                            <div 
+                              className="relative w-10 h-10 sm:w-12 sm:h-12 mb-2 flex items-center justify-center rounded-full overflow-hidden shadow-sm"
+                              style={{ backgroundColor: companyInfo.bgColor }}
+                            >
                               <Image
-                                src={`/3D Client Logos/${logoFile}`}
+                                src={`/3D Client Logos/${companyInfo.logo}`}
                                 alt={`${company} logo`}
                                 fill
                                 className="object-contain p-1"

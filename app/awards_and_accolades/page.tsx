@@ -1,5 +1,6 @@
 import Certificates from "@/components/home/Certificates";
 import SectionTop from "@/components/SectionTop";
+import TiltWrapper from "@/components/TiltWrapper";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -128,25 +129,34 @@ const Plan2035 = () => {
             >
               <div className="relative w-[100%] lg:max-w-[500px] p-3 lg:p-6 h-[300px] lg:h-auto lg:aspect-square">
                 <Image
-                  src={award.img}
-                  alt={award.title}
-                  fill
-                  className="object-contain z-2"
-                />
-                <Image
                   src="/awards/bg.png"
                   alt={"background"}
                   fill
-                  className="absolute  object-cover z-1"
+                  className="absolute object-cover z-[1]"
                 />
+                <TiltWrapper 
+                  className="relative w-full h-full z-[2]"
+                  tiltMaxAngleX={20}
+                  tiltMaxAngleY={20}
+                  scale={1.05}
+                  transitionSpeed={300}
+                >
+                  <Image
+                    src={award.img}
+                    alt={award.title}
+                    fill
+                    className="object-contain"
+                  />
+                </TiltWrapper>
               </div>
-              <div className="flex w-full flex-col gap-4 p-6">
+              <div className="flex w-full flex-col gap-4 p-6 bg-gradient-to-br from-[#121722]   via-emerald-500/80 to-transparent relative">
+                <Image src="/awards/bg.png" alt={award.title} fill className="object-cover absolute top-0 left-0 -z-1" />
                 <span className="chip">{award.chip}</span>
                 <h3 className="font-bold text-2xl -mb-4">{award.title}</h3>
-                <h4 className="font-bold text-md text-[var(--accent1)]">
+                <h4 className="font-bold text-md text-white">
                   {award.event}
                 </h4>
-                <p className="text-black/90 ">{award.desc}</p>
+                <p className="text-white/90 ">{award.desc}</p>
 
                 {award.info.map((info, index) => (
                   <div

@@ -146,7 +146,7 @@ export default function TestimonialSlider() {
                         {/* Testimonial */}
                         <div className="flex-1 flex flex-col justify-between">
                           <p className="text-gray-700 text-sm leading-relaxed mb-4">
-                            {story.testimonial}
+                          &quot; {story.testimonial} &quot;
                           </p>
                           
                           {/* Rating */}

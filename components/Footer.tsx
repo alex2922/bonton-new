@@ -12,7 +12,7 @@ const Footer = () => {
         { name: "About Us", link: "/about" },
         { name: "Our Clients", link: "/#client-success-stories" },
         { name: "Client Success Stories", link: "/#client-success-stories" },
-        { name: "Applications by Sectors", link: "/sectors_of_work" },
+        { name: "Application by Sector", link: "/sectors_of_work" },
         { name: "Awards & Accolades", link: "/awards_and_accolades" },
         {
           name: "Corporate Social Responsibility",
