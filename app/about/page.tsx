@@ -43,7 +43,7 @@ import SectionTop from "@/components/SectionTop";
 const page = () => {
   type CounterItem = {
     title: string;
-    count:  string;
+    count: string;
     icon: IconType;
     additional?: string;
   };
@@ -160,7 +160,8 @@ const page = () => {
     },
     {
       title: "Strong rebound & boom (2020–25) ",
-      description: "Major upward momentum, culminating in ₹700 Cr +  in 2024–25.",
+      description:
+        "Major upward momentum, culminating in ₹700 Cr +  in 2024–25.",
     },
   ];
 
@@ -375,12 +376,12 @@ const page = () => {
     },
     {
       certification: "NABL Accredited Labs",
-      issuingAuthority: "National Accreditation Board for Testing & Calibration Labs (India)",
+      issuingAuthority:
+        "National Accreditation Board for Testing & Calibration Labs (India)",
       stakeholderRelevance: "Government Engineers, Contractors, Consultants",
       guarantees: "Independent lab testing, precision & reliable results",
     },
   ];
-  
 
   return (
     <>
@@ -473,10 +474,7 @@ const page = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16" data-aos="fade-up">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-                Proven{" "}
- 
-                  Engineering Excellence
-             
+                Proven Engineering Excellence
               </h2>
               <p className="text-xl text-white max-w-3xl mx-auto">
                 Built on deep expertise, global certifications, and unwavering
@@ -1014,17 +1012,89 @@ const page = () => {
           </h2>
           <p
             data-aos="fade-up"
+            data-aos-delay="300"
+            className="text-lg text-black max-w-3xl text-center mb-6 !italic"
+          >
+            India&apos;s Most Certified Cable Company
+          </p>
+          <p
+            data-aos="fade-up"
             data-aos-delay="400"
             className="text-lg text-black max-w-3xl text-center mb-6"
           >
-            Our comprehensive portfolio of international certifications demonstrates our unwavering commitment to excellence, safety, and environmental responsibility across every aspect of our operations.
+            Our comprehensive portfolio of international certifications
+            demonstrates our unwavering commitment to excellence, safety, and
+            environmental responsibility across every aspect of our operations.
           </p>
-          <div className="w-full max-w-7xl mx-auto" data-aos="fade-up" data-aos-delay="600">
+          
+          {/* Certification Logos Marquee */}
+          <div 
+            className="w-full overflow-hidden relative my-12"
+            data-aos="fade-up"
+            data-aos-delay="500"
+          >
+            <div className="flex animate-scroll gap-8 items-center hover:pause-animation">
+              {[
+                'CE.png',
+                'DQS.png',
+                'EU.png',
+                'GC.png',
+                // 'HEALTH and Safety.png',
+                'IATF.png',
+                'IQ NET.png',
+                'IS.png',
+                'ISO 9001_ 2015.png',
+                'ISO.png',
+                'NABL.png',
+                'NO FIRE.png',
+                'ROHS & REACH.png',
+                'ROHS 2.png',
+                'SEDEX.png',
+                'SMETA.png',
+                'TUV SUD.png',
+                'UL.png'
+              ].concat([
+                'CE.png',
+                'DQS.png',
+                'EU.png',
+                'GC.png',
+                // 'HEALTH and Safety.png',
+                'IATF.png',
+                'IQ NET.png',
+                'IS.png',
+                'ISO 9001_ 2015.png',
+                'ISO.png',
+                'NABL.png',
+                'NO FIRE.png',
+                'ROHS & REACH.png',
+                'ROHS 2.png',
+                'SEDEX.png',
+                'SMETA.png',
+                'TUV SUD.png',
+                'UL.png'
+              ]).map((logo, index) => (
+                <div key={`${logo}-${index}`} className="flex-shrink-0 flex items-center justify-center px-4">
+                  <Image
+                    src={`/3D Certification Logos/${logo}`}
+                    alt={`Certification logo ${index + 1}`}
+                    width={120}
+                    height={80}
+                    className="max-w-[120px] max-h-[80px] w-auto h-auto object-contain md:max-w-[120px] md:max-h-[80px] sm:max-w-[80px] sm:max-h-[60px] rounded-[100px]"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+          <div
+            className="w-full max-w-7xl mx-auto"
+            data-aos="fade-up"
+            data-aos-delay="600"
+          >
             <div className="bg-gradient-to-br from-[#121722] via-emerald-900 to-[var(--accent3)] rounded-3xl shadow-2xl border border-gray-100 overflow-hidden">
               {/* Desktop Table */}
               <div className="hidden lg:block overflow-x-auto">
                 <table className="w-full">
-                  <thead  className="bg-white/10 backdrop-blur-sm border-b border-white/20">
+                  <thead className="bg-white/10 backdrop-blur-sm border-b border-white/20">
                     <tr>
                       <th className="px-6 py-4 text-left text-sm font-semibold text-white uppercase tracking-wider">
                         Certification
@@ -1042,8 +1112,8 @@ const page = () => {
                   </thead>
                   <tbody className="divide-y divide-white/20">
                     {certifications.map((cert, index) => (
-                      <tr 
-                        key={index} 
+                      <tr
+                        key={index}
                         className="hover:bg-white/10 transition-all duration-300 group border-l-4 border-transparent hover:border-white/50"
                       >
                         <td className="px-6 py-4 whitespace-nowrap">
@@ -1083,7 +1153,7 @@ const page = () => {
               <div className="lg:hidden">
                 <div className="p-6 space-y-6">
                   {certifications.map((cert, index) => (
-                    <div 
+                    <div
                       key={index}
                       className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 shadow-lg hover:shadow-xl transition-all duration-300 group"
                     >
@@ -1095,7 +1165,7 @@ const page = () => {
                           <h4 className="text-lg font-bold text-white mb-3 group-hover:text-emerald-200 transition-colors">
                             {cert.certification}
                           </h4>
-                          
+
                           <div className="space-y-3">
                             <div>
                               <span className="text-sm font-semibold text-white/70 uppercase tracking-wide">
@@ -1105,7 +1175,7 @@ const page = () => {
                                 {cert.issuingAuthority}
                               </p>
                             </div>
-                            
+
                             <div>
                               <span className="text-sm font-semibold text-white/70 uppercase tracking-wide">
                                 Stakeholder Relevance
@@ -1114,7 +1184,7 @@ const page = () => {
                                 {cert.stakeholderRelevance}
                               </p>
                             </div>
-                            
+
                             <div>
                               <span className="text-sm font-semibold text-white/70 uppercase tracking-wide">
                                 Guarantees
@@ -1132,7 +1202,6 @@ const page = () => {
               </div>
             </div>
           </div>
-
         </div>
       </div>
 
@@ -1346,6 +1415,25 @@ const page = () => {
           </div>
         </div>
       </div>
+      
+      <style jsx>{`
+        @keyframes scroll {
+          0% {
+            transform: translateX(100%);
+          }
+          100% {
+            transform: translateX(-300%);
+          }
+        }
+        
+        .animate-scroll {
+          animation: scroll 20s linear infinite;
+        }
+        
+        .hover\\:pause-animation:hover {
+          animation-play-state: paused;
+        }
+      `}</style>
     </>
   );
 };
