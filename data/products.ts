@@ -2,6 +2,9 @@ const products = [
   {
     name: "Fire Survival Cables",
     slug: "fire-survival-cables",
+    type: "Fire Safety",
+    standard: "IS 17505-1 / BS 7846",
+    industry: "Residential & High-Rise",
     shortDescription:
       "In heat and flame, we stand our ground,  Power stays on when danger surrounds.  Built to protect, where safety is crowned. ",
     longDescription:
@@ -186,7 +189,7 @@ const products = [
         gauge: 150,
         weight: "1600kg - 2000kg",
         dimension: "35mm - 42mm",
-        coresLength: [500, 1000],
+        coresLength: [250, 500],
         cableType: ["Copper Conductor", "LSZH Insulated"],
         color: ["Red"],
         colorCustomization: true,
@@ -200,7 +203,7 @@ const products = [
         gauge: 185,
         weight: "2000kg - 2400kg",
         dimension: "38mm - 45mm",
-        coresLength: [500, 1000],
+        coresLength: [250, 500],
         cableType: ["Copper Conductor", "LSZH Insulated"],
         color: ["Red"],
         colorCustomization: true,
@@ -214,7 +217,7 @@ const products = [
         gauge: 240,
         weight: "2500kg - 3000kg",
         dimension: "42mm - 50mm",
-        coresLength: [500, 1000],
+        coresLength: [250, 500],
         cableType: ["Copper Conductor", "LSZH Insulated"],
         color: ["Red"],
         colorCustomization: true,
@@ -228,7 +231,7 @@ const products = [
         gauge: 300,
         weight: "3100kg - 3800kg",
         dimension: "45mm - 55mm",
-        coresLength: [500, 1000],
+        coresLength: [250, 500],
         cableType: ["Copper Conductor", "LSZH Insulated"],
         color: ["Red"],
         colorCustomization: true,
@@ -446,6 +449,9 @@ const products = [
   {
     name: "Solar Cables",
     slug: "solar-cables",
+    type: "Power & Energy",
+    standard: "IS 10293 / TUV Certified",
+    industry: "Solar & Renewable",
     shortDescription:
       "Harness the sun with wires so bright,​ Eco-powered days and starry night.​ Future-ready, clean, and light.​",
     longDescription:
@@ -457,18 +463,46 @@ const products = [
     ],
     variants: [
       {
-        cores: [1, 2, 3, 4, 5, 7, 8, 9, 10, 12, 37],
-        modelNumber: "110341",
+        cores: [1], 
+        modelNumber: "NA",
         gauge: 1.5,
-        coresLength: [500, 1000],
-        cableType: ["Copper Conductor", "LSZH Insulated"],
-        color: ["Red"],
-        colorCustomization: true,
-        weight: "20kg - 40kg",
-        dimension: "6mm - 8mm",
-        packagingType: "Coils/Wooden Drums",
+        coresLength: [100 , 500],
+        cableType: ["Tinned Copper,", "XLPE Insulated"],
+        color: ["Red" , "black"],
+        colorCustomization: false,
+        weight: "20kg - 30kg",
+        dimension: "5mm - 6mm",
+        packagingType: "Coils (100 m standard)",
         unitsPerPack: "as per order",
-        warrantyPeriod: "1 Year (extendable)",
+        warrantyPeriod: "25 years +",
+      },
+      {
+        cores: [1], 
+        modelNumber: "NA",
+        gauge: 2.5,
+        coresLength: [200 , 500 , 1000],
+        cableType: ["Tinned Copper,", "XLPE Insulated"],
+        color: ["Red" , "black"],
+        colorCustomization: false,
+        weight: "30kg - 45kg",
+        dimension: "6mm - 7mm",
+        packagingType: "Coils (100 m standard)",
+        unitsPerPack: "as per order",
+        warrantyPeriod: "25 years +",
+      },
+      {
+        cores: [1], 
+        modelNumber: "NA",
+        gauge: 4,
+        coresLength: [200 , 500 , 1000],
+        cableType: ["Tinned Copper,", "XLPE Insulated"],
+        color: ["Red" , "black"],
+        colorCustomization: false,
+        weight: "55kg - 70kg",
+        dimension: "7mm - 8mm",
+        packagingType: "Coils (100 m standard)",
+        unitsPerPack: "as per order",
+        warrantyPeriod: "25 years +",
       },
     ],
     construction: [
@@ -626,6 +660,9 @@ const products = [
   {
     name: "Co axial Cables",
     slug: "co-axial-cables",
+    type: "Communication",
+    standard: "IEC / UL / ASTM / JIS / DIN",
+    industry: "Special Environments",
     shortDescription:
       "Signal sharp, no static sway,​ From screens to sounds, we lead the way.​ Reliable reach every day.​ ",
     longDescription: "",
@@ -638,6 +675,9 @@ const products = [
   {
     name: "Heavy Duty Cables",
     slug: "heavy-duty-cables",
+    type: "Industrial",
+    standard: "IS 7098-1 / IS 1554-1 / BS 5467",
+    industry: "Infrastructure & Metro",
     shortDescription:
       "For power that lifts, hauls, and drives,​ Tough and rugged where force thrives.​ Industrial strength that always survives.​",
     longDescription: "",
@@ -650,6 +690,9 @@ const products = [
   {
     name: "LAN Cables",
     slug: "lan-cables",
+    type: "Communication",
+    standard: "IEC / UL / ASTM / JIS / DIN",
+    industry: "Telecom & Data Centres",
     shortDescription:
       "Fast as thought, across each floor,​Streaming signals through every core.​ Connect. Communicate. Explore.​",
     longDescription: "",
@@ -659,6 +702,9 @@ const products = [
   {
     name: "Telecom Cables",
     slug: "telecom-cables",
+    type: "Communication",
+    standard: "IEC / UL / ASTM / JIS / DIN",
+    industry: "Telecom & Data Centres",
     shortDescription:
       "Crystal clear from end to end,​Voices, data, messages send.​Built for networks that never bend.​​",
     longDescription: "",
@@ -671,6 +717,9 @@ const products = [
   {
     name: "Building Wires",
     slug: "building-wires",
+    type: "Building Infrastructure",
+    standard: "IS 694 / BS 6004/6500",
+    industry: "Residential & High-Rise",
     shortDescription:
       "Homes and towers, safe and neat,​ Wiring lives from wall to street.​ Reliable strength in every beat.​​",
     longDescription: "",
@@ -688,6 +737,9 @@ const products = [
   {
     name: "Uninyvin Cables",
     slug: "uninyvin-cables",
+    type: "Power & Energy",
+    standard: "IS 10241 / BS G 177",
+    industry: "Solar & Renewable",
     shortDescription:
       "Heat-defying, lean, and light,​Wiring tech that takes its flight.​ From UPS to skies in silent might.​​",
     longDescription: "",
@@ -700,6 +752,9 @@ const products = [
   {
     name: "Control and Instrumentation Cables",
     slug: "control-and-instrumentation-cables",
+    type: "Industrial",
+    standard: "BS EN 50288-7 / IEC / UL / ASTM / JIS / DIN",
+    industry: "Automotive & Industrial",
     shortDescription:
       "Signals flow smooth, no room for fear,​Precision and control are always clear. We carry commands both far and near.​​​",
     longDescription: "",
@@ -711,6 +766,9 @@ const products = [
   {
     name: "Automotive Cables",
     slug: "automotive-cables",
+    type: "Automotive",
+    standard: "DIN / JASO / SAE / ISO / IATF 16949:2016",
+    industry: "Automotive & Industrial",
     shortDescription:
       "Racing, road, and the drive,​ Wires that know no bounds.​ Built for speed, where limits are defied.​​",
     longDescription: "",
@@ -723,6 +781,9 @@ const products = [
   {
     name: "Multicore Cables",
     slug: "multicore-cables",
+    type: "Power & Energy",
+    standard: "BS EN 50525 / BS 6004/6500",
+    industry: "Commercial & Offices",
     shortDescription:
       "Many hearts in one strong skin,​Organized power flows within. Smart wiring for every win.​​",
     longDescription: "",
@@ -735,6 +796,9 @@ const products = [
   {
     name: "Power Cables",
     slug: "power-cables",
+    type: "Power & Energy",
+    standard: "BS EN 50525 / UL Listed",
+    industry: "Power & Utilities",
     shortDescription:
       "Energy flows strong, through every line,​ Powering progress, design divine.​ Reliable current, always fine.​",
     longDescription: "",

@@ -7,6 +7,7 @@ import { useState } from "react";
 import SectionTop from "@/components/SectionTop";
 
 const Page = () => {
+  const [activeCategory, setActiveCategory] = useState("type");
   const [activeFilter, setActiveFilter] = useState("all");
 
   const getFilteredProducts = () => {
@@ -14,13 +15,35 @@ const Page = () => {
     return products.filter((product) => product.slug === activeFilter);
   };
 
+  const getProductsByCategory = () => {
+    if (activeCategory === "type") {
+      return products.reduce((acc, product) => {
+        const type = product.type;
+        if (!acc[type]) acc[type] = [];
+        acc[type].push(product);
+        return acc;
+      }, {} as Record<string, typeof products>);
+    } else if (activeCategory === "standard") {
+      return products.reduce((acc, product) => {
+        const standard = product.standard;
+        if (!acc[standard]) acc[standard] = [];
+        acc[standard].push(product);
+        return acc;
+      }, {} as Record<string, typeof products>);
+    } else if (activeCategory === "industry") {
+      return products.reduce((acc, product) => {
+        const industry = product.industry;
+        if (!acc[industry]) acc[industry] = [];
+        acc[industry].push(product);
+        return acc;
+      }, {} as Record<string, typeof products>);
+    }
+    return {};
+  };
+
   const filteredProducts = getFilteredProducts();
   const activeProduct = products.find((p) => p.slug === activeFilter);
-
-  const filters=[
-    {name:"All",slug:"all"},
-    {}
-  ]
+  const categorizedProducts = getProductsByCategory();
 
 
 
@@ -39,70 +62,151 @@ const Page = () => {
 
 
 
-      <div className="parent">
-        <div className="container">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6">
-
-          </div>
-        </div>
-      </div>
-
-      {/* Products Grid */}
       <div className="parent py-[100px]">
         <div className="container">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6">
-            {filteredProducts.map((product, index) => (
-              <div
-                key={product.slug}
-                className="group bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden border border-gray-200 hover:border-[var(--accent1)]/40 transform hover:-translate-y-1"
-                data-aos="fade-up"
-                data-aos-delay={index * 100}
+          {/* Tab Navigation */}
+          <div className="flex w-full mb-12">
+            <button
+              onClick={() => setActiveCategory("type")}
+              className={`flex-1 flex items-center justify-between px-6 py-4 text-sm font-medium uppercase tracking-wide transition-all duration-300 ${
+                activeCategory === "type"
+                  ? "bg-gray-200 text-gray-800"
+                  : "bg-white text-gray-600 border-b-2 border-gray-300 hover:border-gray-400"
+              }`}
+            >
+              <span>BY TYPE</span>
+              <svg
+                className="w-4 h-4 ml-2"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
               >
-                <div className="aspect-[4/3] relative overflow-hidden">
-                  <Image
-                    src={product.images[1]}
-                    alt={product.name}
-                    fill
-                    className="object-contain object-bottom transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                </div>
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M7 17L17 7M17 7H7M17 7V17"
+                />
+              </svg>
+            </button>
 
-                <div className="p-4">
-                  <h3 className="text-lg font-bold text-black mb-2 group-hover:text-[var(--accent1)] transition-colors duration-300 line-clamp-1">
-                    {product.name}
-                  </h3>
+            <button
+              onClick={() => setActiveCategory("standard")}
+              className={`flex-1 flex items-center justify-between px-6 py-4 text-sm font-medium uppercase tracking-wide transition-all duration-300 ${
+                activeCategory === "standard"
+                  ? "bg-gray-200 text-gray-800"
+                  : "bg-white text-gray-600 border-b-2 border-gray-300 hover:border-gray-400"
+              }`}
+            >
+              <span>BY STANDARD</span>
+              <svg
+                className="w-4 h-4 ml-2"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M7 17L17 7M17 7H7M17 7V17"
+                />
+              </svg>
+            </button>
 
-                  {/* CTA Buttons */}
-                  <div className="flex gap-2">
-                    <Link
-                      href={`/products/${product.slug}`}
-                      className="flex-1 bg-[var(--accent1)] text-white px-3 py-1.5 rounded-md font-medium text-sm text-center hover:bg-[var(--accent1)]/90 transition-colors duration-300"
+            <button
+              onClick={() => setActiveCategory("industry")}
+              className={`flex-1 flex items-center justify-between px-6 py-4 text-sm font-medium uppercase tracking-wide transition-all duration-300 ${
+                activeCategory === "industry"
+                  ? "bg-gray-200 text-gray-800"
+                  : "bg-white text-gray-600 border-b-2 border-gray-300 hover:border-gray-400"
+              }`}
+            >
+              <span>BY INDUSTRY</span>
+              <svg
+                className="w-4 h-4 ml-2"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M7 17L17 7M17 7H7M17 7V17"
+                />
+              </svg>
+            </button>
+          </div>
+
+          {/* Products Display */}
+          <div className="space-y-12">
+            {Object.entries(categorizedProducts).map(([category, categoryProducts]) => (
+              <div key={category} className="space-y-6">
+                <h2 className="text-2xl font-bold text-gray-800 border-b-2 border-gray-200 pb-2">
+                  {category}
+                </h2>
+                <div className="space-y-2">
+                  {categoryProducts.map((product, index) => (
+                    <div
+                      key={product.slug}
+                      className="group bg-white hover:bg-gray-50 transition-all duration-300 border-b border-gray-200 last:border-b-0"
+                      data-aos="fade-up"
+                      data-aos-delay={index * 100}
                     >
-                      View Details
-                    </Link>
-                    <button className="px-3 py-1.5 border border-[var(--accent1)] text-[var(--accent1)] rounded-md font-medium text-sm hover:bg-[var(--accent1)] hover:text-white transition-colors duration-300">
-                      Quote
-                    </button>
-                  </div>
+                      <Link
+                        href={`/products/${product.slug}`}
+                        className="flex items-center justify-between p-4 bg-gray-100 hover:bg-gray-200 transition-colors duration-300"
+                      >
+                        <div className="flex items-center space-x-4">
+                          {/* Product Image */}
+                          <div className="w-12 h-12 rounded-full border-2 border-gray-300 bg-white flex items-center justify-center group-hover:border-[var(--accent1)] transition-colors duration-300 overflow-hidden">
+                            <Image
+                              src={product.images[product.images.length - 1]}
+                              alt={product.name}
+                              width={48}
+                              height={48}
+                              className="w-full h-full object-contain rounded-full "
+                            />
+                          </div>
+                          
+                          {/* Product Name */}
+                          <h3 className="text-lg font-medium text-gray-800 group-hover:text-[var(--accent1)] transition-colors duration-300">
+                            {product.name}
+                          </h3>
+                        </div>
+
+                        {/* Arrow Icon */}
+                        <svg
+                          className="w-5 h-5 text-gray-400 group-hover:text-[var(--accent1)] transition-colors duration-300"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M7 17L17 7M17 7H7M17 7V17"
+                          />
+                        </svg>
+                      </Link>
+                    </div>
+                  ))}
                 </div>
               </div>
             ))}
           </div>
-
-          {filteredProducts.length === 0 && (
-            <div className="text-center py-12">
-              <div className="text-black text-6xl mb-4">🔍</div>
-              <h3 className="text-xl font-semibold text-black mb-2">
-                No products found
-              </h3>
-              <p className="text-black">
-                Try selecting a different filter category
-              </p>
-            </div>
-          )}
         </div>
       </div>
+
+
+
+
+
+
+
+
     </>
   );
 };
