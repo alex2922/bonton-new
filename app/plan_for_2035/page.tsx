@@ -260,7 +260,7 @@ const Plan2035 = () => {
             data-aos="fade-up"
             data-aos-delay=" 400"
             data-aos-anchor="#plan2035-chip"
-            className="text-center  max-w-[800px] text-black/50"
+            className="text-center  max-w-[800px] text-black50"
           >
             We are no longer just supplying cables—we are powering intelligent
             infrastructure.With AI-powered electrical ecosystems, Bonton will
@@ -280,7 +280,7 @@ const Plan2035 = () => {
                   {item.icon}
                 </div>
                 <h3 className="text-lg font-bold text-center">{item.title}</h3>
-                <p className="text-center text-black/50">{item.content}</p>
+                <p className="text-center text-black50">{item.content}</p>
               </div>
             ))}
           </div>
@@ -340,7 +340,7 @@ const Plan2035 = () => {
                     </div>
                     <div className="flex flex-col -mb-1 ">
                       <p className={`text-lg font-bold ${index % 2 === 0 ? "text-white" : ""}`}>{item.title}</p>
-                      <p className={index % 2 === 0 ? "text-white/70 " : "text-black/50 "}>
+                      <p className={index % 2 === 0 ? "text-white/70 " : "text-black50 "}>
                         {item.content}
                       </p>
                     </div>

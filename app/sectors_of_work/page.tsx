@@ -97,8 +97,6 @@ const Plan2035 = () => {
     "Bharti Infra Limited": { logo: "bharti.png", bgColor: "#d4d1cc" }
   };
   
-  // Default background color for logos not specified above
-  const defaultBgValue = "#ebebe7";
 
   const sectors = [
     {
@@ -112,11 +110,10 @@ const Plan2035 = () => {
         "Emaar",
         "MGF",
         "M3M",
-        "Lodha",
         "Kalpataru",
         "Raheja",
         "Brigade",
-        "LULU",
+
         "Godrej",
         "TATA Projects",
         "Lotus Green",
@@ -241,7 +238,7 @@ const Plan2035 = () => {
       title: "Retail & Recreation",
       description: "Dynamic retail and entertainment spaces powered by our versatile cable infrastructure.",
       image: "/sectors/6.jpg",
-      companies: [ "Airport Authority of India" , "The 3C Company" , "Ambience Mall"],
+      companies: [ "Airport Authority of India" , "The 3C Company" , "Ambience Mall" , "LULU"],
     },
     {
       title: "Automotive",
@@ -328,10 +325,10 @@ const Plan2035 = () => {
                             </div>
                           ) : (
                             <div className="w-10 h-10 sm:w-12 sm:h-12 mb-2 bg-gray-100 rounded-full flex items-center justify-center">
-                              <span className="text-gray-400 text-xs text-center">No Logo</span>
+                              <span className="text-black text-xs text-center">No Logo</span>
                             </div>
                           )}
-                          <span className="text-xs sm:text-xs text-gray-700 text-center font-medium leading-tight">
+                          <span className="text-xs sm:text-xs text-black text-center font-medium leading-tight">
                             {company}
                           </span>
                         </div>

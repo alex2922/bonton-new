@@ -69,7 +69,7 @@ const Page = () => {
                 </div>
 
                 <div className="p-4">
-                  <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-[var(--accent1)] transition-colors duration-300 line-clamp-1">
+                  <h3 className="text-lg font-bold text-black mb-2 group-hover:text-[var(--accent1)] transition-colors duration-300 line-clamp-1">
                     {product.name}
                   </h3>
 
@@ -92,11 +92,11 @@ const Page = () => {
 
           {filteredProducts.length === 0 && (
             <div className="text-center py-12">
-              <div className="text-gray-400 text-6xl mb-4">🔍</div>
-              <h3 className="text-xl font-semibold text-gray-600 mb-2">
+              <div className="text-black text-6xl mb-4">🔍</div>
+              <h3 className="text-xl font-semibold text-black mb-2">
                 No products found
               </h3>
-              <p className="text-gray-500">
+              <p className="text-black">
                 Try selecting a different filter category
               </p>
             </div>

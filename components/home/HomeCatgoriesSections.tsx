@@ -6,19 +6,33 @@ import { Pagination, Autoplay, Navigation } from "swiper/modules";
 import Image from "next/image";
 import Link from "next/link";
 import products from "@/data/products";
+import Silk from "../Silk";
 
 const HomeCategoriesSections = () => {
   return (
-    <div className="parent relative py-[50px] md:py-[100px] bg-[var(--accent1)]/5">
+    <div className="parent relative py-[50px] md:py-[100px] bg-black">
       {/* Background Image with Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#121722] via-emerald-500 to-transparent opacity-90 z-10"></div>
+
+      <div
+          className="absolute h-full w-full  bg-img-cover top-0 bg-blue-400  opacity-40"
+          style={{ backgroundImage: "url(/plan_2035/hero.jpg)" }}
+        >
+          <Silk
+            speed={5}
+            scale={1}
+            color="#2969ff"
+            noiseIntensity={1.5}
+            rotation={0}
+          />
+        </div>
+      {/* <div className="absolute inset-0 bg-gradient-to-br from-[#121722] via-emerald-500 to-transparent opacity-90 z-10"></div>
       <Image 
         src="/home/products.webp" 
         alt="Products Background" 
         fill 
         className="object-cover" 
       />
-      
+       */}
       <div className="container px-4 z-20 relative">
         {/* Header Section - Responsive Layout */}
         <div className="text-center md:text-left mb-8 md:mb-0 md:flex md:items-center md:h-full">
@@ -74,7 +88,7 @@ const HomeCategoriesSections = () => {
                 modules={[Pagination, Autoplay, Navigation]}
                 className="products-swiper"
               >
-                {products.slice(0, 6).map((item, index) => (
+                {products.map((item, index) => (
                   <SwiperSlide key={index} className="h-auto">
                     <div className="group bg-white/95 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-white/20 h-full min-h-[400px]">
                       <div className="p-4 md:p-6 flex flex-col h-full">
@@ -82,7 +96,7 @@ const HomeCategoriesSections = () => {
                         <div className="relative h-32 md:h-40 w-full overflow-hidden bg-gradient-to-br from-gray-50 to-gray-100 mb-4 rounded-lg">
                           <div className="absolute inset-4">
                             <Image
-                              src={item.images[1]}
+                              src={item.images[item.images.length - 1]}
                               alt={item.name}
                               fill
                               className="object-contain group-hover:scale-110 transition-transform duration-500"
@@ -94,10 +108,10 @@ const HomeCategoriesSections = () => {
                         {/* Product Details */}
                         <div className="flex-1 flex flex-col justify-between">
                           <div>
-                            <h3 className="text-base md:text-lg font-bold text-gray-800 mb-2 group-hover:text-[var(--accent1)] transition-colors duration-300 line-clamp-1">
+                            <h3 className="text-base md:text-lg font-bold text-black mb-2 group-hover:text-[var(--accent1)] transition-colors duration-300 line-clamp-1">
                               {item.name}
                             </h3>
-                            <p className="text-gray-600 text-xs md:text-sm leading-tight line-clamp-4">
+                            <p className="text-black text-xs md:text-sm leading-tight line-clamp-4 !italic">
                              &quot; {item.shortDescription} &quot;
                             </p>
                           </div>

@@ -253,7 +253,7 @@ const ProductPage = ({ params }: PageProps) => {
                                 <div className="text-xs">
                                   {variant.packagingType}
                                 </div>
-                                <div className="text-xs text-gray-500">
+                                <div className="text-xs text-black">
                                   {variant.unitsPerPack}
                                 </div>
                               </div>
@@ -366,10 +366,10 @@ const ProductPage = ({ params }: PageProps) => {
             </div>
           </div>
 
-          <div className="parent  pt-[50px] pb-[0px] px-2 ">
+          <div className="parent  pt-[100px] pb-[50px] px-2 bg-gradient-to-br from-[#121722]  via-emerald-900 to-[var(--accent3)] ">
             <div className="container  flex flex-col  justify-center align-center gap-4">
-              <h2 className=" text-4xl leading-8 font-bold text-center ">
-                Industry <span>Applications</span>
+              <h2 className=" text-4xl leading-8 font-bold text-center text-white ">
+                Industry Applications
               </h2>
 
               <div className="w-full py-[50px]">
@@ -402,7 +402,7 @@ const ProductPage = ({ params }: PageProps) => {
                 >
                   {product.applications?.map((item, index) => (
                     <SwiperSlide key={index} className="w-full pb-4 ">
-                      <div className="flex flex-col items-center justify-center h-[120px] p-2 shadow-lg bg-gray-200/80 rounded-2xl w-full text-center">
+                      <div className="flex flex-col items-center justify-center h-[120px] p-2 shadow-lg bg-white rounded-2xl w-full text-center">
                         <span className="text-3xl text-[var(--accent2)]">
                           <CiCircleCheck />
                         </span>
@@ -463,23 +463,23 @@ const ProductPage = ({ params }: PageProps) => {
             </div>
           </div>
 
-          <div className="parent py-[50px] ">
+          <div className="parent py-[50px] bg-gradient-to-t from-[#121722]  via-emerald-900 to-[var(--accent3)] ">
             <div className="container  flex flex-col justify-center align-center gap-4">
-              <h2 className=" text-4xl leading-8 font-bold text-center mb-7 ">
-                <span>Manufacturing</span>
+              <h2 className=" text-4xl leading-8 font-bold text-center mb-7 text-white ">
+                Manufacturing
               </h2>
 
               <div className="flex flex-col w-full gap-4 ">
                 {product.manufacturing?.map((item, index) => (
                   <div
                     key={index}
-                    className="w-full p-4 rounded-lg shadow bg-gray-200/60 "
+                    className="w-full p-4 rounded-lg shadow bg-white/90 "
                   >
-                    <h3 className="text-xl font-[800] text-emerald-500">
+                    <h3 className="text-xl font-[800] text-[var(--accent1)]">
                       {item.step}
                     </h3>
                     <div className="w-full border-b-1 border-gray-400/40 my-2"></div>
-                    <p className="text-gray-600">{item.description}</p>
+                    <p className="text-black">{item.description}</p>
                   </div>
                 ))}
               </div>

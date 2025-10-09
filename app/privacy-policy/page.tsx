@@ -39,7 +39,7 @@ export default function PrivacyPolicy() {
             <h2 className="text-2xl font-semibold text-black mb-2">
               1. Introduction and Scope
             </h2>
-            <p className="text-gray-700">
+            <p className="text-black">
               We respect your privacy and are committed to protecting your
               personal data. This policy describes how we collect, use, disclose,
               and protect personal data through our website. Global laws
@@ -54,7 +54,7 @@ export default function PrivacyPolicy() {
             <h2 className="text-2xl font-semibold text-black mb-2">
               2. Information We Collect
             </h2>
-            <ul className="list-disc ml-6 text-gray-700 space-y-2">
+            <ul className="list-disc ml-6 text-black space-y-2">
               <li>
                 <strong>Contact and identity information</strong> – name,
                 company, job title, postal address, telephone number, email, or
@@ -78,7 +78,7 @@ export default function PrivacyPolicy() {
                 survey responses, or support requests.
               </li>
             </ul>
-            <p className="mt-2 text-gray-700">
+            <p className="mt-2 text-black">
               We do not knowingly collect data from children; if you believe a
               child has provided personal data, please contact us so we may
               delete it promptly.
@@ -90,7 +90,7 @@ export default function PrivacyPolicy() {
             <h2 className="text-2xl font-semibold text-black mb-2">
               3. Purpose and Legal Basis
             </h2>
-            <p className="text-gray-700">
+            <p className="text-black">
               We only process personal data when there is a lawful basis to do
               so. Our purposes include fulfilling contracts, responding to
               enquiries, marketing communications, analytics, compliance, and
@@ -105,7 +105,7 @@ export default function PrivacyPolicy() {
             <h2 className="text-2xl font-semibold text-black mb-2">
               4. How We Share Information
             </h2>
-            <p className="text-gray-700">
+            <p className="text-black">
               We may share personal data with service providers, affiliates,
               regulators, legal authorities, or prospective buyers. We do not
               sell personal data. Consent will be requested when required by law.
@@ -117,7 +117,7 @@ export default function PrivacyPolicy() {
             <h2 className="text-2xl font-semibold text-black mb-2">
               5. Cross-Border Data Transfers
             </h2>
-            <p className="text-gray-700">
+            <p className="text-black">
               Bonton Cables operates from India but may store or process data on
               servers outside your jurisdiction. Safeguards such as contractual
               clauses and adequacy decisions are applied.
@@ -129,7 +129,7 @@ export default function PrivacyPolicy() {
             <h2 className="text-2xl font-semibold text-black mb-2">
               6. Data Security
             </h2>
-            <p className="text-gray-700">
+            <p className="text-black">
               We implement encryption, access controls, secure servers, and
               employee training to protect personal data. No system is 100%
               secure; if a data breach occurs, we will notify relevant
@@ -142,7 +142,7 @@ export default function PrivacyPolicy() {
             <h2 className="text-2xl font-semibold text-black mb-2">
               7. Data Retention
             </h2>
-            <p className="text-gray-700">
+            <p className="text-black">
               We retain personal data only as long as necessary or legally
               required. Data is securely deleted or anonymized after retention
               periods expire.
@@ -154,7 +154,7 @@ export default function PrivacyPolicy() {
             <h2 className="text-2xl font-semibold text-black mb-2">
               8. Your Rights
             </h2>
-            <p className="text-gray-700">
+            <p className="text-black">
               Depending on applicable laws (DPDP Act, GDPR, etc.), you may have
               rights including access, rectification, deletion, consent
               withdrawal, objection, restriction, portability, and complaint
@@ -167,7 +167,7 @@ export default function PrivacyPolicy() {
             <h2 className="text-2xl font-semibold text-black mb-2">
               9. Cookies and Similar Technologies
             </h2>
-            <p className="text-gray-700">
+            <p className="text-black">
               We use cookies and similar technologies to improve site
               performance, personalize content, and analyze traffic. You can
               manage cookies via browser settings or our cookie banner.
@@ -179,7 +179,7 @@ export default function PrivacyPolicy() {
             <h2 className="text-2xl font-semibold text-black mb-2">
               10. Children’s Privacy
             </h2>
-            <p className="text-gray-700">
+            <p className="text-black">
               Our services are not directed to children under 18. If we discover
               data collected from minors without consent, we will promptly delete
               it.
@@ -191,7 +191,7 @@ export default function PrivacyPolicy() {
             <h2 className="text-2xl font-semibold text-black mb-2">
               11. Links to Other Websites
             </h2>
-            <p className="text-gray-700">
+            <p className="text-black">
               Our website may contain links to third-party sites. We are not
               responsible for their privacy practices. Please review their
               policies before sharing data.
@@ -203,7 +203,7 @@ export default function PrivacyPolicy() {
             <h2 className="text-2xl font-semibold text-black mb-2">
               12. Contact Us
             </h2>
-            <div className="text-gray-700">
+            <div className="text-black">
               <p>
                 <strong>Bonton Cables (India) Pvt. Ltd.</strong>
               </p>
@@ -222,7 +222,7 @@ export default function PrivacyPolicy() {
             <h2 className="text-2xl font-semibold text-black mb-2">
               13. Updates to This Policy
             </h2>
-            <p className="text-gray-700">
+            <p className="text-black">
               We may update this privacy policy to reflect changes in practices
               or legal requirements. Updated policies will be posted here with a
               new “Last Updated” date.

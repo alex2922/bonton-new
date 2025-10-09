@@ -3,7 +3,7 @@
 import React from 'react'
 import Image from 'next/image'
 
-const LogoSlider = () => {
+const   LogoSlider = () => {
   const logos = [
     'AAI.png',
     'ADANI REALTY.png',
@@ -21,7 +21,7 @@ const LogoSlider = () => {
     'ASCENDAS.png',
     'ATL.png',
     'AWS.png',
-    'Bangalore metro.png',
+    // 'Bangalore metro.png',
     'BANK OF AMERICA.png',
     'birla navya.png',
     'Blue Star.png',
@@ -171,15 +171,15 @@ const LogoSlider = () => {
       <style jsx>{`
         @keyframes scroll {
           0% {
-            transform: translateX(0);
+            transform: translateX(100);
           }
           100% {
-            transform: translateX(-50%);
+            transform: translateX(-300%);
           }
         }
         
         .animate-scroll {
-          animation: scroll 5s linear infinite;
+          animation: scroll 20s linear infinite;
         }
         
         .hover\\:pause-animation:hover {

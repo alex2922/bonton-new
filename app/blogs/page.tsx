@@ -20,7 +20,7 @@ const page = () => {
 
         <h3 className="line-clamp-2 font-[600]">{blog.title}</h3>
 
-        <p className="text-sm text-gray-600 line-clamp-3">{blog.description}</p>
+        <p className="text-sm text-black line-clamp-3">{blog.description}</p>
 
         <Link className="btn" href={`/blogs/${blog.id}`}>
           Read More

@@ -180,7 +180,7 @@ const Certificates = () => {
 
                   {/* Description tooltip on hover */}
                   <div className="certificate-tooltip absolute bottom-full left-1/2 transform -translate-x-1/2 mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-50">
-                    <div className="bg-white/95 backdrop-blur-sm text-gray-800 text-xs rounded-lg p-3 shadow-xl w-[280px]">
+                    <div className="bg-white/95 backdrop-blur-sm text-black text-xs rounded-lg p-3 shadow-xl w-[280px]">
                       <p className="leading-relaxed">{certificate.description}</p>
                       <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-8 border-r-8 border-t-8 border-l-transparent border-r-transparent border-t-white/95"></div>
                     </div>

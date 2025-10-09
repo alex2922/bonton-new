@@ -286,7 +286,7 @@ const OfficeMap = ({ apiKey }: OfficeMapProps) => {
         mapInstanceRef.current = null;
       }
     };
-  }, [ apiKey ]);
+  }, [ apiKey , officeLocations ]);
 
   return (
     <div className="w-full h-[500px] lg:h-[600px] rounded-xl overflow-hidden shadow-lg">

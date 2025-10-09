@@ -160,7 +160,7 @@ const LifeAtBontonPage = () => {
                   <div className="w-8 h-8 rounded-full bg-[var(--accent1)] text-white flex items-center justify-center text-sm font-bold flex-shrink-0">
                     {index + 1}
                   </div>
-                  <p className="text-black/90 font-medium">{value}</p>
+                  <p className="text-black90 font-medium">{value}</p>
                 </div>
               </div>
             ))}
@@ -180,7 +180,7 @@ const LifeAtBontonPage = () => {
               <span>Powering</span> Tomorrow with <span>Women in STEM</span>
             </h2>
             <blockquote
-              className="text-black/70 text-xl lg:text-2xl  italic leading-relaxed text-center lg:text-left border-l-4 border-[var(--accent1)] pl-6 py-4 my-6"
+              className="text-black70 text-xl lg:text-2xl  italic leading-relaxed text-center lg:text-left border-l-4 border-[var(--accent1)] pl-6 py-4 my-6"
               data-aos="fade-up"
               data-aos-delay="200"
             >
@@ -194,7 +194,7 @@ const LifeAtBontonPage = () => {
             </blockquote>
             <div className="flex flex-col gap-4 ">
               <p
-                className="text-black/90 leading-relaxed"
+                className="text-black90 leading-relaxed"
                 data-aos="fade-up"
                 data-aos-delay="300"
               >
@@ -205,7 +205,7 @@ const LifeAtBontonPage = () => {
                 talent thrives beyond boundaries.
               </p>
               <p
-                className="text-black/90 leading-relaxed"
+                className="text-black90 leading-relaxed"
                 data-aos="fade-up"
                 data-aos-delay="400"
               >
@@ -309,7 +309,7 @@ const LifeAtBontonPage = () => {
                          {section.content.map((paragraph, idx) => (
                            <p
                              key={idx}
-                             className="text-sm md:text-lg text-white/90 leading-relaxed"
+                             className="text-xs md:text-sm text-white/90 leading-tight "
                            >
                              {paragraph}
                            </p>
@@ -399,7 +399,7 @@ const LifeAtBontonPage = () => {
                   <h3 className="text-xl text-center leading-5  font-[700] max-w-[20ch]">
                     {item.title}
                   </h3>
-                  <p className="text-center  text-black/50 text-sm">
+                  <p className="text-center  text-black50 text-sm">
                     {item.description}
                   </p>
                 </div>

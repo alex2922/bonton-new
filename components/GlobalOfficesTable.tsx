@@ -30,7 +30,7 @@ export default function GlobalOfficesTable({ columns, className }: GlobalOffices
           {Array.from({ length: maxRows }).map((_, rowIdx) => (
             <tr key={rowIdx} className={rowIdx % 2 === 1 ? "bg-blue-50/70" : "bg-white"}>
               {columns.map((col, colIdx) => (
-                <td key={colIdx} className="text-[13px] lg:text-sm text-gray-700 px-6 py-4">
+                <td key={colIdx} className="text-[13px] lg:text-sm text-black px-6 py-4">
                   {col.items[rowIdx] ?? ""}
                 </td>
               ))}

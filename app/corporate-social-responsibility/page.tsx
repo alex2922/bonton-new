@@ -218,7 +218,7 @@ const CorporateSocialResponsibility = () => {
                 data-aos="fade-up"
                 data-aos-delay="600"
                 data-aos-anchor="#csr-initiatives-chip"
-                className="text-center lg:text-left  text-black/70"
+                className="text-center lg:text-left  text-black70"
               >
                 We are committed to sustainable development that extends beyond
                 our industry, reaching into the community to drive positive
@@ -296,7 +296,7 @@ const CorporateSocialResponsibility = () => {
                     </p>
                     <p
                       className={
-                        index % 2 === 0 ? "text-white/70 " : "text-black/50 "
+                        index % 2 === 0 ? "text-white/70 " : "text-black50 "
                       }
                     >
                       {initiative.impact}
@@ -323,7 +323,7 @@ const CorporateSocialResponsibility = () => {
                     </p>
                     <p
                       className={
-                        index % 2 === 0 ? "text-white/70 " : "text-black/50 "
+                        index % 2 === 0 ? "text-white/70 " : "text-black50 "
                       }
                     >
                       {initiative.volunteerHours}
@@ -333,7 +333,7 @@ const CorporateSocialResponsibility = () => {
 
                 <p
                   className={`text-sm mt-4 ${
-                    index % 2 === 0 ? "text-white/70" : "text-black/70"
+                    index % 2 === 0 ? "text-white/70" : "text-black70"
                   }`}
                   data-aos="fade-up"
                   data-aos-delay="500"

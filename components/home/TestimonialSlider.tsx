@@ -134,7 +134,7 @@ export default function TestimonialSlider() {
                             />
                           </div>
                           <div className="flex-1 min-w-0">
-                            <h3 className="text-sm font-semibold text-gray-900 truncate">
+                            <h3 className="text-sm font-semibold text-black truncate">
                               {story.company}
                             </h3>
                             <p className="text-xs text-[var(--accent1)] font-medium">
@@ -145,7 +145,7 @@ export default function TestimonialSlider() {
                         
                         {/* Testimonial */}
                         <div className="flex-1 flex flex-col justify-between">
-                          <p className="text-gray-700 text-sm leading-relaxed mb-4">
+                          <p className="text-black text-sm leading-relaxed mb-4 !italic">
                           &quot; {story.testimonial} &quot;
                           </p>
                           
@@ -158,7 +158,7 @@ export default function TestimonialSlider() {
                                 </svg>
                               ))}
                             </div>
-                            <div className="text-xs text-gray-500">
+                            <div className="text-xs text-black">
                               Verified Client
                             </div>
                           </div>
@@ -249,7 +249,7 @@ export default function TestimonialSlider() {
                           />
                         </div>
                         <div className="flex-1 min-w-0">
-                          <h3 className="text-xs font-semibold text-gray-900 truncate">
+                          <h3 className="text-xs font-semibold text-black truncate">
                             {story.company}
                           </h3>
                           <p className="text-xs text-[var(--accent1)] font-medium">
@@ -260,7 +260,7 @@ export default function TestimonialSlider() {
                       
                       {/* Testimonial */}
                       <div className="flex-1 flex flex-col justify-between">
-                        <p className="text-gray-700 text-xs leading-relaxed mb-3">
+                        <p className="text-black text-xs leading-relaxed mb-3">
                           {story.testimonial}
                         </p>
                         
@@ -273,7 +273,7 @@ export default function TestimonialSlider() {
                               </svg>
                             ))}
                           </div>
-                          <div className="text-xs text-gray-500">
+                          <div className="text-xs text-black">
                             Verified
                           </div>
                         </div>

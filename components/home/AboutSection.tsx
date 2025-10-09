@@ -27,7 +27,7 @@ const AboutSection = () => {
             data-aos="fade-up"
             data-aos-delay="100"
           >
-            About Us
+            India&apos;s Most Certified Cable Company
           </h2>
 
           <p

@@ -43,7 +43,7 @@ import SectionTop from "@/components/SectionTop";
 const page = () => {
   type CounterItem = {
     title: string;
-    count: number;
+    count:  string;
     icon: IconType;
     additional?: string;
   };
@@ -51,72 +51,67 @@ const page = () => {
   const CounterData: CounterItem[] = [
     {
       title: "Projects Completed",
-      count: 2000,
+      count: "2000+",
       icon: FaCheckCircle,
     },
     {
-      title: "Distributed Reached",
-      count: 1000,
-      icon: FaGlobe,
-    },
-    {
-      title: "Projects Completed",
-      count: 25,
+      title: "Product Categories",
+      count: "25+",
       icon: FaLayerGroup,
     },
     {
-      title: "Years of Experience",
-      count: 15,
+      title: "Pan india offices",
+      count: "15+",
       icon: FaHourglassHalf,
     },
 
     {
       title: "Skilled Professionals",
-      count: 600,
+      count: "600+",
       icon: FaUsers,
     },
     {
       title: "Manufacturing Units (Current)",
-      count: 2,
+      count: "2",
       additional: "(Bhiwadi, Kahrani)",
       icon: FaIndustry,
     },
     {
       title: "Manufacturing Units (Underway)",
-      count: 1,
+      count: "1",
       additional: "(Salarpur)",
       icon: FaIndustry,
     },
     {
       title: "Product Categories",
-      count: 25,
+      count: "25+",
       icon: FaLayerGroup,
     },
     {
       title: "Channel Partners",
-      count: 1000,
+      count: "1000+",
       icon: FaHandshake,
     },
     {
       title: "Wires Manufacturing Capacity",
-      count: 15000,
+      count: "15000+",
       additional: "km/month",
       icon: MdElectricBolt,
     },
     {
       title: "Cables Manufacturing Capacity",
-      count: 500,
+      count: "500+",
       additional: "km/month",
       icon: MdCable,
     },
     {
       title: "Pan India Offices",
-      count: 15,
+      count: "15+",
       icon: FaBuilding,
     },
     {
       title: "Pan India Warehouses",
-      count: 7,
+      count: "8+",
       icon: FaWarehouse,
     },
   ];
@@ -138,7 +133,7 @@ const page = () => {
     { year: "2021-22", turnover: 388.46 },
     { year: "2022-23", turnover: 549.54 },
     { year: "2023-24", turnover: 558.35 },
-    { year: "2024-25", turnover: 700 },
+    { year: "2024-25", turnover: 700 + "+" },
   ];
 
   const keyInsights = [
@@ -165,7 +160,7 @@ const page = () => {
     },
     {
       title: "Strong rebound & boom (2020–25) ",
-      description: "Major upward momentum, culminating in ₹700 Cr in 2024–25.",
+      description: "Major upward momentum, culminating in ₹700 Cr +  in 2024–25.",
     },
   ];
 
@@ -413,10 +408,10 @@ const page = () => {
 
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-16" data-aos="fade-up">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
               Our <span className="text-[var(--accent1)]">Achievements</span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-black max-w-3xl mx-auto">
               Numbers that speak volumes about our commitment to excellence and
               innovation in the cable industry
             </p>
@@ -451,7 +446,7 @@ const page = () => {
 
                     <div className="mb-4 flex-1">
                       <div className="flex flex-wrap items-baseline gap-x-2 gap-y-1">
-                        <div className="text-3xl md:text-4xl font-bold text-gray-900">
+                        <div className="text-3xl md:text-4xl font-bold text-black">
                           {item.count}
                         </div>
                         {item.additional && (
@@ -460,7 +455,7 @@ const page = () => {
                           </span>
                         )}
                       </div>
-                      <div className="text-sm md:text-md font-semibold text-gray-700 leading-snug  break-words mt-2">
+                      <div className="text-sm md:text-md font-semibold text-blackleading-snug  break-words mt-2">
                         {item.title}
                       </div>
                     </div>
@@ -479,9 +474,9 @@ const page = () => {
             <div className="text-center mb-16" data-aos="fade-up">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
                 Proven{" "}
-                <span className="text-[var(--accent1)]">
+ 
                   Engineering Excellence
-                </span>
+             
               </h2>
               <p className="text-xl text-white max-w-3xl mx-auto">
                 Built on deep expertise, global certifications, and unwavering
@@ -500,10 +495,10 @@ const page = () => {
                   <div className="w-16 h-16 bg-gradient-to-br from-[var(--accent1)] to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                     <FaCogs className="text-white text-2xl" />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-[var(--accent1)] transition-colors">
+                  <h3 className="text-xl font-bold text-black mb-4 group-hover:text-[var(--accent1)] transition-colors">
                     Proven Engineering Excellence
                   </h3>
-                  <p className="text-gray-800 leading-relaxed">
+                  <p className="text-black leading-relaxed">
                     With over <strong>15 years</strong> in the industry, we
                     deliver future-ready solutions built on deep engineering
                     expertise, ensuring reliability for critical infrastructure
@@ -523,10 +518,10 @@ const page = () => {
                   <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                     <FaCertificate className="text-white text-2xl" />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-green-600 transition-colors">
+                  <h3 className="text-xl font-bold text-black mb-4 group-hover:text-green-600 transition-colors">
                     Unmatched Global Certifications
                   </h3>
-                  <p className="text-gray-800 leading-relaxed">
+                  <p className="text-black leading-relaxed">
                     As India&apos;s most certified wire and cable company,
                     holding prestigious global accreditations like{" "}
                     <strong>UL, RoHS 2, REACH, and IATF 16949:2016</strong>, we
@@ -547,10 +542,10 @@ const page = () => {
                   <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                     <FaShieldAlt className="text-white text-2xl" />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-purple-600 transition-colors">
+                  <h3 className="text-xl font-bold text-black mb-4 group-hover:text-purple-600 transition-colors">
                     Trusted for Performance & Safety
                   </h3>
-                  <p className="text-gray-800 leading-relaxed">
+                  <p className="text-black leading-relaxed">
                     We are a preferred partner, explicitly trusted by{" "}
                     <strong>consultants, architects, and builders</strong> for
                     delivering superior performance, unwavering safety, and
@@ -570,10 +565,10 @@ const page = () => {
                   <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                     <FaLayerGroup className="text-white text-2xl" />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-orange-600 transition-colors">
+                  <h3 className="text-xl font-bold text-black  mb-4 group-hover:text-orange-600 transition-colors">
                     Comprehensive Product Portfolio
                   </h3>
-                  <p className="text-gray-800 leading-relaxed">
+                  <p className="text-black leading-relaxed">
                     Offering <strong>25+ product categories</strong>, we provide
                     a robust range of solutions for diverse applications across{" "}
                     <strong>Power, Construction, IT, and Automotive</strong>{" "}
@@ -594,10 +589,10 @@ const page = () => {
                   <FaIndustry className="text-white text-3xl" />
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-3">
+                  <h3 className="text-2xl font-bold text-black mb-3">
                     Robust Manufacturing & Distribution
                   </h3>
-                  <p className="text-lg text-gray-700 leading-relaxed">
+                  <p className="text-lg text-black leading-relaxed">
                     Supported by over <strong>600 skilled professionals</strong>
                     , two active manufacturing units (with a third underway),
                     and a network of <strong>1,000+ channel partners</strong>,
@@ -699,7 +694,7 @@ const page = () => {
                 <h3 className="text-[var(--accent1)] font-bold text-md md:text-xl text-center md:text-left w-full  ">
                   {insight.title}
                 </h3>
-                <p className="text-gray-700 leading-relaxed font-medium text-center md:text-left w-full  ">
+                <p className="text-black leading-relaxed font-medium text-center md:text-left w-full  ">
                   {insight.description}
                 </p>
               </div>
@@ -712,10 +707,10 @@ const page = () => {
         <div className="container px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16" data-aos="fade-up">
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
                 Our <span className="text-[var(--accent1)]">Foundation</span>
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              <p className="text-xl text-black max-w-3xl mx-auto">
                 The principles that guide our journey and shape our future
               </p>
             </div>
@@ -730,11 +725,11 @@ const page = () => {
                         <div className="w-16 h-16 bg-gradient-to-br from-[var(--accent1)] to-blue-600 rounded-2xl flex items-center justify-center">
                           <FaRocket className="text-white text-2xl" />
                         </div>
-                        <h3 className="text-3xl md:text-4xl font-bold text-gray-900">
+                        <h3 className="text-3xl md:text-4xl font-bold text-black">
                           Vision
                         </h3>
                       </div>
-                      <p className="text-lg text-gray-700 leading-relaxed">
+                      <p className="text-lg text-black leading-relaxed">
                         To be the market leader in India by 2035, by powering
                         over 5,000 infrastructure projects across sectors
                         through reliable, innovative, and sustainable wiring and
@@ -792,11 +787,11 @@ const page = () => {
                         <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center">
                           <FaShieldAlt className="text-white text-2xl" />
                         </div>
-                        <h3 className="text-3xl md:text-4xl font-bold text-gray-900">
+                        <h3 className="text-3xl md:text-4xl font-bold text-black">
                           Values
                         </h3>
                       </div>
-                      <p className="text-lg text-gray-700 leading-relaxed">
+                      <p className="text-lg text-black leading-relaxed">
                         At Bonton Cables, we are committed to delivering
                         world-class electrical solutions that combine safety,
                         performance, and sustainability. By fostering strong
@@ -821,15 +816,15 @@ const page = () => {
                         <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-2xl flex items-center justify-center">
                           <FaUsers className="text-white text-2xl" />
                         </div>
-                        <h3 className="text-3xl md:text-4xl font-bold text-gray-900">
+                        <h3 className="text-3xl md:text-4xl font-bold text-black">
                           Mission
                         </h3>
                       </div>
-                      <p className="text-lg text-gray-700 leading-relaxed mb-6">
+                      <p className="text-lg text-black leading-relaxed mb-6">
                         Our mission is built on seven core principles that guide
                         every decision and action:
                       </p>
-                      <ul className="space-y-4 text-gray-800 flex-1">
+                      <ul className="space-y-4 text-black flex-1">
                         <li className="flex items-start gap-3">
                           <span className="mt-2 h-2 w-2 rounded-full bg-[var(--accent1)] flex-shrink-0"></span>
                           <span className="font-medium">
@@ -913,14 +908,14 @@ const page = () => {
               <h2
                 data-aos="fade-up"
                 data-aos-delay="200"
-                className="text-4xl lg:text-5xl font-[900] text-gray-900 mb-6"
+                className="text-4xl lg:text-5xl font-[900] text-black mb-6"
               >
                 Our Purpose
               </h2>
               <p
                 data-aos="fade-up"
                 data-aos-delay="400"
-                className="text-lg text-gray-600 max-w-3xl mx-auto"
+                className="text-lg text-black max-w-3xl mx-auto"
               >
                 Our purpose drives every decision we make and every product we
                 create. It&apos;s the foundation of our commitment to
@@ -953,7 +948,7 @@ const page = () => {
                           <h4 className="text-xl lg:text-2xl font-bold text-white mb-3 group-hover:text-[var(--accent1)] transition-colors !leading-[110%]">
                             {purpose.title}
                           </h4>
-                          <p className="text-gray-200 text-sm  !leading-[120%]">
+                          <p className="text-white text-sm  !leading-[120%]">
                             {purpose.description}
                           </p>
                         </div>
@@ -990,7 +985,7 @@ const page = () => {
                             <h4 className="text-xl lg:text-2xl font-bold text-white mb-3 group-hover:text-[var(--accent1)] transition-colors !leading-[110%]">
                               {purpose.title}
                             </h4>
-                            <p className="text-gray-200 text-sm  !leading-[120%]">
+                            <p className="text-white text-sm  !leading-[120%]">
                               {purpose.description}
                             </p>
                           </div>
@@ -1013,14 +1008,14 @@ const page = () => {
           <h2
             data-aos="fade-up"
             data-aos-delay="200"
-            className="text-4xl lg:text-5xl font-[900] text-gray-900 mb-6"
+            className="text-4xl lg:text-5xl font-[900] text-black mb-6"
           >
             Our Certifications
           </h2>
           <p
             data-aos="fade-up"
             data-aos-delay="400"
-            className="text-lg text-gray-600 max-w-3xl text-center mb-6"
+            className="text-lg text-black max-w-3xl text-center mb-6"
           >
             Our comprehensive portfolio of international certifications demonstrates our unwavering commitment to excellence, safety, and environmental responsibility across every aspect of our operations.
           </p>
@@ -1216,11 +1211,11 @@ const page = () => {
                           {milestone.year}
                         </span>
                         <div className="w-4 h-0.5 bg-[var(--accent1)]/30 rounded-full"></div>
-                        <span className="font-bold text-xl text-gray-900 group-hover:text-[var(--accent1)] transition-colors">
+                        <span className="font-bold text-xl text-black group-hover:text-[var(--accent1)] transition-colors">
                           {milestone.title}
                         </span>
                       </div>
-                      <p className="text-gray-600 leading-relaxed  text-center">
+                      <p className="text-black leading-relaxed  text-center">
                         {milestone.description}
                       </p>
                     </div>
@@ -1245,14 +1240,14 @@ const page = () => {
               <h2
                 data-aos="fade-up"
                 data-aos-delay="200"
-                className="text-4xl lg:text-5xl font-[900] text-gray-900  mb-4"
+                className="text-4xl lg:text-5xl font-[900] text-black  mb-4"
               >
                 <span>Building The Future</span>, One Connection At A Time
               </h2>
               <p
                 data-aos="fade-up"
                 data-aos-delay="300"
-                className="text-lg text-gray-600 max-w-3xl mx-auto"
+                className="text-lg text-black max-w-3xl mx-auto"
               >
                 A concise narrative of our growth from 2004 to the present.
               </p>
@@ -1326,18 +1321,18 @@ const page = () => {
                                 {periodIcons[index]}
                               </div>
                               <div className="text-right">
-                                <span className="text-sm font-semibold text-gray-500 uppercase tracking-wide">
+                                <span className="text-sm font-semibold text-black uppercase tracking-wide">
                                   {years[index]}
                                 </span>
                               </div>
                             </div>
-                            <h3 className="text-2xl md:text-3xl font-bold text-gray-900">
+                            <h3 className="text-2xl md:text-3xl font-bold text-black">
                               {section.heading}
                             </h3>
                           </div>
 
                           <div className="p-6 flex-1 flex flex-col">
-                            <p className="text-gray-700 leading-relaxed  flex-1">
+                            <p className="text-black leading-relaxed  flex-1">
                               {section.body}
                             </p>
                           </div>

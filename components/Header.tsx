@@ -27,7 +27,7 @@ const Header = () => {
           name: "Corporate Social Responsibility",
           link: "/corporate-social-responsibility",
         },
-        { name: "Life at Boton", link: "/life-at-bonton" },
+        { name: "Life at Bonton", link: "/life-at-bonton" },
         
         { name: "Bonton Blogs", link: "/blogs" },
         { name: "Plan For 2035 ", link: "/plan_for_2035" },

@@ -157,13 +157,13 @@ const page = () => {
                 <div className="p-6">
                   <div className="mt-[-50px]">
                     <div className="text-center">
-                      <h3 className="text-lg font-bold text-gray-900 group-hover:text-[var(--accent1)] transition-colors mb-2">
+                      <h3 className="text-lg font-bold text-black group-hover:text-[var(--accent1)] transition-colors mb-2">
                         {member.name}
                       </h3>
                       <p className="text-xs text-[var(--accent1)] font-semibold mb-3">
                         {member.designation}
                       </p>
-                      <p className="text-sm text-gray-600 leading-relaxed">
+                      <p className="text-sm text-black leading-relaxed">
                         {member.description}
                       </p>
                     </div>

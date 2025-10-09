@@ -82,7 +82,7 @@ const DownloadsPage = () => {
                   </div>
 
                   {/* Document Name */}
-                  <h3 className="text-lg font-bold  text-gray-800 mb-6 text-center leading-tight group-hover:text-emerald-500 transition-colors duration-300">
+                  <h3 className="text-lg font-bold  text-black mb-6 text-center leading-tight group-hover:text-emerald-500 transition-colors duration-300">
                     {file.name}
                   </h3>
 

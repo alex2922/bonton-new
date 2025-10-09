@@ -444,8 +444,8 @@ const products = [
     ],
   },
   {
-    name: "Bonton Solar Cables",
-    slug: "bonton-solar-cables",
+    name: "Solar Cables",
+    slug: "solar-cables",
     shortDescription:
       "Harness the sun with wires so bright,​ Eco-powered days and starry night.​ Future-ready, clean, and light.​",
     longDescription:
@@ -453,7 +453,7 @@ const products = [
     images: [
       "/products/solar-cables/top.png",
       "/products/solar-cables/side.png",
-      "/products/solar-cables/hero.jpg",
+
     ],
     variants: [
       {
@@ -636,7 +636,7 @@ const products = [
   },
 
   {
-    name: "Heavey Duty Cables",
+    name: "Heavy Duty Cables",
     slug: "heavy-duty-cables",
     shortDescription:
       "For power that lifts, hauls, and drives,​ Tough and rugged where force thrives.​ Industrial strength that always survives.​",
@@ -675,12 +675,13 @@ const products = [
       "Homes and towers, safe and neat,​ Wiring lives from wall to street.​ Reliable strength in every beat.​​",
     longDescription: "",
     images: [
-      "/products/building-wires/side2.png",
-      "/products/building-wires/side.png",
-
       "/products/building-wires/HRFR (Gold Star).png",
       "/products/building-wires/HRFR (Green Wires).png",
       "/products/building-wires/ZHFR.png",
+      "/products/building-wires/side2.png",
+      "/products/building-wires/side.png",
+
+     
     ],
   },
 
@@ -735,7 +736,7 @@ const products = [
     name: "Power Cables",
     slug: "power-cables",
     shortDescription:
-      "​",
+      "Energy flows strong, through every line,​ Powering progress, design divine.​ Reliable current, always fine.​",
     longDescription: "",
     images: [
       "/products/power-cables/top.png",

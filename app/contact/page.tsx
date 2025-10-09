@@ -208,8 +208,212 @@ const Contact = () => {
         </div>
       </div>
 
+
       <OfficeMap apiKey={api} />
       {/* Manufacturing Units */}
+
+      <div className="parent py-8 bg-gradient-to-br from-[#121722]  via-emerald-800 to-[var(--accent2)]">
+        <div className="container px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-12" data-aos="fade-up" data-aos-delay="200">
+              <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+                Our <span className="text-[var(--accent1)]">Offices</span>
+              </h2>
+              <p className="text-lg text-white/80 max-w-3xl mx-auto">
+                Connect with us across India through our extensive network of regional offices and manufacturing units.
+              </p>
+            </div>
+
+            <div className="overflow-x-auto" data-aos="fade-up" data-aos-delay="400">
+              <table className="w-full bg-white/10 backdrop-blur-sm rounded-lg overflow-hidden">
+                <thead className="bg-white/20">
+                  <tr>
+                    <th className="px-6 py-4 text-left text-white font-semibold">Region</th>
+                    <th className="px-6 py-4 text-left text-white font-semibold">Location</th>
+                    <th className="px-6 py-4 text-left text-white font-semibold">Address</th>
+                    <th className="px-6 py-4 text-left text-white font-semibold">Contact</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-white/20">
+                  {/* Head Office */}
+                  <tr className="hover:bg-white/10 transition-colors">
+                    <td className="px-6 py-4 text-white font-medium">Head Office</td>
+                    <td className="px-6 py-4 text-white">Gurugram</td>
+                    <td className="px-6 py-4 text-white/90">
+                      Epitome Building No. 5, 18th Floor, Tower-B<br />
+                      DLF Cyber City, Gurugram – 122002 (Haryana)
+                    </td>
+                    <td className="px-6 py-4 text-white/90">+91 81302 99001</td>
+                  </tr>
+
+                  {/* Northern Region */}
+                  <tr className="hover:bg-white/10 transition-colors">
+                    <td className="px-6 py-4 text-white font-medium">Northern Region</td>
+                    <td className="px-6 py-4 text-white">Chandigarh</td>
+                    <td className="px-6 py-4 text-white/90">
+                      Plot Khasra No. 14/10, Godown Area, Village Pabhat, Zirakpur<br />
+                      District: S.A.S Nagar, Punjab – 140603
+                    </td>
+                    <td className="px-6 py-4 text-white/90">0176-2503906 | +91 73555 58333</td>
+                  </tr>
+
+                  <tr className="hover:bg-white/10 transition-colors">
+                    <td className="px-6 py-4 text-white font-medium"></td>
+                    <td className="px-6 py-4 text-white">Ludhiana</td>
+                    <td className="px-6 py-4 text-white/90">
+                      BXX-3369, Sandhu Tower-2, 2nd Floor, Ferozpur Road, Gurudev Nagar<br />
+                      Ludhiana, Punjab – 141001
+                    </td>
+                    <td className="px-6 py-4 text-white/90">+91 95019 22997</td>
+                  </tr>
+
+                  <tr className="hover:bg-white/10 transition-colors">
+                    <td className="px-6 py-4 text-white font-medium"></td>
+                    <td className="px-6 py-4 text-white">Jaipur</td>
+                    <td className="px-6 py-4 text-white/90">
+                      327-A, 3rd Floor, Ganpati Plaza, M.I. Road<br />
+                      Jaipur, Rajasthan – 302001
+                    </td>
+                    <td className="px-6 py-4 text-white/90">0141-4018060 | +91 94143 23966</td>
+                  </tr>
+
+                  <tr className="hover:bg-white/10 transition-colors">
+                    <td className="px-6 py-4 text-white font-medium"></td>
+                    <td className="px-6 py-4 text-white">Lucknow</td>
+                    <td className="px-6 py-4 text-white/90">
+                      RM Sales Corporation, F-463, Phase II, Transport Nagar<br />
+                      Lucknow, Uttar Pradesh – 226012
+                    </td>
+                    <td className="px-6 py-4 text-white/90">+91 93050 53777</td>
+                  </tr>
+
+                  <tr className="hover:bg-white/10 transition-colors">
+                    <td className="px-6 py-4 text-white font-medium"></td>
+                    <td className="px-6 py-4 text-white">Jammu & Kashmir</td>
+                    <td className="px-6 py-4 text-white/90">
+                      First Floor, Al Kareem Complex, Nowgam Wanpora Road<br />
+                      Near J&K Bank, Khosabagh, Chatar Gam, Budgam<br />
+                      Jammu & Kashmir – 191113
+                    </td>
+                    <td className="px-6 py-4 text-white/90">+91 99062 78899</td>
+                  </tr>
+
+                  {/* Eastern Region */}
+                  <tr className="hover:bg-white/10 transition-colors">
+                    <td className="px-6 py-4 text-white font-medium">Eastern Region</td>
+                    <td className="px-6 py-4 text-white">Kolkata</td>
+                    <td className="px-6 py-4 text-white/90">
+                      2nd Floor, Room No. 203, Business Building No. 11A<br />
+                      54, William Carey Sarani, Radha Bazar Lane<br />
+                      Kolkata, West Bengal – 700001
+                    </td>
+                    <td className="px-6 py-4 text-white/90">+91 94330 09161</td>
+                  </tr>
+
+                  <tr className="hover:bg-white/10 transition-colors">
+                    <td className="px-6 py-4 text-white font-medium"></td>
+                    <td className="px-6 py-4 text-white">Guwahati</td>
+                    <td className="px-6 py-4 text-white/90">
+                      Sonkuchi Path, Beharbari, House No. 05, P.O. Basistha<br />
+                      P.S. Basistha, District: Kamrup (M), Assam – 781029
+                    </td>
+                    <td className="px-6 py-4 text-white/90">+91 98729 90079</td>
+                  </tr>
+
+                  <tr className="hover:bg-white/10 transition-colors">
+                    <td className="px-6 py-4 text-white font-medium"></td>
+                    <td className="px-6 py-4 text-white">Raipur, Chhattisgarh</td>
+                    <td className="px-6 py-4 text-white/90">
+                      Building No. 1/362, Ganj Para, New Raipur<br />
+                      Raipur – 492001
+                    </td>
+                    <td className="px-6 py-4 text-white/90">+91 91111 99772</td>
+                  </tr>
+
+                  {/* Southern Region */}
+                  <tr className="hover:bg-white/10 transition-colors">
+                    <td className="px-6 py-4 text-white font-medium">Southern Region</td>
+                    <td className="px-6 py-4 text-white">Kochi</td>
+                    <td className="px-6 py-4 text-white/90">
+                      44/533, St. Martin Road, Palarivattom<br />
+                      Kochi, Kerala – 682025
+                    </td>
+                    <td className="px-6 py-4 text-white/90">0484-4058309 | +91 97455 44303</td>
+                  </tr>
+
+                  <tr className="hover:bg-white/10 transition-colors">
+                    <td className="px-6 py-4 text-white font-medium"></td>
+                    <td className="px-6 py-4 text-white">Hyderabad (Secunderabad)</td>
+                    <td className="px-6 py-4 text-white/90">
+                      Plot No. 14, Raghava Enclave, Transport Road, Near Gunrock Enclave<br />
+                      Karkhana, Secunderabad – 500009
+                    </td>
+                    <td className="px-6 py-4 text-white/90">+91 90009 99802</td>
+                  </tr>
+
+                  {/* Western Region */}
+                  <tr className="hover:bg-white/10 transition-colors">
+                    <td className="px-6 py-4 text-white font-medium"> Western Region</td>
+                    <td className="px-6 py-4 text-white">Rajkot</td>
+                    <td className="px-6 py-4 text-white/90">
+                      25 SQ, Sadguru Park Main Road, Opp. Kidvainagar, Raiya Road<br />
+                      Rajkot, Gujarat – 360005
+                    </td>
+                    <td className="px-6 py-4 text-white/90">+91 98252 24054</td>
+                  </tr>
+
+                  <tr className="hover:bg-white/10 transition-colors">
+                    <td className="px-6 py-4 text-white font-medium"></td>
+                    <td className="px-6 py-4 text-white">Pune</td>
+                    <td className="px-6 py-4 text-white/90">
+                      Shri Chavan Ninad Bhanudas, CTS 149, Shubhashree Building, Flat No. 201<br />
+                      2nd & 3rd Floor, Parvat, Pune – 411009
+                    </td>
+                    <td className="px-6 py-4 text-white/90">+91 99870 05001</td>
+                  </tr>
+
+                  {/* Manufacturing Units */}
+                  <tr className="hover:bg-white/10 transition-colors">
+                    <td className="px-6 py-4 text-white font-medium"> Manufacturing Units</td>
+                    <td className="px-6 py-4 text-white">Plant 1 - Bhiwadi</td>
+                    <td className="px-6 py-4 text-white/90">
+                      A-115, RIICO Industrial Area, Phase-1<br />
+                      Bhiwadi – 301019, District Alwar
+                    </td>
+                    <td className="px-6 py-4 text-white/90">-</td>
+                  </tr>
+
+                  <tr className="hover:bg-white/10 transition-colors">
+                    <td className="px-6 py-4 text-white font-medium"></td>
+                    <td className="px-6 py-4 text-white">Plant 2 - Bhiwadi</td>
+                    <td className="px-6 py-4 text-white/90">
+                      A-6A, Kaharani Industrial Area<br />
+                      Bhiwadi – 301019, District Alwar
+                    </td>
+                    <td className="px-6 py-4 text-white/90">-</td>
+                  </tr>
+
+                  <tr className="hover:bg-white/10 transition-colors">
+                    <td className="px-6 py-4 text-white font-medium"></td>
+                    <td className="px-6 py-4 text-white">Plant 3 - Bhiwadi</td>
+                    <td className="px-6 py-4 text-white/90">
+                      SP4-134, Industrial Area, Salarpur<br />
+                      Bhiwadi – 301019, District Alwar
+                    </td>
+                    <td className="px-6 py-4 text-white/90">-</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
     </>
   );
 };

@@ -92,15 +92,15 @@ const Footer = () => {
         { name: "Building Wires", link: "/products/building-wires" },
         { name: "Automotive Cables", link: "/products/automobile-cables" },
         {
-          name: "Instrumentation Cables",
-          link: "/products/control-and-instumentation-cables",
+          name: "Control and Instrumentation Cables",
+          link: "/products/control-and-instrumentation-cables",
         },
       ],
     },
   ];
 
   return (
-    <div className="parent bg-gradient-to-br from-[#121722]  via-emerald-800 to-[var(--accent2)] text-[#ffffff]">
+    <div className="parent bg-gradient-to-br from-[#121722]  via-emerald-900 to-[var(--accent3)] text-[#ffffff]">
       <div className="container flex flex-col px-4">
         <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 md:gap-8 py-8 md:py-12 border-b border-white/20">
           {navs.map((nav, index) => (
@@ -108,7 +108,7 @@ const Footer = () => {
               <h2 className="text-lg font-semibold text-white">{nav.title}</h2>
               {nav.links.map((link, idx) => (
                 <Link
-                  className="text-hover text-white/70 hover:text-white transition-colors duration-200 flex items-center gap-2"
+                  className="text-hover text-white hover:text-[var(--accent1)] transition-colors duration-200 flex items-center gap-2"
                   href={link.link}
                   key={idx}
                 >
