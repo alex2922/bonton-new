@@ -459,16 +459,15 @@ const products = [
     images: [
       "/products/solar-cables/top.png",
       "/products/solar-cables/side.png",
-
     ],
     variants: [
       {
-        cores: [1], 
+        cores: [1],
         modelNumber: "NA",
         gauge: 1.5,
-        coresLength: [100 , 500],
+        coresLength: [100, 500],
         cableType: ["Tinned Copper,", "XLPE Insulated"],
-        color: ["Red" , "black"],
+        color: ["Red", "black"],
         colorCustomization: false,
         weight: "20kg - 30kg",
         dimension: "5mm - 6mm",
@@ -477,12 +476,12 @@ const products = [
         warrantyPeriod: "25 years +",
       },
       {
-        cores: [1], 
+        cores: [1],
         modelNumber: "NA",
         gauge: 2.5,
-        coresLength: [200 , 500 , 1000],
+        coresLength: [200, 500, 1000],
         cableType: ["Tinned Copper,", "XLPE Insulated"],
-        color: ["Red" , "black"],
+        color: ["Red", "black"],
         colorCustomization: false,
         weight: "30kg - 45kg",
         dimension: "6mm - 7mm",
@@ -491,12 +490,12 @@ const products = [
         warrantyPeriod: "25 years +",
       },
       {
-        cores: [1], 
+        cores: [1],
         modelNumber: "NA",
         gauge: 4,
-        coresLength: [200 , 500 , 1000],
+        coresLength: [200, 500, 1000],
         cableType: ["Tinned Copper,", "XLPE Insulated"],
-        color: ["Red" , "black"],
+        color: ["Red", "black"],
         colorCustomization: false,
         weight: "55kg - 70kg",
         dimension: "7mm - 8mm",
@@ -729,8 +728,6 @@ const products = [
       "/products/building-wires/ZHFR.png",
       "/products/building-wires/side2.png",
       "/products/building-wires/side.png",
-
-     
     ],
   },
 
@@ -801,11 +798,216 @@ const products = [
     industry: "Power & Utilities",
     shortDescription:
       "Energy flows strong, through every line,​ Powering progress, design divine.​ Reliable current, always fine.​",
-    longDescription: "",
+    longDescription:
+      "Bonton Power Cables are engineered for safe and efficient transmission of electricity in residential, commercial, and industrial power distribution systems. Manufactured with high-conductivity copper conductors, PVC/XLPE insulation, and robust PVC/LSZH sheathing, these cables deliver superior electrical performance, mechanical durability, and fire safety. Available in both armoured and unarmoured designs, they are ideal for low- and medium-voltage applications where reliability and safety are paramount.",
     images: [
       "/products/power-cables/top.png",
       "/products/power-cables/side.png",
     ],
+
+    construction: [
+      {
+        component: "Conductor",
+        material:
+          "High Conductivity Annealed Copper (Class 2 stranded / Class 5 flexible)",
+        description: "Ensures efficient current flow & low power loss",
+      },
+      {
+        component: "Insulation",
+        material: "PVC / XLPE",
+        description: "Provides high dielectric strength & thermal resistance",
+      },
+      {
+        component: "Core Identification",
+        material: "Color coded / numbered",
+        description: "Easy recognition during installation",
+      },
+      {
+        component: "Inner Sheath",
+        material: "Extruded PVC / LSZH",
+        description: "Protects insulated cores & enhances cable strength",
+      },
+      {
+        component: "Armouring (Optional)",
+        material: "Galvanized Steel Wire / Strip",
+        description: "Provides protection against mechanical impact",
+      },
+      {
+        component: "Outer Sheath",
+        material: "PVC / LSZH (UV, Oil & Chemical Resistant)",
+        description: "Ensures durability, fire resistance & weather protection",
+      },
+      {
+        component: "Voltage Grade",
+        material: "Up to 1100 V (LV) / 3.3 kV (MV)",
+        description: "Suitable for power distribution",
+      },
+      {
+        component: "Core Range",
+        material: "2C, 3C, 3.5C, 4C",
+        description: "Available in multiple core combinations",
+      },
+    ],
+
+    Highlights: [
+      "High conductivity copper conductors for maximum efficiency.",
+      "PVC/XLPE insulation to withstand higher operating temperatures.",
+      "Armoured & Unarmoured options for versatile use.",
+      "FR/FRLS/LSZH outer sheath options for enhanced fire safety.",
+      "Designed for low-voltage and medium-voltage power distribution.",
+    ],
+
+    keyFeatures: [
+      "High conductivity copper conductors ensure low losses.",
+      "PVC/XLPE insulation for excellent dielectric properties.",
+      "FR/FRLS/LSZH sheath options for superior fire safety.",
+      "Armoured designs for direct burial and harsh conditions.",
+      "Excellent mechanical & thermal strength.",
+      "UV, oil, and chemical resistant outer sheath.",
+      "Reliable for continuous operation with long service life.",
+    ],
+
+    performanceParameters: [
+      { property: "Rated Voltage", value: "1500 V DC" },
+      { property: "Operating Temperature", value: "–40 °C to +90 °C" },
+      { property: "Max. Conductor Temperature", value: "+120 °C" },
+      { property: "Flame Test Compliance", value: "IEC 60332-1 & IEC 60332-3" },
+      { property: "Smoke Density", value: "IEC 61034" },
+      { property: "Halogen Emission", value: "IEC 60754-1 & IEC 60754-2" },
+      { property: "Ozone Resistance", value: "EN 50396" },
+      { property: "UV Resistance", value: "HD 605/A1" },
+      { property: "Service Life", value: "25+ Years" },
+    ],
+
+    applications: [
+      {
+        description: "Residential and commercial power distribution.",
+      },
+      {
+        description: "Industrial low-voltage and medium-voltage systems.",
+      },
+      {
+        description: "Underground power supply (armoured type).",
+      },
+      {
+        description: "Power transmission in factories, refineries & plants.",
+      },
+      {
+        description: "Infrastructure projects: airports, metros, tunnels.",
+      },
+      {
+        description: "Renewable energy projects (solar/wind integration).",
+      },
+    ],
+
+    certifications: [
+      "IS 1554 (Part 1) – PVC insulated power cables.",
+      "IS 7098 (Part 1) – XLPE insulated power cables.",
+      "IS 8130 – Conductors for electric cables.",
+      "ISO 9001, ISO 14001, ISO 45001, ISO 50001 Certified.",
+      "IATF 16949 – Quality Management.",
+      "RoHS 2 & REACH Compliant.",
+      "GC-Mark Certified.",
+      "NABL accredited testing approvals.",
+    ],
+
+    safetyStandards: [
+      {
+        title: "Indian Standards",
+        standards: [
+          "IS 1554 (Part 1) – PVC insulated power cables up to 1100 V.",
+          "IS 7098 (Part 1) – XLPE insulated LV power cables.",
+          "IS/IEC 60332-1 & 60332-3 – Flame retardance.",
+          "IS 8130 – Conductors for electric cables.",
+          "IS 10810 – Testing methods for cables.",
+        ],
+      },
+      {
+        title: "British / International Standards",
+        standards: [
+          "IEC 60227 / IEC 60228 – Conductor & insulation compliance.",
+          "IEC 60502-1 – Power cables up to 1.1 kV.",
+          "IEC 60332 – Flame retardance tests.",
+          "IEC 60754-1 & 60754-2 – Halogen acid gas emission tests.",
+          "IEC 61034 – Smoke density tests.",
+          "BS 6346 / BS 5467 – LV & MV power cables (armoured).",
+        ],
+      },
+    ],
+
+    manufacturing: [
+      {
+        step: "Raw Materials & Incoming QC",
+        description:
+          "Copper/aluminium rods received; conductivity, diameter, and surface quality verified. PVC/XLPE compounds, tapes, fillers, armour wires/strips, and masterbatches inspected (MFI/gel content, density, RoHS screening, moisture).",
+      },
+      {
+        step: "Conductor Drawing & Annealing",
+        description:
+          "Rod drawn through multi-die lines to target gauges; surface lubricity controlled. (Copper) online annealed to achieve specified ductility and resistance. DC resistance and diameter checked lot-wise.",
+      },
+      {
+        step: "Stranding & Compacting (Conductor Formation)",
+        description:
+          "Wires stranded to Class-2/5 constructions; sector or circular profiles as per design. Compacting done to lower voids and reduce cable diameter. Lay length and strand integrity verified.",
+      },
+      {
+        step: "Insulation Extrusion (PVC or XLPE)",
+        description:
+          "PVC route: HRFR/FR/FRLS-H/ZHFR grades extruded to specified thickness. XLPE route: cross-linking via CV tube (dry cure) or silane moisture-cure; hot-set/gel content checked. Eccentricity/OD controlled; online spark test performed; insulation color/print applied.",
+      },
+      {
+        step: "Core Identification & Pre-Assembly QA",
+        description:
+          "Color coding or number printing completed; meter marking initiated. Insulation thickness and adhesion verified; IR (Insulation Resistance) measured.",
+      },
+      {
+        step: "Laying-Up (Core Assembly) & Fillers",
+        description:
+          "Insulated cores laid-up with controlled lay; fillers (PP/FR) inserted to make a round assembly. Binding tapes (polyester/FR) applied; ovality and run-out checked.",
+      },
+      {
+        step: "Inner Sheath (Bedding)",
+        description:
+          "Extruded PVC (or LSZH) inner sheath applied over laid-up cores to provide a smooth bedding for armour. Thickness, adhesion, concentricity, and surface finish verified.",
+      },
+      {
+        step: "Armouring (Mechanical Protection)",
+        description:
+          "Multi-core: galvanized steel wire (SWA) or steel strip (STA) applied per design coverage. Single-core (to minimize eddy losses): aluminium wire armour (AWA) used. Armour coverage factor, lay, and jointing inspected; corrosion protection ensured.",
+      },
+      {
+        step: "Outer Sheath Extrusion",
+        description:
+          "Final sheath extruded (PVC/FR/FRLS-H/ZHFR/UV-stabilized as specified). Thickness, OD, spark test, surface finish, color, and legend (printing) controlled.",
+      },
+      {
+        step: "Cooling, Length Control & Winding",
+        description:
+          "Water trough cooling optimized to avoid thermal shock; dimensional stability verified. Meter-mark accuracy checked; cable wound on drums with proper end caps and sealing.",
+      },
+      {
+        step: "Routine Electrical Tests (Per Batch/Drum)",
+        description:
+          "Conductor DC resistance, insulation resistance, and high-voltage withstand. Continuity, spark, and sheath integrity tests.",
+      },
+      {
+        step: "Mechanical & Material Tests",
+        description:
+          "Tensile/elongation (PVC/XLPE), ageing, heat shock/pressure (PVC), hot-set/gel (XLPE). Armour wire tensile, zinc coating (for GI wires), bending/impact, abrasion, and tear of sheath. Overall dimensions, thicknesses, and weight confirmed against design.",
+      },
+      {
+        step: "Acceptance/Type Tests (as per design standard)",
+        description:
+          "For XLPE LT power: tests per IS 7098 (Part-1) (e.g., hot set, heating cycle, water immersion, armour adhesion, etc.). For PVC LT power: tests per IS 1554 (Part-1) (e.g., insulation/sheath physicals, dielectric, heat ageing). Flame tests per selected FR/FRLS-H/ZHFR category; smoke/halogen where applicable.",
+      },
+      {
+        step: "Final QA, Documentation & Traceability",
+        description:
+          "Test reports, drum details, batch codes, and compliance certificates compiled. RoHS/REACH conformity statements attached (as applicable). Packing list, handling/storage guidelines, and warranty stickers affixed.",
+      },
+    ],
+    
   },
 ];
 
