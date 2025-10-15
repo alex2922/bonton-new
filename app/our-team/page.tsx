@@ -106,7 +106,7 @@ const page = () => {
     },
     {
       name: "Mr. Ajay Chandulal Vyas",
-      designation: "Branch Head: Gujrat",
+      designation: "Branch Head: Gujarat",
       description:
         "Possesses over 25 years of professional expertise in Sales and Marketing, and became part of the company in 2024.",
       image: "/team/Ajay Chandulal Vyas.jpg",

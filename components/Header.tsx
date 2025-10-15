@@ -31,6 +31,8 @@ const Header = () => {
         
         { name: "Bonton Blogs", link: "/blogs" },
         { name: "Plan For 2035 ", link: "/plan_for_2035" },
+        { name: "Gallery ", link: "/gallery" },
+
       ],
     },
     {

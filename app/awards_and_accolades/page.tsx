@@ -116,6 +116,33 @@ const Plan2035 = () => {
         btnText="Be a Part of Our Journey"
         link="/career-opportunities"
       />
+      <div className="parent py-[100px] hidden md:block">
+        <div className="container px-4 flex gap-8 justify-center items-center" style={{ perspective: '1000px' }}>
+          <div className="transform rotate-3" style={{ transform: 'rotateY(15deg) rotateZ(-3deg)' }}>
+            <Image src="/awards/gal1.png" alt="Awards" width={400} height={1000} />
+          </div>
+          <div className="transform -rotate-3" style={{ transform: 'rotateY(-15deg) rotateZ(3deg)' }}>
+            <Image src="/awards/gal2.png" alt="Awards" width={400} height={1000} />
+          </div>
+        </div>
+      </div>
+
+      <div className="parent py-[100px]  md:hidden">
+        <div className="container px-4 fle flex-col gap-8 justify-center items-center" >
+          <div className="transform  mb-2" >
+            <Image src="/awards/gal1.png" alt="Awards" width={400} height={1000} />
+          </div>
+          <div className="transform mt-2 " >
+            <Image src="/awards/gal2.png" alt="Awards" width={400} height={1000} />
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
       {awards.map((award, index) => (
         <div key={index} className={`parent  relative   ${index % 2 !== 0 ? 'bg-gradient-to-br from-[#121722] via-emerald-500 to-[var(--accent3)]' : 'bg-gradient-to-br from-[#121722] via-[var(--accent2)] to-[var(--accent3)]'}`}>
            <Image

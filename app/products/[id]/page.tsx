@@ -403,20 +403,8 @@ const ProductPage = ({ params }: PageProps) => {
                   {product.applications?.map((item, index) => (
                     <SwiperSlide key={index} className="w-full pb-4 ">
                       <div className="flex flex-col items-center justify-center h-[120px] p-2 shadow-lg bg-white rounded-2xl w-full text-center">
-                        {item.image ? (
-                          <Image
-                            src={item.image}
-                            alt={item.description}
-                            width={40}
-                            height={40}
-                            className="object-contain"
-                          />
-                        ) : (
-                          <span className="text-3xl text-[var(--accent2)]">
-                            <CiCircleCheck />
-                          </span>
-                        )}
-                        <span className="text-sm mt-2">{item.description}</span>
+                        
+                        <p className="text-sm mt-2">{item.description}</p>
                       </div>
                     </SwiperSlide>
                   ))}
