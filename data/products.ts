@@ -868,15 +868,14 @@ const products = [
     ],
 
     performanceParameters: [
-      { property: "Rated Voltage", value: "1500 V DC" },
-      { property: "Operating Temperature", value: "–40 °C to +90 °C" },
-      { property: "Max. Conductor Temperature", value: "+120 °C" },
-      { property: "Flame Test Compliance", value: "IEC 60332-1 & IEC 60332-3" },
-      { property: "Smoke Density", value: "IEC 61034" },
-      { property: "Halogen Emission", value: "IEC 60754-1 & IEC 60754-2" },
-      { property: "Ozone Resistance", value: "EN 50396" },
-      { property: "UV Resistance", value: "HD 605/A1" },
-      { property: "Service Life", value: "25+ Years" },
+      { property: "Rated Voltage", value: "1100 V/3.3kV" },
+      { property: "Conductor Temperature", value: "70 °C (PVC), 90 °C (XLPE)" },
+      { property: "Short Circuit Temp.", value: "160 °C (PVC), 250 °C (XLPE)" },
+      { property: "Dielectric Strength", value: "3.5 kV for 5 minutes" },
+      { property: "Insulation Resistance", value: "> 1 MΩ/km at 27 °C" },
+      { property: "Mechanical Strength", value: "High tensile and impact resistance" },
+      { property: "Fire Performance", value: "Flame Retardant, FRLS, LSZH available" },
+      { property: "Service Life", value: "25+ Years under standard operating conditions" },
     ],
 
     applications: [
