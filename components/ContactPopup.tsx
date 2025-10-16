@@ -10,6 +10,12 @@ interface ContactPopupProps {
 
 const ContactPopup = ({ isOpen, onClose }: ContactPopupProps) => {
   const [isVisible, setIsVisible] = useState(false);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [message, setMessage] = useState("");
+  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>("idle");
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     if (isOpen) {
@@ -56,12 +62,41 @@ const ContactPopup = ({ isOpen, onClose }: ContactPopupProps) => {
         </div>
         
         <div className="p-4">
-          <form action="#" className="w-full flex flex-col gap-3">
+          <form
+            onSubmit={async (e) => {
+              e.preventDefault();
+              setStatus('loading');
+              setError(null);
+              try {
+                const res = await fetch('/api/contact', {
+                  method: 'POST',
+                  headers: { 'Content-Type': 'application/json' },
+                  body: JSON.stringify({ name, email, phone, message }),
+                });
+                if (!res.ok) {
+                  const data = await res.json().catch(() => ({}));
+                  throw new Error(data.error || 'Failed to send');
+                }
+                setStatus('success');
+                setName('');
+                setEmail('');
+                setPhone('');
+                setMessage('');
+              } catch (err: unknown) {
+                setStatus('error');
+                const message = err instanceof Error ? err.message : 'Something went wrong';
+                setError(message);
+              }
+            }}
+            className="w-full flex flex-col gap-3"
+          >
             {/* Name Input */}
             <input 
               type="text" 
               placeholder="Your Name" 
               className="w-full px-3 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all duration-200 bg-gray-50 focus:bg-white text-sm"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
               required
             />
 
@@ -70,6 +105,8 @@ const ContactPopup = ({ isOpen, onClose }: ContactPopupProps) => {
               type="email" 
               placeholder="Your Email" 
               className="w-full px-3 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all duration-200 bg-gray-50 focus:bg-white text-sm"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               required
             />
 
@@ -81,6 +118,8 @@ const ContactPopup = ({ isOpen, onClose }: ContactPopupProps) => {
               placeholder="Phone Number"
               title="Enter a 10-digit number"
               className="w-full px-3 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all duration-200 bg-gray-50 focus:bg-white text-sm"
+              value={phone}
+              onChange={(e) => setPhone(e.target.value)}
               required
             />
 
@@ -89,6 +128,8 @@ const ContactPopup = ({ isOpen, onClose }: ContactPopupProps) => {
               rows={2} 
               placeholder="Your Message" 
               className="w-full px-3 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent resize-none transition-all duration-200 bg-gray-50 focus:bg-white text-sm"
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
               required
             />
 
@@ -96,9 +137,16 @@ const ContactPopup = ({ isOpen, onClose }: ContactPopupProps) => {
             <button 
               type="submit" 
               className="mt-1 w-full bg-gradient-to-r from-emerald-600 to-emerald-700 hover:from-emerald-700 hover:to-emerald-800 text-white font-medium py-2.5 px-4 rounded-lg transition-all duration-200 transform hover:scale-[1.02] active:scale-[0.98] shadow-md hover:shadow-lg text-sm"
+              disabled={status === 'loading'}
             >
-              Send Message
+              {status === 'loading' ? 'Sending…' : 'Send Message'}
             </button>
+            {status === 'success' && (
+              <p className="text-green-600 text-xs">Thanks! Your message has been sent.</p>
+            )}
+            {status === 'error' && (
+              <p className="text-red-600 text-xs">{error || 'Failed to send message.'}</p>
+            )}
           </form>
         </div>
       </div>

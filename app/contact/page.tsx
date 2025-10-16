@@ -1,4 +1,5 @@
 import Link from "next/link";
+import ContactForm from "@/components/ContactForm";
 import OfficeMap from "@/components/OfficeMap";
 import { FiPhone, FiMail } from "react-icons/fi";
 import { MdLocationOn } from "react-icons/md";
@@ -137,21 +138,7 @@ const Contact = () => {
             <div className="p-4 w-full bg-black/4 rounded-xl">
               <h2 className="font-bold text-2xl mb-4">Send us a message</h2>
 
-              <form action="#" className="w-full flex flex-col gap-8">
-                <input type="text" placeholder="Name" />
-                <input type="email" placeholder="Email" />
-                <input
-                  type="tel"
-                  pattern="[0-9]{10}"
-                  inputMode="numeric"
-                  placeholder="Phone Number"
-                  title="Enter a 10-digit number"
-                />
-                <textarea rows={4} placeholder="Your Message" />
-                <button type="submit" className="btn mt-8">
-                  Submit
-                </button>
-              </form>
+              <ContactForm />
             </div>
           </div>
         </div>
