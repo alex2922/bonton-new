@@ -44,8 +44,9 @@ const Gallery = () => {
     <>
       <SectionTop
         chip=""
-        title="Gallery"
-        description="Explore our gallery showcasing our facilities, team, and work environment at Bonton Cables."
+        title="The Future, Wired"
+        description="Where Progress, People, and Power Come Together — not as distant ideas, but as one electrifying force.
+From the spark in an electrician’s hands to the precision of our factories and the dreams lighting up Indian homes, this is where innovation meets emotion, where technology embraces humanity. This is the junction where every connection becomes a symbol of possibility."
         imageUrl="/sectiontop/gallery.jpg"
         btnText=""
         link=""

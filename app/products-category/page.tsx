@@ -7,7 +7,7 @@ import { useState } from "react";
 import SectionTop from "@/components/SectionTop";
 
 const Page = () => {
-  const [activeCategory, setActiveCategory] = useState("type");
+  const [activeCategory, setActiveCategory] = useState("all");
   const [activeFilter, setActiveFilter] = useState("all");
 
   const getFilteredProducts = () => {
@@ -37,6 +37,8 @@ const Page = () => {
         acc[industry].push(product);
         return acc;
       }, {} as Record<string, typeof products>);
+    } else if (activeCategory === "all") {
+      return { "All Cables": products } as Record<string, typeof products>;
     }
     return {};
   };
@@ -65,10 +67,34 @@ const Page = () => {
       <div className="parent py-[100px]">
         <div className="container">
           {/* Tab Navigation */}
-          <div className="flex w-full mb-12">
+          <div className="flex w-full mb-12 gap-3 flex-wrap md:flex-nowrap overflow-x-auto md:overflow-visible">
+            <button
+              onClick={() => setActiveCategory("all")}
+              className={`flex-1 min-w-[180px] flex items-center justify-between px-6 py-4 text-sm font-medium uppercase tracking-wide transition-all duration-300 ${
+                activeCategory === "all"
+                  ? "bg-gray-200 text-gray-800"
+                  : "bg-white text-gray-600 border-b-2 border-gray-300 hover:border-gray-400"
+              }`}
+            >
+              <span>ALL CABLES</span>
+              <svg
+                className="w-4 h-4 ml-2"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M7 17L17 7M17 7H7M17 7V17"
+                />
+              </svg>
+            </button>
+
             <button
               onClick={() => setActiveCategory("type")}
-              className={`flex-1 flex items-center justify-between px-6 py-4 text-sm font-medium uppercase tracking-wide transition-all duration-300 ${
+              className={`flex-1 min-w-[180px] flex items-center justify-between px-6 py-4 text-sm font-medium uppercase tracking-wide transition-all duration-300 ${
                 activeCategory === "type"
                   ? "bg-gray-200 text-gray-800"
                   : "bg-white text-gray-600 border-b-2 border-gray-300 hover:border-gray-400"
@@ -92,7 +118,7 @@ const Page = () => {
 
             <button
               onClick={() => setActiveCategory("standard")}
-              className={`flex-1 flex items-center justify-between px-6 py-4 text-sm font-medium uppercase tracking-wide transition-all duration-300 ${
+              className={`flex-1 min-w-[180px] flex items-center justify-between px-6 py-4 text-sm font-medium uppercase tracking-wide transition-all duration-300 ${
                 activeCategory === "standard"
                   ? "bg-gray-200 text-gray-800"
                   : "bg-white text-gray-600 border-b-2 border-gray-300 hover:border-gray-400"
@@ -116,7 +142,7 @@ const Page = () => {
 
             <button
               onClick={() => setActiveCategory("industry")}
-              className={`flex-1 flex items-center justify-between px-6 py-4 text-sm font-medium uppercase tracking-wide transition-all duration-300 ${
+              className={`flex-1 min-w-[180px] flex items-center justify-between px-6 py-4 text-sm font-medium uppercase tracking-wide transition-all duration-300 ${
                 activeCategory === "industry"
                   ? "bg-gray-200 text-gray-800"
                   : "bg-white text-gray-600 border-b-2 border-gray-300 hover:border-gray-400"

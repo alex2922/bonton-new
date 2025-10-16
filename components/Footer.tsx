@@ -90,7 +90,7 @@ const Footer = () => {
         { name: "Multicore Cables", link: "/products/multicore-cables" },
         { name: "Power Cables", link: "/products/power-cables" },
         { name: "Building Wires", link: "/products/building-wires" },
-        { name: "Automotive Cables", link: "/products/automobile-cables" },
+        { name: "Automotive Cables", link: "/products/automotive-cables" },
         {
           name: "Control and Instrumentation Cables",
           link: "/products/control-and-instrumentation-cables",

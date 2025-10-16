@@ -403,8 +403,20 @@ const ProductPage = ({ params }: PageProps) => {
                   {product.applications?.map((item, index) => (
                     <SwiperSlide key={index} className="w-full pb-4 ">
                       <div className="flex flex-col items-center justify-center h-[120px] p-2 shadow-lg bg-white rounded-2xl w-full text-center">
-                        
-                        <p className="text-sm mt-2">{item.description}</p>
+                        {item.image ? (
+                          <Image
+                            src={item.image}
+                            alt={item.description}
+                            width={40}
+                            height={40}
+                            className="object-contain"
+                          />
+                        ) : (
+                          <span className="text-3xl text-[var(--accent2)]">
+                            <CiCircleCheck />
+                          </span>
+                        )}
+                        <span className="text-sm mt-2">{item.description}</span>
                       </div>
                     </SwiperSlide>
                   ))}
@@ -461,28 +473,30 @@ const ProductPage = ({ params }: PageProps) => {
             </div>
           </div>
 
-          <div className="parent py-[50px] bg-gradient-to-t from-[#121722]  via-emerald-900 to-[var(--accent3)] ">
-            <div className="container  flex flex-col justify-center align-center gap-4">
-              <h2 className=" text-4xl leading-8 font-bold text-center mb-7 text-white ">
-                Manufacturing
-              </h2>
+          {product.manufacturing && product.manufacturing.length > 0 && (
+            <div className="parent py-[50px] bg-gradient-to-t from-[#121722]  via-emerald-900 to-[var(--accent3)] ">
+              <div className="container  flex flex-col justify-center align-center gap-4">
+                <h2 className=" text-4xl leading-8 font-bold text-center mb-7 text-white ">
+                  Manufacturing
+                </h2>
 
-              <div className="flex flex-col w-full gap-4 ">
-                {product.manufacturing?.map((item, index) => (
-                  <div
-                    key={index}
-                    className="w-full p-4 rounded-lg shadow bg-white/90 "
-                  >
-                    <h3 className="text-xl font-[800] text-[var(--accent1)]">
-                      {item.step}
-                    </h3>
-                    <div className="w-full border-b-1 border-gray-400/40 my-2"></div>
-                    <p className="text-black">{item.description}</p>
-                  </div>
-                ))}
+                <div className="flex flex-col w-full gap-4 ">
+                  {product.manufacturing.map((item, index) => (
+                    <div
+                      key={index}
+                      className="w-full p-4 rounded-lg shadow bg-white/90 "
+                    >
+                      <h3 className="text-xl font-[800] text-[var(--accent1)]">
+                        {item.step}
+                      </h3>
+                      <div className="w-full border-b-1 border-gray-400/40 my-2"></div>
+                      <p className="text-black">{item.description}</p>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
-          </div>
+          )}
         </>
       ) : (
         <div className="flex justify-center items-center h-screen">
