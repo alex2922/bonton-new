@@ -31,7 +31,7 @@ interface Product {
   images: string[];
   variants?: Array<{
     modelNumber: string;
-    gauge: number;
+    gauge: string | number;
     cores: number[];
     coresLength?: number[];
     cableType?: string[];
@@ -50,7 +50,8 @@ interface Product {
   construction?: Array<{
     component: string;
     material: string;
-    description: string;
+    description?: string;
+    Function?: string;
   }>;
   certifications?: string[];
   safetyStandards?: Array<{
@@ -72,6 +73,7 @@ interface Product {
 const ProductPage = ({ params }: PageProps) => {
   const router = useRouter();
   const [tabs, setTabs] = useState(1);
+  const [tabItems, setTabItems] = useState<Array<{ id: number; label: string }>>([]);
   const [product, setProduct] = useState<Product | undefined>(undefined);
 
   useEffect(() => {
@@ -82,17 +84,30 @@ const ProductPage = ({ params }: PageProps) => {
 
       if (!foundProduct) {
         router.push("/");
+        return;
+      }
+
+      const hasSpecs = Array.isArray(foundProduct.variants) && foundProduct.variants.length > 0;
+      const hasPerformance = Array.isArray(foundProduct.performanceParameters) && foundProduct.performanceParameters.length > 0;
+      const hasConstruction = Array.isArray(foundProduct.construction) && foundProduct.construction.length > 0;
+      const hasCerts = (Array.isArray(foundProduct.certifications) && foundProduct.certifications.length > 0) ||
+        (Array.isArray(foundProduct.safetyStandards) && foundProduct.safetyStandards.length > 0);
+
+      const availableTabs: Array<{ id: number; label: string }> = [];
+      if (hasSpecs) availableTabs.push({ id: 1, label: "Specifications" });
+      if (hasPerformance) availableTabs.push({ id: 2, label: "Performance" });
+      if (hasConstruction) availableTabs.push({ id: 3, label: "Construction" });
+      if (hasCerts) availableTabs.push({ id: 4, label: "Certifications" });
+
+      setTabItems(availableTabs);
+      if (availableTabs.length > 0) {
+        setTabs(availableTabs[0].id);
       }
     };
 
     getProduct();
   }, [params, router]);
-  const tabItems = [
-    { id: 1, label: "Specifications" },
-    { id: 2, label: "Performance" },
-    { id: 3, label: "Construction" },
-    { id: 4, label: "Certifications" },
-  ];
+  
 
   return (
     <>
@@ -100,44 +115,48 @@ const ProductPage = ({ params }: PageProps) => {
         <>
           <div className="parent py-[20px] md:py-[100px] bg-[#121721] ">
             <div className="container  px-4 flex flex-col md:flex-row gap-8">
-              <div className="w-full md:w-1/3 h-full flex flex-col gap-4 ">
-                <div className="aspect-square w-[100%] bg-gradient-to-b from-white/70 to-white/30 rounded-2xl overflow-hidden relative">
-                  <Swiper
-                    modules={[Navigation, Pagination, Thumbs]}
-                    spaceBetween={0}
-                    slidesPerView={1}
-                    navigation={true}
-                    pagination={{
-                      clickable: true,
-                      el: ".swiper-pagination-custom",
-                    }}
-                    className="w-full h-full"
-                  >
-                    {product.images?.map((imgSrc, index) => (
-                      <SwiperSlide key={index}>
-                        <div className="w-full h-full flex items-center justify-center">
-                          <Image
-                            src={imgSrc}
-                            alt={`${product.name} image ${index + 1}`}
-                            width={400}
-                            height={400}
-                            className="object-contain w-full h-full"
-                          />
-                        </div>
-                      </SwiperSlide>
-                    ))}
-                  </Swiper>
+              {Array.isArray(product.images) && product.images.length > 0 && (
+                <div className="w-full md:w-1/3 h-full flex flex-col gap-4 ">
+                  <div className="aspect-square w-[100%] bg-gradient-to-b from-white/70 to-white/30 rounded-2xl overflow-hidden relative">
+                    <Swiper
+                      modules={[Navigation, Pagination, Thumbs]}
+                      spaceBetween={0}
+                      slidesPerView={1}
+                      navigation={true}
+                      pagination={{
+                        clickable: true,
+                        el: ".swiper-pagination-custom",
+                      }}
+                      className="w-full h-full"
+                    >
+                      {product.images.map((imgSrc, index) => (
+                        <SwiperSlide key={index}>
+                          <div className="w-full h-full flex items-center justify-center">
+                            <Image
+                              src={imgSrc}
+                              alt={`${product.name} image ${index + 1}`}
+                              width={400}
+                              height={400}
+                              className="object-contain w-full h-full"
+                            />
+                          </div>
+                        </SwiperSlide>
+                      ))}
+                    </Swiper>
+                  </div>
+                  <div className="swiper-pagination-custom"></div>
                 </div>
-                <div className="swiper-pagination-custom"></div>
-              </div>
+              )}
 
               <div className="w-full md:w-2/3  min-h-[400px] flex flex-col items-center md:items-start gap-4 justify-center  ">
                 <h1 className="text-4xl text-white font-[800] text-center md:text-left">
                   {product.name}
                 </h1>
-                <p className="text-white/80 font-[300] text-center md:text-left !max-w-[1000ch]">
-                  {product.longDescription}
-                </p>
+                {product.longDescription && (
+                  <p className="text-white/80 font-[300] text-center md:text-left !max-w-[1000ch]">
+                    {product.longDescription}
+                  </p>
+                )}
                 <div className="flex gap-4 items-center justify-center flex-wrap ">
                   <Link href={"/contact"} className="btn">
                     Get Quotation
@@ -153,27 +172,28 @@ const ProductPage = ({ params }: PageProps) => {
             </div>
           </div>
 
-          <div className="parent bg-gray-200/80 py-[50px] px-2 ">
-            <div className="container !max-w-[1400px]  flex flex-col  justify-center align-center gap-4">
-              <h2 className=" text-4xl leading-8 font-bold text-center ">
-                <span>Technical</span> Specifications
-              </h2>
+          {tabItems.length > 0 && (
+            <div className="parent bg-gray-200/80 py-[50px] px-2 ">
+              <div className="container !max-w-[1400px]  flex flex-col  justify-center align-center gap-4">
+                <h2 className=" text-4xl leading-8 font-bold text-center ">
+                  <span>Technical</span> Specifications
+                </h2>
 
-              <div className="w-full grid grid-cols-1  md:grid-cols-4 bg-white p-1 rounded-lg mt-[50px]">
-                {tabItems.map((tab) => (
-                  <button
-                    key={tab.id}
-                    onClick={() => setTabs(tab.id)}
-                    className={`w-full p-2 rounded-lg text-lg font-[500] cursor-pointer ${
-                      tabs === tab.id ? "!bg-[var(--accent1)] text-white" : ""
-                    }`}
-                  >
-                    {tab.label}
-                  </button>
-                ))}
-              </div>
-              <div className="w-full  bg-white rounded-lg  p-1  overflow-hidden">
-                {tabs === 1 ? (
+                <div className="w-full grid grid-cols-1  md:grid-cols-4 bg-white p-1 rounded-lg mt-[50px]">
+                  {tabItems.map((tab) => (
+                    <button
+                      key={tab.id}
+                      onClick={() => setTabs(tab.id)}
+                      className={`w-full p-2 rounded-lg text-lg font-[500] cursor-pointer ${
+                        tabs === tab.id ? "!bg-[var(--accent1)] text-white" : ""
+                      }`}
+                    >
+                      {tab.label}
+                    </button>
+                  ))}
+                </div>
+                <div className="w-full  bg-white rounded-lg  p-1  overflow-hidden">
+                  {tabs === 1 ? (
                   <>
                     <div className="overflow-x-auto table-scroll-wrapper">
                       <table className="w-full product-table">
@@ -362,116 +382,125 @@ const ProductPage = ({ params }: PageProps) => {
                     </>
                   )
                 )}
+                </div>
               </div>
             </div>
-          </div>
+          )}
 
-          <div className="parent  pt-[100px] pb-[50px] px-2 bg-gradient-to-br from-[#121722]  via-emerald-900 to-[var(--accent3)] ">
-            <div className="container  flex flex-col  justify-center align-center gap-4">
-              <h2 className=" text-4xl leading-8 font-bold text-center text-white ">
-                Industry Applications
-              </h2>
+          {Array.isArray(product.applications) && product.applications.length > 0 && (
+            <div className="parent  pt-[100px] pb-[50px] px-2 bg-gradient-to-br from-[#121722]  via-emerald-900 to-[var(--accent3)] ">
+              <div className="container  flex flex-col  justify-center align-center gap-4">
+                <h2 className=" text-4xl leading-8 font-bold text-center text-white ">
+                  Industry Applications
+                </h2>
 
-              <div className="w-full py-[50px]">
-                <Swiper
-                  modules={[Navigation, Pagination, Autoplay]}
-                  spaceBetween={20}
-                  slidesPerView={1}
-                  navigation={true}
-                  pagination={{
-                    clickable: true,
-                    el: ".swiper-pagination-applications",
-                  }}
-                  autoplay={{
-                    delay: 3000,
-                    disableOnInteraction: false,
-                  }}
-                  loop={true}
-                  breakpoints={{
-                    640: {
-                      slidesPerView: 2,
-                    },
-                    768: {
-                      slidesPerView: 3,
-                    },
-                    1024: {
-                      slidesPerView: 4,
-                    },
-                  }}
-                  className="w-full"
-                >
-                  {product.applications?.map((item, index) => (
-                    <SwiperSlide key={index} className="w-full pb-4 ">
-                      <div className="flex flex-col items-center justify-center h-[120px] p-2 shadow-lg bg-white rounded-2xl w-full text-center">
-                        {item.image ? (
-                          <Image
-                            src={item.image}
-                            alt={item.description}
-                            width={40}
-                            height={40}
-                            className="object-contain"
-                          />
-                        ) : (
+                <div className="w-full py-[50px]">
+                  <Swiper
+                    modules={[Navigation, Pagination, Autoplay]}
+                    spaceBetween={20}
+                    slidesPerView={1}
+                    navigation={true}
+                    pagination={{
+                      clickable: true,
+                      el: ".swiper-pagination-applications",
+                    }}
+                    autoplay={{
+                      delay: 3000,
+                      disableOnInteraction: false,
+                    }}
+                    loop={true}
+                    breakpoints={{
+                      640: {
+                        slidesPerView: 2,
+                      },
+                      768: {
+                        slidesPerView: 3,
+                      },
+                      1024: {
+                        slidesPerView: 4,
+                      },
+                    }}
+                    className="w-full"
+                  >
+                    {product.applications.map((item, index) => (
+                      <SwiperSlide key={index} className="w-full pb-4 ">
+                        <div className="flex flex-col items-center justify-center h-[120px] p-2 shadow-lg bg-white rounded-2xl w-full text-center">
+                          {item.image ? (
+                            <Image
+                              src={item.image}
+                              alt={item.description}
+                              width={40}
+                              height={40}
+                              className="object-contain"
+                            />
+                          ) : (
+                            <span className="text-3xl text-[var(--accent2)]">
+                              <CiCircleCheck />
+                            </span>
+                          )}
+                          <span className="text-sm mt-2">{item.description}</span>
+                        </div>
+                      </SwiperSlide>
+                    ))}
+                  </Swiper>
+                 <div className="w-full  flex items-center justify-center">
+                 <div className="swiper-pagination-applications  !w-fit"></div>
+                 </div>
+                  </div>
+              </div>
+            </div>
+          )}
+
+          {(Array.isArray(product.keyFeatures) && product.keyFeatures.length > 0) || (Array.isArray(product.Highlights) && product.Highlights.length > 0) ? (
+            <div className="parent bg-gray-200/80 py-[50px] ">
+              <div className="container  flex flex-col md:flex-row justify-center align-center gap-4">
+                {Array.isArray(product.keyFeatures) && product.keyFeatures.length > 0 && (
+                  <div className="w-full md:w-1/2 h-full  px-4 py-8">
+                    <h2 className=" text-4xl leading-8 font-bold text-center ">
+                      Key <span>Features</span>
+                    </h2>
+
+                    <div className="w-full py-[50px] flex flex-col gap-4 justify-center items-center">
+                      {product.keyFeatures.map((item, index) => (
+                        <div
+                          key={index}
+                          className="flex items-center gap-1 box p-2 shadow-xl/10 bg-white rounded-2xl  w-full text-left "
+                        >
                           <span className="text-3xl text-[var(--accent2)]">
                             <CiCircleCheck />
                           </span>
-                        )}
-                        <span className="text-sm mt-2">{item.description}</span>
-                      </div>
-                    </SwiperSlide>
-                  ))}
-                </Swiper>
-               <div className="w-full  flex items-center justify-center">
-               <div className="swiper-pagination-applications  !w-fit"></div>
-               </div>
-                </div>
-            </div>
-          </div>
 
-          <div className="parent bg-gray-200/80 py-[50px] ">
-            <div className="container  flex flex-col md:flex-row justify-center align-center gap-4">
-              <div className="w-full md:w-1/2 h-full  px-4 py-8">
-                <h2 className=" text-4xl leading-8 font-bold text-center ">
-                  Key <span>Features</span>
-                </h2>
-
-                <div className="w-full py-[50px] flex flex-col gap-4 justify-center items-center">
-                  {product.keyFeatures?.map((item, index) => (
-                    <div
-                      key={index}
-                      className="flex items-center gap-1 box p-2 shadow-xl/10 bg-white rounded-2xl  w-full text-left "
-                    >
-                      <span className="text-3xl text-[var(--accent2)]">
-                        <CiCircleCheck />
-                      </span>
-
-                      {item}
+                          {item}
+                        </div>
+                      ))}
                     </div>
-                  ))}
-                </div>
-              </div>
-              <div className="w-full md:w-1/2 h-full  px-4 py-8">
-                <h2 className=" text-4xl leading-8 font-bold text-center ">
-                  Product <span>Highlights</span>
-                </h2>
+                  </div>
+                )}
+                {Array.isArray(product.Highlights) && product.Highlights.length > 0 && (
+                  <div className="w-full md:w-1/2 h-full  px-4 py-8">
+                    <h2 className=" text-4xl leading-8 font-bold text-center ">
+                      Product <span>Highlights</span>
+                    </h2>
 
-                <div className="w-full py-[50px] flex flex-col gap-4 justify-center items-center">
-                  {product.Highlights?.map((item, index) => (
-                    <div
-                      key={index}
-                      className="flex items-center gap-1 box p-2 shadow-xl/10 bg-white rounded-2xl  w-full text-left "
-                    >
-                      <span className="text-3xl text-[var(--accent2)]">
-                        <CiCircleCheck />
-                      </span>
+                    <div className="w-full py-[50px] flex flex-col gap-4 justify-center items-center">
+                      {product.Highlights.map((item, index) => (
+                        <div
+                          key={index}
+                          className="flex items-center gap-1 box p-2 shadow-xl/10 bg-white rounded-2xl  w-full text-left "
+                        >
+                          <span className="text-3xl text-[var(--accent2)]">
+                            <CiCircleCheck />
+                          </span>
 
-                      {item}
+                          {item}
+                        </div>
+                      ))}
                     </div>
-                  ))}
-                </div>
+                  </div>
+                )}
               </div>
             </div>
-          </div>
+          ) : null}
 
           {product.manufacturing && product.manufacturing.length > 0 && (
             <div className="parent py-[50px] bg-gradient-to-t from-[#121722]  via-emerald-900 to-[var(--accent3)] ">

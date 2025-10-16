@@ -329,35 +329,27 @@ const products = [
     ],
     applications: [
       {
-        image: "/products/fire-survival-cables/application-1.png",
         description: "Fire Alarm Systems",
       },
       {
-        image: "/products/fire-survival-cables/application-2.png",
         description: "Emergency Lighting & Exit Signage",
       },
       {
-        image: "/products/fire-survival-cables/application-3.png",
         description: "Evacuation & Public Address Systems",
       },
       {
-        image: "/products/fire-survival-cables/application-4.png",
         description: "Fire Pumps & Sprinkler Systems",
       },
       {
-        image: "/products/fire-survival-cables/application-5.png",
         description: "Pressurization & Smoke Venting Fans",
       },
       {
-        image: "/products/fire-survival-cables/application-6.png",
         description: "Fireman’s Lifts & Control Rooms",
       },
       {
-        image: "/products/fire-survival-cables/application-7.png",
         description: "Metro Railways, Airports, Hospitals, High-Rise Buildings",
       },
       {
-        image: "/products/fire-survival-cables/application-8.png",
         description: "Underground Tunnels, Data Centres, HVAC Installations",
       },
     ],
@@ -739,25 +731,20 @@ const products = [
 
     applications: [
       {
-        image: "/products/solar-cables/application-1.png",
         description: "Rooftop, off-grid, and utility-scale solar projects",
       },
       {
-        image: "/products/solar-cables/application-2.png",
         description:
           "Interconnection between solar panels, inverters, combiner boxes, and batteries",
       },
       {
-        image: "/products/solar-cables/application-3.png",
         description: "Solar farms, industrial, and commercial PV installations",
       },
       {
-        image: "/products/solar-cables/application-4.png",
         description:
           "Tunnel, railway, and green energy infrastructure requiring solar integration",
       },
       {
-        image: "/products/solar-cables/application-6.png",
         description:
           "Suitable for harsh outdoor conditions with high temperature and UV exposure",
       },
@@ -837,6 +824,51 @@ const products = [
     images: [
       "/products/co-axial-cables/top.png",
       "/products/co-axial-cables/side.png",
+    ],
+
+    variants: [
+      {
+        cores: [1],
+        modelNumber: "110086",
+        gauge: 0.28,
+        coresLength: [305],
+        cableType: ["RG-59"],
+        color: ["white", "black"],
+        colorCustomization: false,
+        weight: "30kg - 40kg",
+        dimension: "6mm",
+        packagingType: "Coils / Reels",
+        unitsPerPack: "as per order",
+        warrantyPeriod: "1 Year (extendable)",
+      },
+      {
+        cores: [1],
+        modelNumber: "110087",
+        gauge: 0.52,
+        coresLength: [305],
+        cableType: ["RG-6"],
+        color: ["white", "black"],
+        colorCustomization: false,
+        weight: "45kg - 65kg",
+        dimension: "6.8mm - 7.2mm",
+        packagingType: "Coils / Reels",
+        unitsPerPack: "as per order",
+        warrantyPeriod: "1 Year (extendable)",
+      },
+      {
+        cores: [1],
+        modelNumber: "110088",
+        gauge: 1.31,
+        coresLength: [305],
+        cableType: ["RG-11"],
+        color: ["black"],
+        colorCustomization: false,
+        weight: "90kg - 120kg",
+        dimension: "10.3mm",
+        packagingType: "Wooden Drums",
+        unitsPerPack: "as per order",
+        warrantyPeriod: "1 Year (extendable)",
+      },
     ],
 
     construction: [
@@ -935,7 +967,8 @@ const products = [
         description: " Telecom networks & control rooms.",
       },
       {
-        description: " Commercial complexes, data centres, and residential use.",
+        description:
+          " Commercial complexes, data centres, and residential use.",
       },
     ],
 
@@ -1006,8 +1039,7 @@ const products = [
         description:
           "Finished reels had been packed and marked with type and performance data.",
       },
-    ]
-    
+    ],
   },
 
   {
@@ -1018,10 +1050,268 @@ const products = [
     industry: "Infrastructure & Metro",
     shortDescription:
       "For power that lifts, hauls, and drives,​ Tough and rugged where force thrives.​ Industrial strength that always survives.​",
-    longDescription: "",
+    longDescription:
+      "Bonton Heavy Duty Cables (Low Voltage Power Cables) are engineered to deliver safe, reliable, and long-lasting performance in power distribution networks. Built with high conductivity copper/aluminium conductors, PVC/XLPE insulation, and robust armouring, they are designed to withstand mechanical stress, thermal variations, and environmental challenges. With compliance to IS, IEC, and BS standards, these cables ensure maximum safety, energy efficiency, and durability for industries, infrastructure, and critical installations.",
     images: [
       "/products/heavy-duty-cables/top.png",
       "/products/heavy-duty-cables/side.png",
+    ],
+    variants: [
+      {
+        cores: [1, 2, 3, 4],
+        modelNumber: "110311",
+        gauge: 1.5,
+        coresLength: [100, 500],
+        cableType: ["Copper / Aluminium", "PVC/XLPE Insulated"],
+        color: ["Black", "Grey"],
+        colorCustomization: false,
+        weight: "25 – 40kg",
+        dimension: "~8–12mm",
+        packagingType: "Coils / Drums",
+        unitsPerPack: "100 m coils / 500 m drums",
+        warrantyPeriod: "1 Year (extendable)",
+      },
+      {
+        cores: [1, 2, 3, 4],
+        modelNumber: "110312",
+        gauge: 2.5,
+        coresLength: [100, 500],
+        cableType: ["Copper / Aluminium", "PVC/XLPE Insulated"],
+        color: ["Black", "Grey"],
+        colorCustomization: false,
+        weight: "35 – 55kg",
+        dimension: "~9–13mm",
+        packagingType: "Coils / Drums",
+        unitsPerPack: "100 m coils / 500 m drums",
+        warrantyPeriod: "1 Year (extendable)",
+      },
+      {
+        cores: [1, 2, 3, 4],
+        modelNumber: "110313",
+        gauge: 4,
+        coresLength: [100],
+        cableType: ["Copper / Aluminium", "PVC/XLPE Insulated"],
+        color: ["Black", "Grey"],
+        colorCustomization: false,
+        weight: "55 – 80kg",
+        dimension: "~10–15mm",
+        packagingType: "Wooden Drums",
+        unitsPerPack: "100 m drums",
+        warrantyPeriod: "1 Year (extendable)",
+      },
+      {
+        cores: [1, 2, 3, 4],
+        modelNumber: "110314",
+        gauge: 6,
+        coresLength: [100],
+        cableType: ["Copper / Aluminium", "PVC/XLPE Insulated"],
+        color: ["Black", "Grey"],
+        colorCustomization: false,
+        weight: "90 – 130kg",
+        dimension: "~12–16mm",
+        packagingType: "Wooden Drums",
+        unitsPerPack: "100 m drums",
+        warrantyPeriod: "1 Year (extendable)",
+      },
+      {
+        cores: [1, 2, 3, 4],
+        modelNumber: "110315",
+        gauge: 10,
+        coresLength: [100],
+        cableType: ["Copper / Aluminium", "PVC/XLPE Insulated"],
+        color: ["Black", "Grey"],
+        colorCustomization: false,
+        weight: "150 – 220kg",
+        dimension: "~14–18mm",
+        packagingType: "Wooden Drums",
+        unitsPerPack: "100 m drums",
+        warrantyPeriod: "1 Year (extendable)",
+      },
+    ],
+
+    construction: [
+      {
+        component: "Conductor",
+        material: "High Conductivity Copper / Aluminium (Stranded Class 2)",
+        description: "Ensures excellent current-carrying capacity",
+      },
+      {
+        component: "Insulation",
+        material: "PVC / XLPE (FR, FRLS-H, ZHFR variants available)",
+        description: "Provides thermal & electrical protection",
+      },
+      {
+        component: "Core Identification",
+        material: "Colour coding (as per IS: 7098)",
+        description: "Easy phase identification",
+      },
+      {
+        component: "Inner Sheath",
+        material: "PVC / LSZH Compound",
+        description: "Binds and protects insulated cores",
+      },
+      {
+        component: "Armouring",
+        material: "Galvanized Steel Wire / Strip (for armoured type)",
+        description: "Provides mechanical strength & protection",
+      },
+      {
+        component: "Outer Sheath",
+        material: "Black / Grey PVC / LSZH (UV, rodent, termite resistant)",
+        description: "Weatherproofing and additional safety",
+      },
+      {
+        component: "Voltage Rating",
+        material: "Up to 1.1 kV (Low Voltage Range)",
+        description: "For power distribution applications",
+      },
+    ],
+
+    Highlights: [
+      "Copper / Aluminium conductors (stranded Class 2) for high conductivity",
+      "PVC / XLPE insulation with FR, FRLS-H, ZHFR options",
+      "Armoured & Unarmoured variants for flexible project needs",
+      "Inner & Outer sheaths in PVC/LSZH for superior safety",
+      "Designed for 1.1 kV Low Voltage distribution systems",
+    ],
+
+    keyFeatures: [
+      "High conductivity copper / aluminium conductors.",
+      "Armoured and unarmoured types available.",
+      "PVC / XLPE insulation with multiple safety variants.",
+      "FR, FRLS-H, and ZHFR options for enhanced fire safety.",
+      "UV, rodent & termite resistant outer sheath.",
+      "High mechanical strength and durability.",
+      "Long service life and low maintenance.",
+      "Designed to operate under Indian & global utility conditions.",
+    ],
+
+    applications: [
+      {
+        description:
+          "Power distribution in residential, commercial & industrial projects.",
+      },
+      {
+        description:
+          "Infrastructure projects – airports, metro, tunnels, highways.",
+      },
+      {
+        description:
+          "Heavy industries – steel, cement, mining, petrochemicals.",
+      },
+      {
+        description:
+          "Hospitals, malls, high-rise buildings (critical power supply).",
+      },
+      {
+        description:
+          "Renewable power projects – solar & wind evacuation lines.",
+      },
+      {
+        description: "Control & auxiliary power circuits.",
+      },
+    ],
+
+    certifications: [
+      "IS 1554 (Part 1) / IS 7098-1 compliance (Low Voltage Cables).",
+      "ISO 9001, ISO 14001, ISO 45001, ISO 50001 Certified.",
+      "IATF 16949 (quality management).",
+      "RoHS 2 & REACH Compliant.",
+      "GC-Mark Certified.",
+      "NABL accredited testing approval.",
+    ],
+
+    performanceParameters: [
+      { property: "Rated Voltage", value: "1.1 kV" },
+      {
+        property: "Conductor Temperature",
+        value: "Up to 90 °C (XLPE), 70 °C (PVC)",
+      },
+      {
+        property: "Short Circuit Temperature",
+        value: "Up to 250 °C (XLPE), 160 °C (PVC)",
+      },
+      { property: "Dielectric Strength", value: "3.5 kV for 5 min" },
+      { property: "Insulation Resistance", value: "> 1 MΩ-km" },
+      { property: "Flame Retardance", value: "IS 10810-53, IEC 60332-1 & 3" },
+      {
+        property: "Mechanical Strength",
+        value: "High tensile strength due to armouring",
+      },
+      {
+        property: "Service Life",
+        value: "25+ years (under standard conditions)",
+      },
+    ],
+
+    safetyStandards: [
+      {
+        title: "Indian Standards",
+        standards: [
+          "IS 7098 (Part 1) – XLPE insulated LV cables",
+          "IS 1554 (Part 1) – PVC insulated LV cables",
+          "IS/IEC 60332-1 & IS/IEC 60332-3 – Flame retardance tests",
+          "IS 10810 – Routine & type testing for power cables",
+        ],
+      },
+      {
+        title: "British / International Standards",
+        standards: [
+          "IEC 60502-1 – Power Cables up to 1.1 kV",
+          "IEC 60332 – Flame tests",
+          "IEC 60754-1/2 – Halogen acid gas emission tests",
+          "IEC 61034 – Smoke density test",
+          "BS 5467 – XLPE insulated, armoured LV cables",
+          "BS 6346 – PVC insulated, armoured LV cables",
+        ],
+      },
+    ],
+
+    manufacturing: [
+      {
+        step: "Conductor Made and Compacted",
+        description:
+          "Copper or aluminium conductors had been stranded and compacted to achieve circularity and reduced voids.",
+      },
+      {
+        step: "Primary Insulation Extruded",
+        description:
+          "Polyvinyl chloride or cross-linked polyethylene insulation had been extruded over each conductor.",
+      },
+      {
+        step: "Cabling of Cores Completed",
+        description:
+          "Insulated cores had been laid-up with fillers to the specified formation.",
+      },
+      {
+        step: "Bedding Applied",
+        description:
+          "A protective bedding layer had been extruded over the laid-up cores.",
+      },
+      {
+        step: "Armour Applied",
+        description:
+          "Galvanised steel wire armour, galvanised steel strip armour, or aluminium wire armour had been applied as specified.",
+      },
+      {
+        step: "Outer Sheath Extruded",
+        description:
+          "A robust outer sheath (polyvinyl chloride or halogen-free compound) had been extruded and cooled.",
+      },
+      {
+        step: "Marking and Metering Printed",
+        description:
+          "Continuous identification and meter marks had been printed.",
+      },
+      {
+        step: "Electrical and Mechanical Tests Completed",
+        description:
+          "Conductor resistance, high-voltage, partial discharge (where applicable), impact, abrasion, and bend tests had been completed.",
+      },
+      {
+        step: "Drums Packed and Sealed",
+        description: "Finished lengths had been drummed, sealed, and tagged.",
+      },
     ],
   },
 
@@ -1033,8 +1323,300 @@ const products = [
     industry: "Telecom & Data Centres",
     shortDescription:
       "Fast as thought, across each floor,​Streaming signals through every core.​ Connect. Communicate. Explore.​",
-    longDescription: "",
+    longDescription:
+      "Bonton LAN Cables are designed for high-speed data transmission, low signal loss, and long-term reliability in networking environments. Built with solid bare copper conductors, precision-twisted pairs, advanced shielding options, and LSZH jackets, these cables ensure consistent performance, minimal crosstalk, and strong EMI/RFI protection. Suitable for Cat5e, Cat6, and Cat6A systems, they are compliant with TIA/EIA, ISO/IEC, and Indian standards, making them ideal for structured cabling, enterprise networks, and data centres.",
     images: ["/products/lan-cables/top.png", "/products/lan-cables/side.png"],
+
+    variants: [
+      {
+        cores: [8],
+        modelNumber: "NA",
+        gauge: "~0.20–0.25",
+        coresLength: [305],
+        cableType: ["Cat5e UTP"],
+        color: ["Grey", "Blue"],
+        colorCustomization: true,
+        weight: "35 – 45kg",
+        dimension: "~5.0 – 5.5mm",
+        packagingType: "Pull Box / Reels",
+        unitsPerPack: "305 m pull box / reels",
+        warrantyPeriod: "3–5 Years (extendable)",
+      },
+      {
+        cores: [8],
+        modelNumber: "NA",
+        gauge: "~0.20–0.25 ",
+        coresLength: [305],
+        cableType: ["Cat5e FTP"],
+        color: ["Grey", "Blue"],
+        colorCustomization: true,
+        weight: "40 – 55kg",
+        dimension: "~5.5 – 6.0mm",
+        packagingType: "Reels / Drums",
+        unitsPerPack: "305 m reels",
+        warrantyPeriod: "3–5 Years (extendable)",
+      },
+      {
+        cores: [8],
+        modelNumber: "NA",
+        gauge: "~0.25–0.30 ",
+        coresLength: [305],
+        cableType: ["Cat6 UTP"],
+        color: ["Grey", "Blue", "Green"],
+        colorCustomization: true,
+        weight: "45 – 65kg",
+        dimension: "~6.0 – 6.5mm",
+        packagingType: "Pull Box / Reels",
+        unitsPerPack: "305 m pull box / reels",
+        warrantyPeriod: "3–5 Years (extendable)",
+      },
+      {
+        cores: [8],
+        modelNumber: "NA",
+        gauge: "~0.25–0.30 ",
+        coresLength: [305],
+        cableType: ["Cat6 FTP"],
+        color: ["Grey", "Blue", "Green"],
+        colorCustomization: true,
+        weight: "55 – 75kg",
+        dimension: "~6.5 – 7.0mm",
+        packagingType: "Reels / Drums",
+        unitsPerPack: "305 m reels",
+        warrantyPeriod: "3–5 Years (extendable)",
+      },
+      {
+        cores: [8],
+        modelNumber: "NA",
+        gauge: "~0.25–0.32 ",
+        coresLength: [305],
+        cableType: ["Cat6A UTP"],
+        color: ["Grey", "Blue", "Violet"],
+        colorCustomization: true,
+        weight: "60 – 85kg",
+        dimension: "~7.0 – 7.5mm",
+        packagingType: "Reels / Drums",
+        unitsPerPack: "305 m reels",
+        warrantyPeriod: "3–5 Years (extendable)",
+      },
+      {
+        cores: [8],
+        modelNumber: "NA",
+        gauge: "~0.25–0.32 ",
+        coresLength: [305],
+        cableType: ["Cat6A S/FTP"],
+        color: ["Grey", "Blue", "Violet"],
+        colorCustomization: true,
+        weight: "70 – 100kg",
+        dimension: "~7.5 – 8.5mm",
+        packagingType: "Reels / Drums",
+        unitsPerPack: "305 m reels",
+        warrantyPeriod: "3–5 Years (extendable)",
+      },
+    ],
+
+    construction: [
+      {
+        component: "Conductor",
+        material: "Solid Bare Copper (22–24 AWG)",
+        description: "High conductivity & stable signal transmission",
+      },
+      {
+        component: "Insulation",
+        material: "HDPE (High Density Polyethylene) / LSZH",
+        description: "Reduces signal attenuation, flame safe",
+      },
+      {
+        component: "Pair Assembly",
+        material: "4 Twisted Pairs",
+        description: "Maintains impedance and minimizes crosstalk",
+      },
+      {
+        component: "Shielding",
+        material: "UTP / FTP (foil shield) / S/FTP (foil + braid)",
+        description: "Protection against EMI & RFI (as per category)",
+      },
+      {
+        component: "Separator",
+        material: "Cross-filler (Cat6A, Cat7)",
+        description: "Provides pair isolation and reduces NEXT",
+      },
+      {
+        component: "Outer Sheath",
+        material: "PVC / LSZH (UV, Rodent, Termite Resistant)",
+        description: "Mechanical and environmental protection",
+      },
+      {
+        component: "Operating Voltage",
+        material: "Up to 300 V",
+        description: "For data transmission systems",
+      },
+      {
+        component: "Frequency Rating",
+        material:
+          "Cat5e – 100 MHz, Cat6 – 250 MHz, Cat6A – 500 MHz, Cat7 – 600–1000 MHz",
+        description: "Bandwidth for high-speed data",
+      },
+    ],
+
+    Highlights: [
+      "Solid bare copper conductors (not CCA) for premium quality",
+      "4 twisted pair design ensures high data integrity",
+      "Multiple shielding options (UTP / FTP / S/FTP)",
+      "Cross-filler spine in Cat6A/Cat7 for reduced crosstalk",
+      "PVC / LSZH jackets for indoor and flame-safe use",
+    ],
+    
+    keyFeatures: [
+      "High-performance solid copper LAN cables (Cat5e, Cat6, Cat6A, Cat7).",
+      "Supports Gigabit & 10 Gigabit Ethernet.",
+      "Low attenuation, high NEXT & return loss for stable performance.",
+      "EMI/RFI protection with FTP / S/FTP shielding options.",
+      "Long service life (15–20 years) for enterprise networking.",
+      "Flexible installation with pull-box / reel packaging.",
+      "LSZH jacket options for safety in public & commercial buildings.",
+    ],
+    
+    applications: [
+      {
+        description:
+          "Structured cabling systems in offices & commercial buildings.",
+      },
+      {
+        description:
+          "Data centres requiring high-speed Ethernet connectivity.",
+      },
+      {
+        description:
+          "Enterprise networking (LAN, WAN, server farms).",
+      },
+      {
+        description:
+          "CCTV, IP surveillance & VoIP systems.",
+      },
+      {
+        description:
+          "Broadband, telecom & residential networks.",
+      },
+      {
+        description:
+          "Industrial automation networks.",
+      },
+    ],
+    
+
+    certifications: [
+      "ISO 9001, ISO 14001, ISO 45001, ISO 50001",
+      "IATF 16949 (quality management)",
+      "RoHS 2 & REACH Compliant",
+      "TIA/EIA-568 & ISO/IEC 11801 compliance",
+      "GC-Mark Certified",
+      "NABL tested for performance parameters",
+    ],
+    
+
+    performanceParameters: [
+      {
+        property: "Frequency Rating",
+        value: "Cat5e – 100 MHz | Cat6 – 250 MHz | Cat6A – 500 MHz",
+      },
+      {
+        property: "Data Rate",
+        value: "Cat5e – Up to 1 Gbps | Cat6 – Up to 1 Gbps | Cat6A – 10 Gbps",
+      },
+      {
+        property: "Max. Distance",
+        value: "Cat5e – 100 m | Cat6 – 100 m | Cat6A – 100 m",
+      },
+      {
+        property: "Impedance",
+        value: "Cat5e – 100 ± 15 Ω | Cat6 – 100 ± 15 Ω | Cat6A – 100 ± 15 Ω",
+      },
+      {
+        property: "NEXT (Near-End Crosstalk)",
+        value: "Cat5e – ≥ 27 dB | Cat6 – ≥ 32 dB | Cat6A – ≥ 45 dB",
+      },
+      {
+        property: "Return Loss",
+        value: "Cat5e – ≥ 16 dB | Cat6 – ≥ 20 dB | Cat6A – ≥ 23 dB",
+      },
+      {
+        property: "Operating Temp. Range",
+        value: "Cat5e – –20 °C to +70 °C | Cat6 – –20 °C to +70 °C | Cat6A – –20 °C to +70 °C",
+      },
+      {
+        property: "Service Life",
+        value: "Cat5e – 15–20 Years | Cat6 – 15–20 Years | Cat6A – 20+ Years",
+      },
+    ],
+    
+    
+
+    safetyStandards: [
+      {
+        title: "Indian Standards",
+        standards: [
+          "IS 694 (for general wiring, referenced in LAN sheath compliance)",
+          "IS/IEC 60332-1 & 60332-3 – Flame retardance tests",
+          "IS 17048 – Halogen-free (LSZH) requirements",
+        ],
+      },
+      {
+        title: "British / International Standards",
+        standards: [
+          "TIA/EIA-568-C / D – LAN cabling standards",
+          "ISO/IEC 11801 – Structured cabling standard",
+          "EN 50288-6-1 – Multi-element metallic cables for digital communications",
+          "IEC 60332 – Flame tests",
+          "IEC 60754-1/2 – Halogen acid gas emission tests",
+          "IEC 61034 – Smoke density tests",
+        ],
+      },
+    ],
+    
+
+    manufacturing: [
+      {
+        step: "Solid Conductors Drawn and Annealed",
+        description:
+          "Solid copper conductors had been drawn to the specified gauge and had been annealed.",
+      },
+      {
+        step: "Core Insulation Extruded",
+        description:
+          "Polyethylene insulation with tightly controlled diameter had been extruded onto each conductor.",
+      },
+      {
+        step: "Twisted Pairs Formed with Lay Control",
+        description:
+          "Four pairs had been twisted with distinct lay lengths to control crosstalk.",
+      },
+      {
+        step: "Separators or Barriers Inserted Where Required",
+        description:
+          "A central spline or pair separators had been inserted for higher categories where specified.",
+      },
+      {
+        step: "Shields Applied for Screened Types",
+        description:
+          "Pair shields or overall foil and braid shields had been applied for screened constructions.",
+      },
+      {
+        step: "Outer Jacket Extruded",
+        description:
+          "Building-rated or plenum-rated outer jackets had been extruded and cooled.",
+      },
+      {
+        step: "Performance Tests Completed",
+        description:
+          "Direct current resistance, unbalance, capacitance, characteristic impedance, near-end crosstalk, far-end crosstalk, return loss, and delay skew had been measured.",
+      },
+      {
+        step: "Reels Packed and Traceability Recorded",
+        description:
+          "Boxed pulls or reels had been prepared with full lot traceability.",
+      },
+    ],
+    
   },
 
   {
@@ -1045,11 +1627,330 @@ const products = [
     industry: "Telecom & Data Centres",
     shortDescription:
       "Crystal clear from end to end,​Voices, data, messages send.​Built for networks that never bend.​​",
-    longDescription: "",
+    longDescription: "Bonton Telecom Cables are designed for reliable voice and data transmission across long distances with minimal signal loss. Manufactured with annealed high-conductivity copper conductors, twisted pair construction, and robust PVC/LSZH sheathing, these cables provide superior performance, durability, and protection against interference. Available in armoured and unarmoured versions, they are ideal for indoor exchanges, outdoor installations, and underground telecom networks, ensuring long-lasting connectivity in diverse environments.",
     images: [
       "/products/telecom-cables/top.png",
       "/products/telecom-cables/side.png",
     ],
+
+    variants: [
+      {
+        cores: [4], // 2 Pair (4C)
+        modelNumber: "110092",
+        gauge: "~0.13–0.20 ",
+        coresLength: [100, 500],
+        cableType: [
+          "Copper Conductor",
+          "PVC/PE Insulated",
+          "PVC Sheath"
+        ],
+        color: ["Grey", "Black"],
+        colorCustomization: true, // "Customized (as per order)"
+        weight: "15 – 20kg",
+        dimension: "~5.0 – 6.0mm",
+        packagingType: "Coils",
+        unitsPerPack: "100 m / 500 m coils",
+        warrantyPeriod: "1 Year (extendable)"
+      },
+      {
+        cores: [10], // 5 Pair (10C)
+        modelNumber: "110095",
+        gauge: "~0.13–0.20 ",
+        coresLength: [100, 500],
+        cableType: [
+          "Twisted Pair",
+          "Copper Conductor",
+          "PVC/PE Insulated"
+        ],
+        color: ["Grey", "Black"],
+        colorCustomization: true,
+        weight: "25 – 35kg",
+        dimension: "~7.0 – 8.0mm",
+        packagingType: "Coils / Reels",
+        unitsPerPack: "100 m / 500 m coils",
+        warrantyPeriod: "1 Year (extendable)"
+      },
+      {
+        cores: [20], // 10 Pair (20C)
+        modelNumber: "110096",
+        gauge: "~0.20–0.31 ",
+        coresLength: [500],
+        cableType: [
+          "Copper Conductor",
+          "Twisted Pairs",
+          "PVC/LSZH Sheath"
+        ],
+        color: ["Grey", "Black"],
+        colorCustomization: true,
+        weight: "60 – 90kg",
+        dimension: "~9.0 – 11.0mm",
+        packagingType: "Wooden Drums",
+        unitsPerPack: "500 m drums",
+        warrantyPeriod: "1 Year (extendable)"
+      },
+      {
+        cores: [40], // 20 Pair (40C)
+        modelNumber: "110097",
+        gauge: "~0.20–0.31 ",
+        coresLength: [500],
+        cableType: [
+          "Copper Conductor",
+          "Twisted Pairs",
+          "Shielded Options"
+        ],
+        color: ["Grey", "Black"],
+        colorCustomization: true,
+        weight: "110 – 150kg",
+        dimension: "~12 – 14mm",
+        packagingType: "Wooden Drums",
+        unitsPerPack: "500 m drums",
+        warrantyPeriod: "1 Year (extendable)"
+      },
+      {
+        cores: [100], // 50 Pair (100C)
+        modelNumber: "110098",
+        gauge: "~0.20–0.31 ",
+        coresLength: [500],
+        cableType: [
+          "Copper Conductor",
+          "Twisted Pairs",
+          "LDPE/LSZH Jacket"
+        ],
+        color: ["Grey", "Black"],
+        colorCustomization: true,
+        weight: "250 – 320kg",
+        dimension: "~20 – 24mm",
+        packagingType: "Wooden Drums",
+        unitsPerPack: "500 m drums",
+        warrantyPeriod: "1 Year (extendable)"
+      },
+      {
+        cores: [200], // 100 Pair (200C)
+        modelNumber: "110099",
+        gauge: "~0.20–0.31 ",
+        coresLength: [500],
+        cableType: [
+          "Copper Conductor",
+          "Twisted Pairs",
+          "Jelly Filled (optional)"
+        ],
+        color: ["Grey", "Black"],
+        colorCustomization: true,
+        weight: "500 – 650kg",
+        dimension: "~30 – 36mm",
+        packagingType: "Wooden Drums",
+        unitsPerPack: "500 m drums",
+        warrantyPeriod: "1 Year (extendable)"
+      }
+    ],
+
+    construction: [
+      {
+        component: "Conductor",
+        material: "High Conductivity Solid Annealed Copper (Tinned / Bare)",
+        description: "Ensures stable voice/data transmission",
+      },
+      {
+        component: "Conductor Diameter",
+        material: "0.4 mm, 0.5 mm, 0.63 mm (common telecom sizes)",
+        description: "Standardized for telecom networks",
+      },
+      {
+        component: "Insulation",
+        material: "PVC / HDPE",
+        description: "Provides dielectric strength & reduces attenuation",
+      },
+      {
+        component: "Twisted Pair",
+        material: "Balanced pair construction",
+        description: "Minimizes crosstalk and interference",
+      },
+      {
+        component: "Core Wrapping",
+        material: "Polyester / Non-Hygroscopic Tape",
+        description: "Holds pair bundles tightly",
+      },
+      {
+        component: "Shielding",
+        material: "Aluminum Foil + Optional Jelly Filling",
+        description: "Protects against EMI/RFI, moisture ingress",
+      },
+      {
+        component: "Inner Sheath",
+        material: "PVC / LSZH",
+        description: "Additional mechanical protection",
+      },
+      {
+        component: "Armouring",
+        material: "Galvanized Steel Tape / Wire (for armoured version)",
+        description: "Withstands direct burial & mechanical stress",
+      },
+      {
+        component: "Outer Sheath",
+        material: "UV Resistant PVC / LSZH (Grey / Black)",
+        description: "Environmental protection",
+      },
+    ],
+    
+
+    Highlights: [
+      "Solid annealed copper conductors for stable transmission",
+      "Twisted pair construction to reduce crosstalk",
+      "Optional shielding & jelly filling for enhanced reliability",
+      "Armoured & unarmoured options for versatile applications",
+      "LSZH sheathing available for flame-safe environments",
+    ],
+    
+    keyFeatures: [
+      "High conductivity solid copper conductors.",
+      "Excellent voice & data transmission performance.",
+      "Low attenuation & high insulation resistance.",
+      "Twisted pair construction for noise-free communication.",
+      "Optional armouring & jelly filling for outdoor/direct burial use.",
+      "UV, rodent & termite resistant sheath.",
+      "LSZH versions for safety in public installations.",
+      "Long service life with low maintenance.",
+    ],
+    
+    applications: [
+      {
+        description: "Telephone exchanges & interconnections.",
+      },
+      {
+        description: "Voice & data transmission in commercial complexes.",
+      },
+      {
+        description: "Underground telecom networks.",
+      },
+      {
+        description: "Switchboard & intercom systems.",
+      },
+      {
+        description: "CCTV & signaling systems (low-frequency data).",
+      },
+      {
+        description: "Residential and enterprise telecom wiring.",
+      },
+    ],
+    
+    certifications: [
+      "IS 694, IS 1554 – PVC insulated cables compliance.",
+      "ISO 9001, ISO 14001, ISO 45001, ISO 50001 Certified.",
+      "IATF 16949 for quality assurance.",
+      "RoHS 2 Compliant (lead-free, eco-safe).",
+      "REACH Compliant.",
+      "GC-Mark Certified.",
+      "NABL tested for performance parameters.",
+    ],
+    
+    performanceParameters: [
+      {
+        property: "Conductor Size",
+        value: "0.4 mm / 0.5 mm / 0.63 mm",
+      },
+      {
+        property: "Characteristic Impedance",
+        value: "100 ± 15 Ω",
+      },
+      {
+        property: "Capacitance",
+        value: "≤ 56 nF/km",
+      },
+      {
+        property: "Attenuation @ 1 kHz",
+        value: "≤ 1.6 dB/km (0.5 mm conductor)",
+      },
+      {
+        property: "Insulation Resistance",
+        value: "> 5000 MΩ-km",
+      },
+      {
+        property: "Dielectric Strength",
+        value: "1.5 kV for 1 min",
+      },
+      {
+        property: "Operating Voltage",
+        value: "Up to 300 V",
+      },
+      {
+        property: "Operating Temp. Range",
+        value: "–20 °C to +70 °C",
+      },
+      {
+        property: "Service Life",
+        value: "20+ Years",
+      },
+    ],
+    
+
+    safetyStandards: [
+      {
+        title: "Indian Standards",
+        standards: [
+          "IS 694 – PVC insulated wires and cables.",
+          "IS 1554 (Part 1) – PVC insulated telecom/power cables.",
+          "IS/IEC 60332-1 & 60332-3 – Flame retardance tests.",
+          "IS 17048 – Halogen-free requirements (LSZH variants).",
+        ],
+      },
+      {
+        title: "British / International Standards",
+        standards: [
+          "IEC 60189 – Low-frequency telecom cable standard.",
+          "IEC 60332 – Flame resistance.",
+          "IEC 60754-1 & 60754-2 – Halogen acid gas emission tests.",
+          "IEC 61034 – Smoke density test.",
+          "BS EN 50288-7 – Multi-element metallic cables (telecom).",
+        ],
+      },
+    ],
+    
+
+    manufacturing: [
+      {
+        step: "Copper Prepared and Insulated",
+        description:
+          "Solid or stranded copper conductors had been drawn and had been insulated with polyethylene or polyvinyl chloride.",
+      },
+      {
+        step: "Pairs Twisted with Colour Code Applied",
+        description:
+          "Conductors had been twisted into pairs with a defined colour code sequence.",
+      },
+      {
+        step: "Units Assembled and Laid-Up",
+        description:
+          "Pairs had been assembled into units and the cable core had been laid-up to count.",
+      },
+      {
+        step: "Water Blocking Applied for Outdoor Types",
+        description:
+          "Petroleum jelly compounds, water-swellable tapes, or gel fillings had been applied to block moisture ingress where required.",
+      },
+      {
+        step: "Metallic Shield Applied Where Specified",
+        description:
+          "Corrugated aluminium or copper tapes had been applied with an overlap for screening.",
+      },
+      {
+        step: "Outer Sheath Extruded",
+        description:
+          "Polyethylene or polyvinyl chloride outer sheaths had been extruded and cooled.",
+      },
+      {
+        step: "Electrical Tests Completed",
+        description:
+          "Conductor resistance, mutual capacitance, capacitance unbalance, insulation resistance, and attenuation had been verified.",
+      },
+      {
+        step: "Length Drummed and Identification Finalised",
+        description:
+          "Marking and metre printing had been applied and drums had been sealed.",
+      },
+    ]
+    
+
+
   },
 
   {
@@ -1060,7 +1961,8 @@ const products = [
     industry: "Residential & High-Rise",
     shortDescription:
       "Homes and towers, safe and neat, Wiring lives from wall to street. Reliable strength in every beat.",
-    longDescription: "",
+    longDescription:
+      "Bonton Building Wires are designed for safe, efficient, and long-lasting electrical installations in residential, commercial, and industrial spaces. Manufactured with high-conductivity copper conductors and advanced FR/FRLS/ZHFR insulation, these wires provide flame resistance, low smoke emission, and zero halogen options to ensure maximum safety and reliability. With superior flexibility, durability, and compliance to IS and IEC standards, they are the perfect choice for modern electrical wiring.",
     images: [
       "/products/building-wires/HRFR (Gold Star).png",
       "/products/building-wires/HRFR (Green Wires).png",
@@ -1535,7 +2437,8 @@ const products = [
     industry: "Solar & Renewable",
     shortDescription:
       "Heat-defying, lean, and light,Wiring tech that takes its flight. From UPS to skies in silent might.",
-    longDescription: "",
+    longDescription:
+      "Bonton Uninyvin Cables are designed for high-performance power transmission in compact spaces, particularly in industries like aviation, defense, automotive, switchgear, and panel wiring. Made with tinned copper conductors, heat-resistant PVC insulation, and a tough nylon sheath, these cables combine excellent thermal stability, mechanical strength, and flame resistance. Their lightweight, flexible, and durable construction makes them ideal for demanding low-voltage and high-reliability environments.",
     images: [
       "/products/uninyvin-cables/top.png",
       "/products/uninyvin-cables/side.png",
@@ -1981,7 +2884,8 @@ const products = [
     industry: "Automotive & Industrial",
     shortDescription:
       "Signals flow smooth, no room for fear,​Precision and control are always clear. We carry commands both far and near.​​​",
-    longDescription: "",
+    longDescription:
+      "Bonton Control & Instrumentation (C&I) Cables are engineered for accurate signal transmission and reliable control system operations in power plants, refineries, process industries, and automation setups. Manufactured with high-conductivity copper conductors, precision twisting, shielding options, and robust PVC/XLPE insulation with LSZH sheathing, these cables ensure low interference, excellent noise rejection, and long-lasting durability. Available in armoured and unarmoured types, they are designed to withstand mechanical stress, electromagnetic disturbances, and harsh industrial conditions.",
     images: [
       "/products/control-and-instumentation-cables/top.png",
       "/products/control-and-instumentation-cables/side.png",
@@ -2298,7 +3202,8 @@ const products = [
     industry: "Automotive & Industrial",
     shortDescription:
       "Racing, road, and the drive, Wires that know no bounds. Built for speed, where limits are defied.",
-    longDescription: "",
+    longDescription:
+      "Bonton Automobile Cables are specially designed for vehicle wiring harnesses, battery connections, and electrical systems in automobiles. Manufactured with high-conductivity flexible copper conductors and heat-, oil-, and fuel-resistant PVC/XLPE insulation, these cables ensure superior performance, durability, and safety under extreme conditions of heat, vibration, and abrasion. They comply with international automotive standards (JASO D, ISO 6722) and are ideal for both OEMs and aftermarket applications.",
     images: [
       "/products/automobile-cables/top.png",
       "/products/automobile-cables/side.png",
@@ -3508,94 +4413,232 @@ const products = [
     ],
   },
 
-  // {
-  //   name: "Submersible Cables",
-  //   slug: "Submersible Cables",
-  //   type: "Power & Energy",
-  //   standard: "BS EN 50525 / UL Listed",
-  //   industry: "Power & Utilities",
-  //   shortDescription:
-  //     "Energy flows strong, through every line, Powering progress, design divine. Reliable current, always fine.",
-  //   longDescription:
-  //     "Bonton Power Cables are engineered for safe and efficient transmission of electricity in residential, commercial, and industrial power distribution systems. Manufactured with high-conductivity copper conductors, PVC/XLPE insulation, and robust PVC/LSZH sheathing, these cables deliver superior electrical performance, mechanical durability, and fire safety. Available in both armoured and unarmoured designs, they are ideal for low- and medium-voltage applications where reliability and safety are paramount.",
-  //   images: [
-  //     "/products/power-cables/top.png",
-  //     "/products/power-cables/side.png",
-  //   ],
+  {
+    name: "Submersible Cables",
+    slug: "submersible-cables",
+    type: "Power & Energy",
+    standard: "BS EN 50525 / UL Listed",
+    industry: "Power & Utilities",
+    shortDescription:
+      "Engineered to perform where water prevails — delivering reliable power deep below the surface.",
+    longDescription:
+      "Heavy-duty waterproof submersible cable designed for continuous underwater use in pumps, irrigation, drainage, and marine systems. Features tinned copper conductors for corrosion resistance, flexible and oil-resistant insulation, and high mechanical strength. Suitable for fountains, pools, sewage plants, and industrial dewatering. Certified for safety, durability, and environmental compliance.",
+    images: [
+      "/products/submersible-cables/top.png",
+      "/products/submersible-cables/side.png",
+    ],
 
-  //   keyFeatures: [
-  //     "Fully waterproof insulation for safe underwater operations.",
-  //     "High flexibility with resistance to oil, chemicals, UV, and mechanical stress.",
-  //     "Designed to withstand high hydrostatic pressure and continuous submersion.",
-  //     "Available in flat form for different installation needs.",
-  //     "Copper conductors ensure high conductivity and corrosion resistance.",
-  //   ],
+    variants: [
+      {
+        cores: [3], // 3C / Flat
+        modelNumber: "110311",
+        gauge: 1.5, // sq.mm
+        coresLength: [100, 500],
+        cableType: ["Copper Conductor", "PVC Insulated", "PVC Sheathed"],
+        color: ["Black"],
+        colorCustomization: false,
+        weight: "45 – 55kg",
+        dimension: "~6.0 – 6.5mm",
+        packagingType: "Coil",
+        unitsPerPack: "100 m coils / 500 m drums",
+        warrantyPeriod: "1 Year (extendable)",
+        armouring: "Unarmoured",
+      },
+      {
+        cores: [3],
+        modelNumber: "110312",
+        gauge: 2.5,
+        coresLength: [100, 500],
+        cableType: ["Copper Conductor", "PVC Insulated", "PVC Sheathed"],
+        color: ["Black"],
+        colorCustomization: false,
+        weight: "90 – 105kg",
+        dimension: "~7.5 – 8.0mm",
+        packagingType: "Coil",
+        unitsPerPack: "100 m coils / 500 m drums",
+        warrantyPeriod: "1 Year (extendable)",
+        armouring: "Unarmoured",
+      },
+      {
+        cores: [3],
+        modelNumber: "110313",
+        gauge: 4.0,
+        coresLength: [100, 500],
+        cableType: ["Copper Conductor", "PVC Insulated", "PVC Sheathed"],
+        color: ["Black"],
+        colorCustomization: false,
+        weight: "135 – 160kg",
+        dimension: "~8.5 – 9.0mm",
+        packagingType: "Coil",
+        unitsPerPack: "100 m coils / 500 m drums",
+        warrantyPeriod: "1 Year (extendable)",
+        armouring: "Unarmoured",
+      },
+      {
+        cores: [3],
+        modelNumber: "110314",
+        gauge: 6.0,
+        coresLength: [100, 500],
+        cableType: ["Copper Conductor", "PVC Insulated", "PVC Sheathed"],
+        color: ["Black"],
+        colorCustomization: false,
+        weight: "190 – 220kg",
+        dimension: "~9.5 – 10.0mm",
+        packagingType: "Coil / Drum",
+        unitsPerPack: "100 m coils / 500 m drums",
+        warrantyPeriod: "1 Year (extendable)",
+        armouring: "Unarmoured",
+      },
+      {
+        cores: [3],
+        modelNumber: "110315",
+        gauge: 10,
+        coresLength: [100, 500],
+        cableType: ["Copper Conductor", "PVC Insulated", "PVC Sheathed"],
+        color: ["Black"],
+        colorCustomization: false,
+        weight: "190 – 220kg",
+        dimension: "~9.5 – 10.0mm",
+        packagingType: "Coil / Drum",
+        unitsPerPack: "100 m coils / 500 m drums",
+        warrantyPeriod: "1 Year (extendable)",
+        armouring: "Unarmoured",
+      },
+      {
+        cores: [3],
+        modelNumber: "110316",
+        gauge: 16,
+        coresLength: [100, 500],
+        cableType: ["Copper Conductor", "PVC Insulated", "PVC Sheathed"],
+        color: ["Black"],
+        colorCustomization: false,
+        weight: "190 – 220kg",
+        dimension: "~9.5 – 10.0mm",
+        packagingType: "Coil / Drum",
+        unitsPerPack: "100 m coils / 500 m drums",
+        warrantyPeriod: "1 Year (extendable)",
+        armouring: "Unarmoured",
+      },
+      {
+        cores: [3],
+        modelNumber: "110317",
+        gauge: 25,
+        coresLength: [100, 500],
+        cableType: ["Copper Conductor", "PVC Insulated", "PVC Sheathed"],
+        color: ["Black"],
+        colorCustomization: false,
+        weight: "190 – 220kg",
+        dimension: "~9.5 – 10.0mm",
+        packagingType: "Coil / Drum",
+        unitsPerPack: "100 m coils / 500 m drums",
+        warrantyPeriod: "1 Year (extendable)",
+        armouring: "Unarmoured",
+      },
+      {
+        cores: [3],
+        modelNumber: "110318",
+        gauge: 35,
+        coresLength: [100, 500],
+        cableType: ["Copper Conductor", "PVC Insulated", "PVC Sheathed"],
+        color: ["Black"],
+        colorCustomization: false,
+        weight: "190 – 220kg",
+        dimension: "~9.5 – 10.0mm",
+        packagingType: "Coil / Drum",
+        unitsPerPack: "100 m coils / 500 m drums",
+        warrantyPeriod: "1 Year (extendable)",
+        armouring: "Unarmoured",
+      },
+      {
+        cores: [3],
+        modelNumber: "110319",
+        gauge: 50,
+        coresLength: [100, 500],
+        cableType: ["Copper Conductor", "PVC Insulated", "PVC Sheathed"],
+        color: ["Black"],
+        colorCustomization: false,
+        weight: "190 – 220kg",
+        dimension: "~9.5 – 10.0mm",
+        packagingType: "Coil / Drum",
+        unitsPerPack: "100 m coils / 500 m drums",
+        warrantyPeriod: "1 Year (extendable)",
+        armouring: "Unarmoured",
+      },
+    ],    
 
-  //   applications: [
-  //     {
-  //       description: "Power supply for submersible pumps in wells, irrigation, and drainage systems",
-  //     },
-  //     {
-  //       description: "Suitable for fountains, aquariums, swimming pools, and firefighting equipment",
-  //     },
-  //     {
-  //       description: "Extensively used in mining, marine, sewage treatment, and industrial dewatering setups",
-  //     },
+    keyFeatures: [
+      "Fully waterproof insulation for safe underwater operations.",
+      "High flexibility with resistance to oil, chemicals, UV, and mechanical stress.",
+      "Designed to withstand high hydrostatic pressure and continuous submersion.",
+      "Available in flat form for different installation needs.",
+      "Copper conductors ensure high conductivity and corrosion resistance.",
+    ],
 
-  //   ],
+    applications: [
+      {
+        description: "Power supply for submersible pumps in wells, irrigation, and drainage systems",
+      },
+      {
+        description: "Suitable for fountains, aquariums, swimming pools, and firefighting equipment",
+      },
+      {
+        description: "Extensively used in mining, marine, sewage treatment, and industrial dewatering setups",
+      },
 
-  //   certifications: [
-  //     "IS 1554 (Part 1) – PVC insulated power cables.",
-  //     "IS 7098 (Part 1) – XLPE insulated power cables.",
-  //     "IS 8130 – Conductors for electric cables.",
-  //     "ISO 9001, ISO 14001, ISO 45001, ISO 50001 Certified.",
-  //     "IATF 16949 – Quality Management.",
-  //     "RoHS 2 & REACH Compliant.",
-  //     "GC-Mark Certified.",
-  //     "NABL accredited testing approvals.",
-  //   ],
+    ],
 
-  //   safetyStandards: [
-  //     {
-  //       title: "Indian Standards",
-  //       standards: [
-  //         "Certified under ISO 9001, ISO 14001, ISO 45001, ISO 50001, and IATF 16949",
-  //         "RoHS 2 Compliant – free from lead, cadmium, and mercury",
-  //         "Sedex/SMETA audited and G.C. Mark certified for ethical and environmental compliance",
-  //       ],
-  //     },
+    certifications: [
+      "IS 1554 (Part 1) – PVC insulated power cables.",
+      "IS 7098 (Part 1) – XLPE insulated power cables.",
+      "IS 8130 – Conductors for electric cables.",
+      "ISO 9001, ISO 14001, ISO 45001, ISO 50001 Certified.",
+      "IATF 16949 – Quality Management.",
+      "RoHS 2 & REACH Compliant.",
+      "GC-Mark Certified.",
+      "NABL accredited testing approvals.",
+    ],
 
-  //   ],
+    safetyStandards: [
+      {
+        title: "Indian Standards",
+        standards: [
+          "Certified under ISO 9001, ISO 14001, ISO 45001, ISO 50001, and IATF 16949",
+          "RoHS 2 Compliant – free from lead, cadmium, and mercury",
+          "Sedex/SMETA audited and G.C. Mark certified for ethical and environmental compliance",
+        ],
+      },
 
-  //   manufacturing: [
-  //     {
-  //       step: "Conductors Stranded and Tinned Where Required",
-  //       description:
-  //         " Copper conductors had been stranded and, where specified, had been tinned for corrosion resistance.",
-  //     },
-  //     {
-  //       step: "Primary Insulation Extruded",
-  //       description:
-  //         "Water-resistant polyvinyl chloride, cross-linked polyethylene, or elastomeric insulation had been extruded.",
-  //     },
-  //     {
-  //       step: "Stranding & Compacting (Conductor Formation)",
-  //       description:
-  //         "Three insulated cores had been aligned in parallel for flat constructions, or laid-up for round constructions.",
-  //     },
-  //     {
-  //       step: "Water-Blocking and Encapsulation Performed",
-  //       description:
-  //         "Water-blocking compounds and encapsulating jackets had been applied to prevent longitudinal water ingress.",
-  //     },
-  //     {
-  //       step: "Outer Jacket Extruded",
-  //       description:
-  //         "A heavy-duty, abrasion-resistant outer jacket suitable for immersion had been",
-  //     },
-  //   ],
+    ],
 
-  // },
+    manufacturing: [
+      {
+        step: "Conductors Stranded and Tinned Where Required",
+        description:
+          " Copper conductors had been stranded and, where specified, had been tinned for corrosion resistance.",
+      },
+      {
+        step: "Primary Insulation Extruded",
+        description:
+          "Water-resistant polyvinyl chloride, cross-linked polyethylene, or elastomeric insulation had been extruded.",
+      },
+      {
+        step: "Stranding & Compacting (Conductor Formation)",
+        description:
+          "Three insulated cores had been aligned in parallel for flat constructions, or laid-up for round constructions.",
+      },
+      {
+        step: "Water-Blocking and Encapsulation Performed",
+        description:
+          "Water-blocking compounds and encapsulating jackets had been applied to prevent longitudinal water ingress.",
+      },
+      {
+        step: "Outer Jacket Extruded",
+        description:
+          "A heavy-duty, abrasion-resistant outer jacket suitable for immersion had been",
+      },
+    ],
+
+  },
 ];
 
 export default products;

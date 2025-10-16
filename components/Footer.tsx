@@ -22,6 +22,8 @@ const Footer = () => {
         { name: "Plan for 2035", link: "/plan_for_2035" },
         { name: "Our Team", link: "/our-team" },
         { name: "Blogs", link: "/blogs" },
+        { name: "Gallery", link: "/gallery" },
+
         { name: "Privacy Policy", link: "/privacy-policy" },
       ],
     },
