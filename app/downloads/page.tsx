@@ -2,6 +2,14 @@ import SectionTop from "@/components/SectionTop";
 
 const DownloadsPage = () => {
   const downloadFiles = [
+
+    {
+      name: "Company Profile",
+      link: "/heavy/Company Profile.pdf",
+      category: "Company Profile",
+    },
+
+
     // Product Catalogs
     {
       name: "Bonton Cable Catalogue",
@@ -80,6 +88,11 @@ const DownloadsPage = () => {
     {
       name: "NABL Certificate (Kaharani Plant 2)",
       link: "/downloads/NABL (Kaharani_ Plant 2).pdf",
+      category: "Certificates & Compliance",
+    },
+    {
+      name: "NABL Certificate 2025",
+      link: "/heavy/NABL 2025.pdf",
       category: "Certificates & Compliance",
     },
     {
