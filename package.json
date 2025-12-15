@@ -17,7 +17,7 @@
     "clsx": "^2.1.1",
     "ldrs": "^1.1.7",
     "lucide-react": "^0.544.0",
-    "next": "15.4.6",
+    "next": "15.4.10",
     "nodemailer": "^6.10.1",
     "react": "19.1.0",
     "react-countup": "^6.5.3",
