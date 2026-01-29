@@ -5,7 +5,7 @@ const DownloadsPage = () => {
 
     {
       name: "Company Profile",
-      link: "/heavy/Company_Profile.pdf?v=100",
+      link: "/heavy/Company_Profile.pdf?v=101",
       category: "Company Profile",
     },
 
